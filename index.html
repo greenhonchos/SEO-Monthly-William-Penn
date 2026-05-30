@@ -1,0 +1,1483 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>William Penn · Organic — SEO Intelligence Report</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js"></script>
+<style>
+/* ============================================================
+   DESIGN SYSTEM · Helvetica · #093C76 on #FFFFF0
+   Executive-reporting visual style
+   ============================================================ */
+:root{
+  --bg:#FFFFF0;
+  --surface:#FFFFFF;
+  --surface-2:#FAF7E4;
+  --surface-3:#F3EFD7;
+  --navy:#093C76;
+  --navy-2:#1659AD;
+  --navy-3:#4A7BC4;
+  --navy-soft:rgba(9,60,118,.06);
+  --navy-soft-2:rgba(9,60,118,.12);
+  --gold:#B8801A;
+  --gold-soft:rgba(184,128,26,.10);
+  --pos:#1F7A4D;
+  --pos-soft:rgba(31,122,77,.10);
+  --neg:#B3261E;
+  --neg-soft:rgba(179,38,30,.10);
+  --warn:#B8801A;
+  --warn-soft:rgba(184,128,26,.10);
+  --info:#1659AD;
+  --info-soft:rgba(22,89,173,.10);
+  --ink-1:#0E1A2B;
+  --ink-2:#3D4A63;
+  --ink-3:#6B7691;
+  --ink-4:#95A0B8;
+  --line:#E9E3CB;
+  --line-2:#D9D0B2;
+  --rule:#EFE9D2;
+  --r-sm:8px;
+  --r-md:10px;
+  --r-lg:14px;
+  --r-xl:18px;
+  --sh-1:0 1px 2px rgba(9,60,118,.04);
+  --sh-2:0 1px 3px rgba(9,60,118,.05), 0 6px 18px rgba(9,60,118,.06);
+  --sh-3:0 2px 6px rgba(9,60,118,.06), 0 16px 40px rgba(9,60,118,.08);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink-1);
+  font-family:Helvetica,'Helvetica Neue',Arial,sans-serif;-webkit-font-smoothing:antialiased;
+  font-feature-settings:'kern' 1;}
+a{color:inherit;text-decoration:none}
+::selection{background:rgba(9,60,118,.18)}
+
+.app{display:grid;grid-template-columns:248px 1fr;min-height:100vh}
+.sidebar{position:sticky;top:0;height:100vh;background:var(--surface);border-right:1px solid var(--line);padding:24px 18px;display:flex;flex-direction:column;gap:4px;overflow-y:auto;box-shadow:var(--sh-1)}
+.brand{display:flex;align-items:center;gap:12px;padding:4px 6px 20px;margin-bottom:6px;border-bottom:1px solid var(--line)}
+.brand-mark{width:46px;height:46px;border-radius:var(--r-md);background:#FFFFFF;border:1px solid var(--line);display:grid;place-items:center;padding:4px;overflow:hidden}
+.brand-mark img{width:100%;height:100%;object-fit:contain}
+.brand-text{display:flex;flex-direction:column;line-height:1.2}
+.brand-text b{font-size:14px;color:var(--navy);font-weight:700;letter-spacing:.01em}
+.brand-text span{font-size:10.5px;color:var(--ink-3);letter-spacing:.08em;text-transform:uppercase;margin-top:2px}
+
+.nav-section{font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:var(--ink-4);padding:18px 10px 6px;font-weight:700}
+.nav-item{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:var(--r-sm);cursor:pointer;color:var(--ink-2);font-size:13px;font-weight:500;transition:.15s;border-left:2px solid transparent}
+.nav-item:hover{background:var(--surface-2);color:var(--navy)}
+.nav-item.active{background:var(--navy-soft);color:var(--navy);font-weight:700;border-left-color:var(--navy)}
+.nav-num{font-size:10.5px;color:var(--ink-4);width:18px;font-variant-numeric:tabular-nums}
+.nav-item.active .nav-num{color:var(--navy)}
+
+.sidebar-foot{margin-top:auto;padding:14px 8px 4px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:10px;font-size:10.5px;color:var(--ink-3);line-height:1.45}
+.source-strip{display:flex;align-items:flex-start;gap:8px}
+.source-strip .dot{margin-top:5px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--pos);box-shadow:0 0 0 3px rgba(31,122,77,.18);flex-shrink:0}
+.gh-strip{display:flex;align-items:center;justify-content:center;padding:14px 16px;background:var(--navy);border-radius:var(--r-sm);border:1px solid var(--navy);box-shadow:var(--sh-1)}
+.gh-strip img{height:36px;width:auto;max-width:100%;object-fit:contain;display:block}
+
+.main{padding:28px 36px 64px;max-width:1640px;margin:0 auto;width:100%}
+.topbar{display:flex;align-items:center;gap:14px;margin-bottom:24px;flex-wrap:wrap}
+.crumbs{font-size:12px;color:var(--ink-3)}
+.crumbs b{color:var(--ink-1);font-weight:700}
+.spacer{flex:1}
+.meta-pill{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:var(--r-sm);background:var(--surface);border:1px solid var(--line);font-size:12px;color:var(--ink-2);box-shadow:var(--sh-1)}
+.meta-pill b{color:var(--navy);font-weight:600}
+.meta-pill.solid{background:var(--navy);color:#FFFFF0;border-color:var(--navy)}
+.meta-pill.solid b{color:#FFFFF0}
+
+.hero{background:linear-gradient(135deg, #093C76 0%, #0e4a8c 60%, #1659AD 100%);color:#FFFFF0;border-radius:var(--r-xl);padding:34px 36px;margin-bottom:28px;box-shadow:var(--sh-3);position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;right:-80px;top:-80px;width:340px;height:340px;background:radial-gradient(circle, rgba(255,255,240,.08), transparent 60%)}
+.hero .ek{font-size:11px;letter-spacing:.18em;color:#B9D3F2;text-transform:uppercase;margin-bottom:10px;font-weight:700}
+.hero h1{font-size:30px;margin:0 0 12px;letter-spacing:-.02em;font-weight:700;line-height:1.15;max-width:75ch}
+.hero p.lede{margin:0;color:rgba(255,255,240,.85);font-size:14px;line-height:1.6;max-width:78ch}
+.hero .lede b{color:#FFFFF0;font-weight:600}
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-top:24px;padding-top:24px;border-top:1px solid rgba(255,255,240,.18)}
+.hero-stats .stat .l{font-size:10.5px;color:#B9D3F2;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}
+.hero-stats .stat .v{font-size:26px;font-weight:700;letter-spacing:-.01em}
+.hero-stats .stat .s{font-size:11.5px;color:#9FB8DA;margin-top:2px}
+
+.section{margin-top:36px;scroll-margin-top:20px}
+.section-head{margin-bottom:18px}
+.section-head .eyebrow{font-size:10.5px;letter-spacing:.16em;color:var(--gold);text-transform:uppercase;font-weight:700;margin-bottom:6px}
+.section-head h2{font-size:22px;margin:0;color:var(--navy);font-weight:700;letter-spacing:-.01em}
+.section-head p{margin:6px 0 0;color:var(--ink-3);font-size:13px;max-width:78ch;line-height:1.55}
+.section-tools{display:flex;align-items:center;gap:10px;margin-top:14px;flex-wrap:wrap}
+
+.kpi-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+.kpi-grid.c5{grid-template-columns:repeat(5,1fr)}
+.kpi-grid.c4{grid-template-columns:repeat(4,1fr)}
+.kpi-grid.c3{grid-template-columns:repeat(3,1fr)}
+@media (max-width:1280px){.kpi-grid,.kpi-grid.c5,.kpi-grid.c4,.kpi-grid.c3{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:780px){.kpi-grid,.kpi-grid.c5,.kpi-grid.c4,.kpi-grid.c3{grid-template-columns:repeat(2,1fr)}}
+
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:16px 18px;box-shadow:var(--sh-1);min-height:108px;display:flex;flex-direction:column;justify-content:space-between}
+.kpi .lbl{font-size:11px;color:var(--ink-3);letter-spacing:.06em;text-transform:uppercase;font-weight:600;display:flex;justify-content:space-between;align-items:center}
+.kpi .val{font-size:24px;font-weight:700;margin-top:8px;letter-spacing:-.01em;color:var(--ink-1);line-height:1.1}
+.kpi .sub{display:flex;align-items:center;gap:8px;margin-top:8px;font-size:11.5px;color:var(--ink-3)}
+.kpi .sub b{color:var(--ink-1);font-weight:600}
+
+.kpi-row-label{font-size:10.5px;color:var(--gold);text-transform:uppercase;letter-spacing:.12em;font-weight:700;margin:18px 0 8px}
+
+.delta{display:inline-flex;align-items:center;gap:3px;padding:2px 7px;border-radius:5px;font-size:11px;font-weight:700;font-variant-numeric:tabular-nums}
+.delta.up{background:var(--pos-soft);color:var(--pos)}
+.delta.down{background:var(--neg-soft);color:var(--neg)}
+.delta.flat{background:var(--surface-3);color:var(--ink-3)}
+
+.grid{display:grid;gap:18px}
+.g-2{grid-template-columns:1fr 1fr}
+.g-3{grid-template-columns:repeat(3,1fr)}
+.g-4{grid-template-columns:repeat(4,1fr)}
+.g-2-1{grid-template-columns:2fr 1fr}
+.g-1-2{grid-template-columns:1fr 2fr}
+@media (max-width:1100px){.g-2,.g-3,.g-4,.g-2-1,.g-1-2{grid-template-columns:1fr}}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:22px;box-shadow:var(--sh-1)}
+.card.tinted{background:var(--surface-2)}
+.card-head{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:14px;gap:14px}
+.card-head h3{margin:0;font-size:14px;font-weight:700;color:var(--navy);letter-spacing:.01em}
+.card-head p{margin:4px 0 0;font-size:12px;color:var(--ink-3);line-height:1.45}
+.card-head .right{display:flex;gap:6px;flex-shrink:0}
+
+.chip{display:inline-flex;align-items:center;font-size:11px;padding:3px 9px;border-radius:6px;border:1px solid var(--line-2);color:var(--ink-2);background:var(--surface-2);font-weight:600}
+.chip.pos{color:var(--pos);border-color:rgba(31,122,77,.3);background:var(--pos-soft)}
+.chip.neg{color:var(--neg);border-color:rgba(179,38,30,.3);background:var(--neg-soft)}
+.chip.warn{color:var(--warn);border-color:rgba(184,128,26,.3);background:var(--warn-soft)}
+.chip.info{color:var(--info);border-color:rgba(22,89,173,.3);background:var(--info-soft)}
+.chip.navy{color:#FFFFF0;background:var(--navy);border-color:var(--navy)}
+
+.sev{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:700;padding:3px 8px;border-radius:5px;letter-spacing:.04em}
+.sev.crit{background:var(--neg-soft);color:var(--neg)}
+.sev.high{background:var(--warn-soft);color:var(--warn)}
+.sev.med{background:var(--info-soft);color:var(--info)}
+.sev.low{background:var(--pos-soft);color:var(--pos)}
+
+.table{width:100%;border-collapse:collapse;font-size:12.5px}
+.table th{text-align:left;font-weight:700;color:var(--ink-3);font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;padding:10px 12px;border-bottom:1px solid var(--line)}
+.table td{padding:11px 12px;border-bottom:1px solid var(--rule);color:var(--ink-1);vertical-align:middle}
+.table tr:last-child td{border-bottom:none}
+.table tr:hover td{background:var(--surface-2)}
+.table .num{text-align:right;font-variant-numeric:tabular-nums}
+.table .truncate{max-width:290px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.table .sub{font-size:11px;color:var(--ink-3);margin-top:2px;font-weight:400}
+
+.mini-bar{position:relative;height:6px;border-radius:3px;background:var(--surface-3);overflow:hidden;min-width:60px}
+.mini-bar > i{position:absolute;left:0;top:0;bottom:0;border-radius:3px;background:var(--navy);display:block}
+
+.scroll-table{max-height:520px;overflow-y:auto;border:1px solid var(--line);border-radius:var(--r-sm);background:var(--surface)}
+.scroll-table.sm{max-height:480px}
+.scroll-table.lg{max-height:640px}
+.scroll-table table{border-collapse:separate;border-spacing:0}
+.scroll-table .table th{position:sticky;top:0;background:var(--surface-2);z-index:2;box-shadow:0 1px 0 var(--line)}
+.scroll-table .table td{background:var(--surface)}
+.scroll-table::-webkit-scrollbar{width:8px}
+.scroll-table::-webkit-scrollbar-track{background:var(--surface-2);border-radius:4px}
+.scroll-table::-webkit-scrollbar-thumb{background:var(--line-2);border-radius:4px}
+.scroll-table::-webkit-scrollbar-thumb:hover{background:var(--ink-4)}
+.scroll-hint{font-size:11px;color:var(--ink-3);font-style:italic;margin-top:8px;text-align:right}
+
+.empty-state{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:36px 24px;text-align:center;gap:10px;min-height:180px}
+.empty-state .es-icon{width:44px;height:44px;border-radius:12px;background:var(--surface-3);color:var(--ink-3);display:grid;place-items:center;font-size:20px;font-weight:700}
+.empty-state .es-title{font-size:14px;font-weight:700;color:var(--ink-2);margin:0}
+.empty-state .es-msg{font-size:12.5px;color:var(--ink-3);max-width:42ch;line-height:1.55;margin:0}
+.empty-state .es-cta{font-size:11px;color:var(--ink-4);letter-spacing:.08em;text-transform:uppercase;font-weight:600;margin-top:4px}
+
+.chart-wrap{position:relative;height:260px;padding:6px 0}
+.chart-wrap.sm{height:190px}
+.chart-wrap.tall{height:340px}
+.chart-wrap.xl{height:380px}
+
+.callout{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--navy);border-radius:var(--r-md);padding:18px 22px;box-shadow:var(--sh-1);display:flex;gap:16px;align-items:flex-start}
+.callout.gold{border-left-color:var(--gold)}
+.callout.warn{border-left-color:var(--warn);background:linear-gradient(90deg, var(--warn-soft) 0%, var(--surface) 30%)}
+.callout.neg{border-left-color:var(--neg);background:linear-gradient(90deg, var(--neg-soft) 0%, var(--surface) 30%)}
+.callout.pos{border-left-color:var(--pos);background:linear-gradient(90deg, var(--pos-soft) 0%, var(--surface) 30%)}
+.callout-mark{font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--navy);text-transform:uppercase;width:90px;flex-shrink:0;padding-top:1px}
+.callout.gold .callout-mark{color:var(--gold)}
+.callout.warn .callout-mark{color:var(--warn)}
+.callout.neg .callout-mark{color:var(--neg)}
+.callout.pos .callout-mark{color:var(--pos)}
+.callout-body{flex:1}
+.callout-body strong{display:block;font-size:14.5px;color:var(--ink-1);margin-bottom:6px;font-weight:700}
+.callout-body p{margin:0;font-size:13.5px;line-height:1.65;color:var(--ink-2)}
+.callout-body b{color:var(--ink-1);font-weight:700}
+
+.divider{height:1px;background:var(--line);margin:36px 0 0}
+
+.anomaly{display:flex;gap:12px;padding:14px 16px;border-radius:var(--r-md);background:var(--surface);border:1px solid var(--line);margin-bottom:10px;font-size:13px;color:var(--ink-2);align-items:flex-start;box-shadow:var(--sh-1);line-height:1.55}
+.anomaly .icn{width:24px;height:24px;border-radius:6px;display:grid;place-items:center;flex-shrink:0;font-size:12px;font-weight:700}
+.anomaly.pos .icn{background:var(--pos-soft);color:var(--pos)}
+.anomaly.neg .icn{background:var(--neg-soft);color:var(--neg)}
+.anomaly.warn .icn{background:var(--warn-soft);color:var(--warn)}
+.anomaly.info .icn{background:var(--info-soft);color:var(--info)}
+.anomaly b{color:var(--ink-1);font-weight:700}
+
+.foot{margin-top:60px;padding:24px 0 0;border-top:1px solid var(--line);color:var(--ink-3);font-size:11.5px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;line-height:1.5}
+
+@media (max-width:1100px){
+  .app{grid-template-columns:1fr}
+  .sidebar{position:relative;height:auto;width:100%;flex-direction:row;flex-wrap:wrap;border-right:none;border-bottom:1px solid var(--line)}
+  .brand{width:100%;border-bottom:none;padding-bottom:8px;margin-bottom:0}
+  .nav-section{display:none}
+  .nav-item{padding:6px 10px;font-size:12px;border-left:none}
+  .nav-item.active{border-left:none;border-bottom:2px solid var(--navy)}
+  .hero{padding:24px;border-radius:var(--r-md)}
+  .hero h1{font-size:22px}
+  .hero-stats{grid-template-columns:repeat(2,1fr);gap:16px}
+}
+</style>
+</head>
+<body>
+
+<div class="app">
+
+<!-- ===================== SIDEBAR ===================== -->
+<aside class="sidebar">
+  <div class="brand">
+    <div class="brand-mark"><img src="https://docket.kartmax.in/sites/StAFxmqh5LfPz3ZQSdCh/tmp/theme/newlogo-5e8e2a57-b1d3-4206-b918-9fa5bccb6d09.jpg" alt="William Penn"></div>
+    <div class="brand-text">
+      <b>William Penn · Organic</b>
+      <span>SEO Intelligence Report</span>
+    </div>
+  </div>
+
+  <div class="nav-section">Sections</div>
+  <a class="nav-item active" href="#executive"><span class="nav-num">01</span> Organic Overview</a>
+  <a class="nav-item" href="#trend"><span class="nav-num">02</span> Organic Trend</a>
+  <a class="nav-item" href="#newret"><span class="nav-num">03</span> New vs Returning</a>
+  <a class="nav-item" href="#serp"><span class="nav-num">04</span> SERP &amp; Keywords</a>
+  <a class="nav-item" href="#content"><span class="nav-num">05</span> Content Performance</a>
+  <a class="nav-item" href="#ecom"><span class="nav-num">06</span> Ecommerce SEO</a>
+  <a class="nav-item" href="#audience"><span class="nav-num">07</span> Audience Intel</a>
+  <a class="nav-item" href="#health"><span class="nav-num">08</span> SEO Health Center</a>
+  <a class="nav-item" href="#paid" style="position:relative"><span class="nav-num">09</span> SEO vs Paid <span style="margin-left:auto;font-size:9px;font-weight:700;color:var(--gold);background:rgba(184,128,26,.14);padding:2px 6px;border-radius:4px;letter-spacing:.06em">INT</span></a>
+  <a class="nav-item" href="#gh"><span class="nav-num">10</span> GH Insights</a>
+
+  <div class="sidebar-foot">
+    <div class="source-strip">
+      <span class="dot"></span>
+      <span>Live · Windsor.ai · GA4 · GSC · Bing Webmaster Tools · Microsoft Clarity · Shopify · Google Ads · Meta Ads</span>
+    </div>
+    <div class="gh-strip">
+      <img src="https://www.greenhonchos.com/wp-content/uploads/2024/04/Group-2@2x.png" alt="GreenHonchos">
+    </div>
+  </div>
+</aside>
+
+<!-- ===================== MAIN ===================== -->
+<main class="main">
+
+  <div class="topbar">
+    <div class="crumbs">Brand · <b>William Penn</b> &nbsp;|&nbsp; Workspace · <b>GreenHonchos</b></div>
+    <span class="spacer"></span>
+    <div class="meta-pill">Compare: <b>Prev. Period</b></div>
+    <div class="meta-pill">📅 1 May – 29 May 2026</div>
+    <div class="meta-pill solid">⚡ Synced <b>4 min ago</b></div>
+  </div>
+
+  <!-- ============================================================
+       SECTION 01 · EXECUTIVE VIEW
+       ============================================================ -->
+  <section class="section" id="executive">
+    <div class="hero">
+      <div class="ek">Section 01 · Organic Overview</div>
+      <h1>Organic revenue +51.0% on +0.2% session change — quality is lifting.</h1>
+      <p class="lede">May (1–29) vs April (1–29): organic sessions <b>+0.2%</b> to <b>15,767</b>, organic orders +0.9% and organic revenue +51.0% to <b>₹7.98 L</b>. The bright spot is <b>AOV +49.7%</b> (₹7,252). Returning visitors convert at <b>1.8%</b> vs <b>0.3%</b> for new, delivering <b>80%</b> of organic revenue. GSC clicks +1.0% and site CTR +4.3% — search visibility is the pressure point.</p>
+      <div class="hero-stats">
+        <div class="stat"><div class="l">Organic Sessions</div><div class="v">15,767</div><div class="s">+0.2% vs prev period</div></div>
+        <div class="stat"><div class="l">Organic CVR</div><div class="v">0.70%</div><div class="s">+0.7% vs prev period</div></div>
+        <div class="stat"><div class="l">Organic AOV</div><div class="v">₹7,252</div><div class="s">+49.7% vs prev period</div></div>
+        <div class="stat"><div class="l">Organic Revenue</div><div class="v">₹7.98 L</div><div class="s">+51.0% vs prev period</div></div>
+      </div>
+    </div>
+
+    <div class="section-head">
+      <h2>Headline KPIs</h2>
+      <p>Key metrics tracked against the previous period.</p>
+    </div>
+
+    <!-- ROW 1 · Organic Metrics -->
+    <div class="kpi-row-label">Organic Metrics</div>
+    <div class="kpi-grid c5">
+      <div class="kpi"><div class="lbl">Organic Sessions<span class="delta up">+0.2%</span></div><div class="val">15,767</div><div class="sub">vs 15,731 prev period</div></div>
+      <div class="kpi"><div class="lbl">Organic CVR<span class="delta up">+0.7%</span></div><div class="val">0.70%</div><div class="sub">vs 0.69% prev period</div></div>
+      <div class="kpi"><div class="lbl">Organic Orders<span class="delta up">+0.9%</span></div><div class="val">110</div><div class="sub">vs 109 prev period</div></div>
+      <div class="kpi"><div class="lbl">Organic AOV<span class="delta up">+49.7%</span></div><div class="val">₹7,252</div><div class="sub">vs ₹4,846 prev period</div></div>
+      <div class="kpi"><div class="lbl">Organic Revenue<span class="delta up">+51.0%</span></div><div class="val">₹7.98 L</div><div class="sub">vs ₹5.28 L prev period</div></div>
+    </div>
+
+    <!-- ROW 2 · Overall Metrics -->
+    <div class="kpi-row-label">Overall Metrics</div>
+    <div class="kpi-grid c5">
+      <div class="kpi"><div class="lbl">Overall Sessions<span class="delta up">+1.0%</span></div><div class="val">1,32,894</div><div class="sub">vs 1,31,556 prev period</div></div>
+      <div class="kpi"><div class="lbl">Overall CVR<span class="delta down">-22.0%</span></div><div class="val">0.45%</div><div class="sub">vs 0.57% prev period</div></div>
+      <div class="kpi"><div class="lbl">Overall Orders<span class="delta down">-21.2%</span></div><div class="val">596</div><div class="sub">vs 756 prev period</div></div>
+      <div class="kpi"><div class="lbl">Overall AOV<span class="delta up">+3.9%</span></div><div class="val">₹7,377</div><div class="sub">vs ₹7,102 prev period</div></div>
+      <div class="kpi"><div class="lbl">Overall Revenue<span class="delta down">-18.1%</span></div><div class="val">₹43.97 L</div><div class="sub">vs ₹53.69 L prev period</div></div>
+    </div>
+
+    <!-- ROW 3 · Share / Index — column-aligned with Rows 1 & 2 -->
+    <div class="kpi-row-label">Organic Share / Index Metrics</div>
+    <div class="kpi-grid c5">
+      <div class="kpi"><div class="lbl">Organic Sessions Share<span class="delta down">-0.8%</span></div><div class="val">11.86%</div><div class="sub">vs 11.96% prev period</div></div>
+      <div class="kpi"><div class="lbl">Organic CVR Index<span class="delta up">+29.0%</span></div><div class="val">156%</div><div class="sub">vs 121% prev period</div></div>
+      <div class="kpi"><div class="lbl">Organic Orders Share<span class="delta up">+28.0%</span></div><div class="val">18.46%</div><div class="sub">vs 14.42% prev period</div></div>
+      <div class="kpi"><div class="lbl">Organic AOV Index<span class="delta up">+44.1%</span></div><div class="val">98%</div><div class="sub">vs 68% prev period</div></div>
+      <div class="kpi"><div class="lbl">Organic Revenue Share<span class="delta up">+84.4%</span></div><div class="val">18.14%</div><div class="sub">vs 9.84% prev period</div></div>
+    </div>
+
+    <!-- ORGANIC CHANNEL BREAKDOWN -->
+    <div class="section-head" style="margin-top:32px;margin-bottom:14px">
+      <div class="eyebrow">Organic Channel Breakdown</div>
+      <h2 style="font-size:18px">Organic Search · Organic Shopping · AI Referrals</h2>
+      <p>Decomposition of the 15,767 organic sessions and ₹7.98 L organic revenue across the three constituent sub-channels.</p>
+    </div>
+
+    <div class="grid g-3">
+      <div class="card">
+        <div class="card-head"><h3>Organic Search</h3><span class="chip navy">97.9% share</span></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px">
+          <div><div style="font-size:10.5px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;font-weight:600">Sessions</div><div style="font-size:22px;font-weight:700;color:var(--ink-1);margin-top:4px">15,435</div><div style="font-size:11.5px;color:var(--pos);font-weight:600;margin-top:2px">+0.7%</div></div>
+          <div><div style="font-size:10.5px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;font-weight:600">Revenue</div><div style="font-size:22px;font-weight:700;color:var(--ink-1);margin-top:4px">₹7.42 L</div><div style="font-size:11.5px;color:var(--pos);font-weight:600;margin-top:2px">+41.5%</div></div>
+          <div><div style="font-size:10.5px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;font-weight:600">Orders</div><div style="font-size:18px;font-weight:700;color:var(--ink-1);margin-top:4px">108</div></div>
+          <div><div style="font-size:10.5px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;font-weight:600">CVR · AOV</div><div style="font-size:14px;font-weight:700;color:var(--ink-1);margin-top:4px">0.7% · ₹6,869</div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h3>Organic Shopping</h3><span class="chip">2.1% share</span></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px">
+          <div><div style="font-size:10.5px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;font-weight:600">Sessions</div><div style="font-size:22px;font-weight:700;color:var(--ink-1);margin-top:4px">328</div><div style="font-size:11.5px;color:var(--neg);font-weight:600;margin-top:2px">-17.8%</div></div>
+          <div><div style="font-size:10.5px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;font-weight:600">Revenue</div><div style="font-size:22px;font-weight:700;color:var(--ink-1);margin-top:4px">₹55.9K</div><div style="font-size:11.5px;color:var(--pos);font-weight:600;margin-top:2px">+1349.7%</div></div>
+          <div><div style="font-size:10.5px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;font-weight:600">Orders</div><div style="font-size:18px;font-weight:700;color:var(--ink-1);margin-top:4px">2</div></div>
+          <div><div style="font-size:10.5px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;font-weight:600">CVR · AOV</div><div style="font-size:14px;font-weight:700;color:var(--ink-1);margin-top:4px">0.6% · ₹27,944</div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h3>AI Referrals</h3><span class="chip warn">1.7% share · emerging</span></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px">
+          <div><div style="font-size:10.5px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;font-weight:600">Sessions</div><div style="font-size:22px;font-weight:700;color:var(--ink-1);margin-top:4px">262</div><div style="font-size:11.5px;color:var(--pos);font-weight:600;margin-top:2px">+66.9%</div></div>
+          <div><div style="font-size:10.5px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;font-weight:600">Revenue</div><div style="font-size:22px;font-weight:700;color:var(--ink-1);margin-top:4px">₹0</div><div style="font-size:11.5px;color:var(--neg);font-weight:600;margin-top:2px">no orders yet</div></div>
+          <div><div style="font-size:10.5px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;font-weight:600">Sources</div><div style="font-size:13px;font-weight:700;color:var(--ink-1);margin-top:4px">Perplexity, ChatGPT, Gemini</div></div>
+          <div><div style="font-size:10.5px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;font-weight:600">Action</div><div style="font-size:13px;font-weight:700;color:var(--ink-1);margin-top:4px">Ship LLMs.txt</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:24px">
+      <div class="callout-mark">GH Insight</div>
+      <div class="callout-body">
+        <strong>Quality of traffic is compounding — revenue is outpacing sessions.</strong>
+        <p>Organic revenue +51.0% to <b>₹7.98 L</b> on sessions +0.2% and orders +0.9%, with <b>AOV +49.7%</b> (₹7,252). On visibility, GSC clicks <b>+1.0%</b> on -3.2% impressions → site CTR <b>1.14%</b>; the lever is title/meta on high-impression category & product pages.<br><br><b>Where to act:</b> returning visitors convert at <b>1.8%</b> vs <b>0.3%</b> for new — closing the new-visitor gap is the biggest lever. In paid, blended Google ROAS is <b>5.0</b> with Exact match strongest — weight budget to Exact over Broad/Phrase.</p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:18px">
+      <div class="card-head">
+        <div><h3>Projection vs Achievement — Pacing Health</h3><p>GA4 actuals plotted against targets. Target source noted under each metric.</p></div>
+        <span class="chip info">Source-tagged</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:6px">
+        <div>
+          <div style="font-size:11px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;font-weight:600">Sessions Pace</div>
+          <div style="font-size:22px;font-weight:700;margin:6px 0;color:var(--ink-1)">15,767 / 6,800</div>
+          <div class="mini-bar" style="height:8px"><i style="width:100%"></i></div>
+          <div style="font-size:11.5px;color:var(--ink-3);margin-top:6px">232% of target · -8,967 sessions to plan</div>
+          <div style="font-size:10.5px;color:var(--ink-4);margin-top:4px;font-style:italic">Target: Google Sheet projection (set by PM team)</div>
+        </div>
+        <div>
+          <div style="font-size:11px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;font-weight:600">Revenue Pace</div>
+          <div style="font-size:22px;font-weight:700;margin:6px 0;color:var(--ink-1)">₹7.98 L / ₹4.50L</div>
+          <div class="mini-bar" style="height:8px"><i style="width:100%;background:var(--pos)"></i></div>
+          <div style="font-size:11.5px;color:var(--ink-3);margin-top:6px">177% of ₹4.50L target</div>
+          <div style="font-size:10.5px;color:var(--ink-4);margin-top:4px;font-style:italic">Target: Google Sheet projection (set by PM team)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 02 · ORGANIC TREND
+       ============================================================ -->
+  <section class="section" id="trend">
+    <div class="section-head">
+      <div class="eyebrow">Section 02</div>
+      <h2>Organic Trend</h2>
+      <p>Traffic, conversion, revenue and visibility trends over the last 6 months. Funnel performance for the current MTD window at the bottom.</p>
+    </div>
+
+    <!-- Row 1 · Organic Traffic Trend (full width) -->
+    <div class="card">
+      <div class="card-head"><h3>Organic Traffic Trend</h3><p>Sessions &amp; Session Share · last 6 months</p></div>
+      <div style="display:flex;gap:14px;margin-bottom:8px;flex-wrap:wrap">
+        <span style="display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--ink-2);font-weight:600"><span style="width:12px;height:12px;border-radius:3px;background:#093C76;display:inline-block"></span> Organic Sessions</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--ink-2);font-weight:600"><span style="width:12px;height:12px;border-radius:3px;background:#B8801A;display:inline-block"></span> Session Share %</span>
+      </div>
+      <div class="chart-wrap tall"><canvas id="trafficTrend"></canvas></div>
+    </div>
+
+    <!-- Row 2 · Organic Conversion Trend (full width) -->
+    <div class="card" style="margin-top:18px">
+      <div class="card-head"><h3>Organic Conversion Trend</h3><p>Orders &amp; CVR · last 6 months</p></div>
+      <div style="display:flex;gap:14px;margin-bottom:8px;flex-wrap:wrap">
+        <span style="display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--ink-2);font-weight:600"><span style="width:12px;height:12px;border-radius:3px;background:#093C76;display:inline-block"></span> Organic Orders</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--ink-2);font-weight:600"><span style="width:12px;height:12px;border-radius:3px;background:#B8801A;display:inline-block"></span> Organic CVR %</span>
+      </div>
+      <div class="chart-wrap tall"><canvas id="conversionTrend"></canvas></div>
+    </div>
+
+    <!-- Row 3 · Organic Revenue Trend (full width) -->
+    <div class="card" style="margin-top:18px">
+      <div class="card-head"><h3>Organic Revenue Trend</h3><p>Revenue &amp; Revenue Share · last 6 months</p></div>
+      <div style="display:flex;gap:14px;margin-bottom:8px;flex-wrap:wrap">
+        <span style="display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--ink-2);font-weight:600"><span style="width:12px;height:12px;border-radius:3px;background:#093C76;display:inline-block"></span> Organic Revenue (₹k)</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--ink-2);font-weight:600"><span style="width:12px;height:12px;border-radius:3px;background:#B8801A;display:inline-block"></span> Revenue Share %</span>
+      </div>
+      <div class="chart-wrap tall"><canvas id="revenueTrend"></canvas></div>
+    </div>
+
+    <!-- Row 4 · GSC Visibility (full width) -->
+    <div class="card" style="margin-top:18px">
+      <div class="card-head"><h3>GSC Visibility — Impressions, Clicks &amp; CTR</h3><p>Visibility trend from Google Search Console · last 6 months</p></div>
+      <div style="display:flex;gap:14px;margin-bottom:8px;flex-wrap:wrap">
+        <span style="display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--ink-2);font-weight:600"><span style="width:12px;height:12px;border-radius:3px;background:#093C76;display:inline-block"></span> Impressions</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--ink-2);font-weight:600"><span style="width:12px;height:12px;border-radius:3px;background:#4A7BC4;display:inline-block"></span> Clicks</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--ink-2);font-weight:600"><span style="width:12px;height:12px;border-radius:3px;background:#B8801A;display:inline-block"></span> Site CTR %</span>
+      </div>
+      <div class="chart-wrap tall"><canvas id="impressionsTrend"></canvas></div>
+    </div>
+
+    <!-- Row 5 · Brand split + RPS + Sessions per Order (3-column) -->
+    <div class="grid g-3" style="margin-top:18px">
+      <div class="card">
+        <div class="card-head"><h3>Brand vs Non-Brand · Click Share</h3><p>Stacked: % of monthly organic clicks · last 8 weeks</p></div>
+        <div style="display:flex;gap:14px;margin-bottom:8px;flex-wrap:wrap">
+          <span style="display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--ink-2);font-weight:600"><span style="width:12px;height:12px;border-radius:3px;background:#093C76;display:inline-block"></span> Brand</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--ink-2);font-weight:600"><span style="width:12px;height:12px;border-radius:3px;background:#B8801A;display:inline-block"></span> Non-Brand</span>
+        </div>
+        <div class="chart-wrap"><canvas id="brandSplit"></canvas></div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h3>Revenue per Session</h3><p>Trend across 6 months</p></div>
+        <div style="font-size:28px;font-weight:700;color:var(--navy);margin-top:6px">₹50.6</div>
+        <div style="font-size:12px;color:var(--ink-3);margin-top:4px">vs ₹33.6 last period · <span class="delta up">+50.7%</span></div>
+        <div class="chart-wrap sm" style="margin-top:10px"><canvas id="rps"></canvas></div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h3>Sessions per Order</h3><p>Trend across 6 months</p></div>
+        <div style="font-size:28px;font-weight:700;color:var(--navy);margin-top:6px">143.3</div>
+        <div style="font-size:12px;color:var(--ink-3);margin-top:4px">vs 144.3 last period · <span class="delta up">-0.7%</span> (lower is better)</div>
+        <div class="chart-wrap sm" style="margin-top:10px"><canvas id="spo"></canvas></div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:18px">
+      <div class="card-head"><h3>Organic Funnel · MTD</h3><p>Each step shows volume and conversion to next step</p></div>
+      <div style="display:flex;flex-direction:column;gap:12px;margin-top:10px">
+        <div><div style="display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:5px"><span><b>Impressions</b> · GSC</span><b style="font-variant-numeric:tabular-nums">12,29,525</b></div><div class="mini-bar" style="height:8px"><i style="width:100%"></i></div></div>
+        <div><div style="display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:5px"><span><b>Clicks</b> · CTR 1.14%</span><b style="font-variant-numeric:tabular-nums">14,050</b></div><div class="mini-bar" style="height:8px"><i style="width:60%"></i></div></div>
+        <div><div style="display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:5px"><span><b>Sessions</b> · GA4</span><b style="font-variant-numeric:tabular-nums">15,767</b></div><div class="mini-bar" style="height:8px"><i style="width:50%"></i></div></div>
+        <div><div style="display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:5px"><span><b>PDP Views</b></span><b style="font-variant-numeric:tabular-nums">16,817</b></div><div class="mini-bar" style="height:8px"><i style="width:35%"></i></div></div>
+        <div><div style="display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:5px"><span><b>Add to Cart</b></span><b style="font-variant-numeric:tabular-nums">666</b></div><div class="mini-bar" style="height:8px"><i style="width:12%"></i></div></div>
+        <div><div style="display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:5px"><span><b>Orders</b></span><b style="font-variant-numeric:tabular-nums;color:var(--pos)">110</b></div><div class="mini-bar" style="height:8px"><i style="width:5%;background:var(--pos)"></i></div></div>
+      </div>
+      <div style="font-size:12.5px;color:var(--ink-3);margin-top:14px;line-height:1.6"><b style="color:var(--ink-1)">Biggest leak:</b> Click → Session is healthy, but PDP→Cart conversion sits at 4.0% and Cart→Order at 16.5%. The drop-off concentrates at checkout. Fix in Section 08.</div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 03 · ORGANIC NEW VS RETURNING
+       ============================================================ -->
+  <section class="section" id="newret">
+    <div class="section-head">
+      <div class="eyebrow">Section 03</div>
+      <h2>Organic · New vs Returning Analysis</h2>
+      <p>How acquisition splits between first-time and returning organic visitors — and the dramatic gap in conversion behaviour between them.</p>
+    </div>
+
+    <div class="kpi-grid c4">
+      <div class="kpi"><div class="lbl">New Visitors<span class="delta up">+5.4%</span></div><div class="val">11,204 <span style="font-size:13px;color:var(--ink-3);font-weight:500">sessions</span></div><div class="sub">71% of organic sessions</div></div>
+      <div class="kpi"><div class="lbl">Returning Visitors<span class="delta down">-4.5%</span></div><div class="val">4,115 <span style="font-size:13px;color:var(--ink-3);font-weight:500">sessions</span></div><div class="sub">26% of organic sessions</div></div>
+      <div class="kpi"><div class="lbl">New CVR<span class="delta flat">0.3%</span></div><div class="val">0.3%</div><div class="sub">35 orders · ₹1.56 L rev</div></div>
+      <div class="kpi"><div class="lbl">Returning CVR<span class="delta flat">1.8%</span></div><div class="val">1.8%</div><div class="sub">75 orders · ₹6.42 L rev</div></div>
+    </div>
+
+    <div class="card" style="margin-top:18px">
+      <div class="card-head"><h3>Full Comparison Table</h3><p>All metrics side-by-side · organic only · MTD</p></div>
+      <table class="table">
+        <thead>
+          <tr><th>User Type</th><th class="num">Sessions</th><th class="num">Bounce Rate</th><th class="num">Pages / Session</th><th class="num">Avg. Session (sec)</th><th class="num">Orders</th><th class="num">CVR</th><th class="num">AOV</th><th class="num">Revenue</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><b>New</b></td><td class="num">11,204</td><td class="num">38%</td><td class="num">—</td><td class="num">311</td><td class="num">35</td><td class="num">0.3%</td><td class="num">₹4,456</td><td class="num">₹1,55,973</td></tr>
+          <tr><td><b>Returning</b></td><td class="num">4,115</td><td class="num">27%</td><td class="num">—</td><td class="num">1369</td><td class="num">75</td><td class="num" style="color:var(--pos);font-weight:700">1.8%</td><td class="num">₹8,556</td><td class="num">₹6,41,723</td></tr>
+          <tr><td><b>Unknown</b></td><td class="num">630</td><td class="num">80%</td><td class="num">—</td><td class="num">618</td><td class="num">0</td><td class="num">0.0%</td><td class="num">—</td><td class="num">₹0</td></tr>
+          <tr style="background:var(--surface-2);font-weight:700"><td><b>Grand Total</b></td><td class="num">15,949</td><td class="num">37%</td><td class="num">—</td><td class="num">596</td><td class="num">110</td><td class="num">0.7%</td><td class="num">₹7,252</td><td class="num">₹7,97,696</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout pos" style="margin-top:18px">
+      <div class="callout-mark">Insight</div>
+      <div class="callout-body">
+        <strong>Returning organic users convert 5.8× higher than new — protect the retention loop.</strong>
+        <p>Returning visitors deliver <b>80% of organic revenue from 26% of sessions</b>. Lower bounce (27% vs 38%), higher depth (0.0 vs 0.0 pages) and ~4.4× session length. With new-visitor CVR at just 0.3%, the priority is converting first-time organic traffic: faster PDPs, clearer sizing, and a first-order incentive.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 04 · SERP & KEYWORD INTELLIGENCE
+       ============================================================ -->
+  <section class="section" id="serp">
+    <div class="section-head">
+      <div class="eyebrow">Section 04</div>
+      <h2>SERP &amp; Keyword Intelligence</h2>
+      <p>Movement tracking, cannibalisation and page-2 opportunities — focused on action, not numerical estimates.</p>
+    </div>
+
+    <div class="card" style="margin-bottom:14px;background:var(--surface-2)">
+      <div style="font-size:11px;color:var(--gold);text-transform:uppercase;letter-spacing:.12em;font-weight:700;margin-bottom:8px">Targeted Keyword Set (181 keywords)</div>
+      <div class="kpi-grid c5">
+        <div class="kpi"><div class="lbl">Targeted Keywords<span class="delta up">+0</span></div><div class="val">181</div><div class="sub">Tracked in position tracker</div></div>
+        <div class="kpi"><div class="lbl">Top 3 (pos 1-3)<span class="delta up">+14</span></div><div class="val">86</div><div class="sub">65.2% of ranking</div></div>
+        <div class="kpi"><div class="lbl">Top 5 (pos 1-5)<span class="delta up">+10</span></div><div class="val">99</div><div class="sub">75.0% of ranking</div></div>
+        <div class="kpi"><div class="lbl">Top 10 / Page 1<span class="delta up">+9</span></div><div class="val">119</div><div class="sub">90.2% of ranking</div></div>
+        <div class="kpi"><div class="lbl">Top 20<span class="delta up">+4</span></div><div class="val">128</div><div class="sub">97.0% of ranking</div></div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:18px">
+      <div style="font-size:11px;color:var(--navy);text-transform:uppercase;letter-spacing:.12em;font-weight:700;margin-bottom:8px">Total Organic Keyword Footprint</div>
+      <div class="kpi-grid c5">
+        <div class="kpi"><div class="lbl">Total Organic Keywords<span class="delta flat">n/a</span></div><div class="val">—</div><div class="sub">Data pending — Domain Organic export</div></div>
+        <div class="kpi"><div class="lbl">Page 1 (pos 1-10)<span class="delta flat">n/a</span></div><div class="val">—</div><div class="sub">Data pending</div></div>
+        <div class="kpi"><div class="lbl">Page 2 (pos 11-20)<span class="delta flat">n/a</span></div><div class="val">—</div><div class="sub">Data pending</div></div>
+        <div class="kpi"><div class="lbl">Avg. Position<span class="delta flat">n/a</span></div><div class="val">—</div><div class="sub">Data pending</div></div>
+        <div class="kpi"><div class="lbl">Featured Snippets<span class="delta flat">n/a</span></div><div class="val">—</div><div class="sub">Data pending</div></div>
+      </div>
+    </div>
+
+    <div class="grid g-2">
+      <div class="card">
+        <div class="card-head"><div><h3>Winners · Climbers</h3><p>Position improvements this period</p></div></div>
+        <table class="table">
+          <thead><tr><th>Keyword</th><th class="num">Vol</th><th class="num">Sessions</th><th>Move</th></tr></thead>
+          <tbody>
+            <tr><td><b>ink pen</b></td><td class="num">33,100</td><td class="num">—</td><td><span class="chip pos">34 → 3</span></td></tr>
+            <tr><td><b>zippo lighters</b></td><td class="num">2,900</td><td class="num">—</td><td><span class="chip pos">40 → 16</span></td></tr>
+            <tr><td><b>noblia pen</b></td><td class="num">170</td><td class="num">—</td><td><span class="chip pos">21 → 1</span></td></tr>
+            <tr><td><b>medium nib fountain pen</b></td><td class="num">210</td><td class="num">—</td><td><span class="chip pos">22 → 3</span></td></tr>
+            <tr><td><b>sheaffer accessories</b></td><td class="num">—</td><td class="num">—</td><td><span class="chip pos">24 → 6</span></td></tr>
+            <tr><td><b>fountain pen converter</b></td><td class="num">590</td><td class="num">—</td><td><span class="chip pos">18 → 1</span></td></tr>
+        </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><div><h3>Losers · Drops &amp; Decay</h3><p>Position drops with root cause</p></div></div>
+        <table class="table">
+          <thead><tr><th>Keyword</th><th class="num">Sessions</th><th>Move</th><th>Cause</th></tr></thead>
+          <tbody>
+            <tr><td><b>hugo boss wallet</b></td><td class="num">—</td><td><span class="chip neg">12 → 40</span></td><td>Position decline</td></tr>
+            <tr><td><b>pilot fountain pen</b></td><td class="num">—</td><td><span class="chip neg">3 → 20</span></td><td>Position decline</td></tr>
+            <tr><td><b>demonstrator fountain pen</b></td><td class="num">—</td><td><span class="chip neg">2 → 18</span></td><td>Position decline</td></tr>
+            <tr><td><b>fisher space pen refills</b></td><td class="num">—</td><td><span class="chip neg">1 → 8</span></td><td>Position decline</td></tr>
+            <tr><td><b>pen gift set</b></td><td class="num">—</td><td><span class="chip neg">3 → 8</span></td><td>Position decline</td></tr>
+            <tr><td><b>classic fountain pens</b></td><td class="num">—</td><td><span class="chip neg">1 → 6</span></td><td>Position decline</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:18px">
+      <div class="card-head"><div><h3>Page-2 Opportunity Engine</h3><p>Keywords ranked 11–20 — prioritised by action effort, ready to push to page 1.</p></div></div>
+      <table class="table">
+        <thead><tr><th>Keyword</th><th class="num">Vol</th><th class="num">Pos</th><th>Action</th></tr></thead>
+        <tbody>
+            <tr><td><b>ballpoint pen</b></td><td class="num">49,500</td><td class="num">13</td><td><span class="chip warn">Optimise on-page</span></td></tr>
+            <tr><td><b>mechanical pencils</b></td><td class="num">40,500</td><td class="num">15</td><td><span class="chip warn">Optimise on-page</span></td></tr>
+            <tr><td><b>pilot fountain pen</b></td><td class="num">4,400</td><td class="num">20</td><td><span class="chip warn">Optimise on-page</span></td></tr>
+            <tr><td><b>zippo lighters</b></td><td class="num">2,900</td><td class="num">16</td><td><span class="chip warn">Optimise on-page</span></td></tr>
+            <tr><td><b>montblanc belt</b></td><td class="num">2,400</td><td class="num">15</td><td><span class="chip warn">Optimise on-page</span></td></tr>
+            <tr><td><b>luxury gifts under 5000</b></td><td class="num">1,900</td><td class="num">14</td><td><span class="chip warn">Optimise on-page</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" style="margin-top:18px">
+      <div class="card-head">
+        <div><h3>All Targeted Keywords · Current Ranking</h3><p>Full position-tracker list with landing page, current vs previous position, and search volume. First 20 visible — scroll to reveal the rest.</p></div>
+      </div>
+      <div class="scroll-table">
+      <table class="table">
+        <thead><tr><th>Keyword</th><th>Landing Page</th><th class="num">Current Pos</th><th class="num">Previous Pos</th><th>Δ</th><th class="num">Search Vol.</th></tr></thead>
+        <tbody>
+            <tr><td><b>1 lakh rupees pen</b></td><td class="truncate">https://www.williampenn.net/category/1-lakh-rupees-pen</td><td class="num">1</td><td class="num">1</td><td><span class="chip">flat</span></td><td class="num">110</td></tr>
+            <tr><td><b>caran d ache ballpoint pen</b></td><td class="truncate">https://www.williampenn.net/category/caran-d-ache</td><td class="num">1</td><td class="num">1</td><td><span class="chip">flat</span></td><td class="num">50</td></tr>
+            <tr><td><b>caran d ache pen</b></td><td class="truncate">https://www.williampenn.net/category/caran-d-ache</td><td class="num">1</td><td class="num">1</td><td><span class="chip">flat</span></td><td class="num">720</td></tr>
+            <tr><td><b>classic pens</b></td><td class="truncate">https://www.williampenn.net/category/classic-pens</td><td class="num">1</td><td class="num">1</td><td><span class="chip">flat</span></td><td class="num">590</td></tr>
+            <tr><td><b>classic rollerball pen</b></td><td class="truncate">https://www.williampenn.net/category/classic-rollerball-pen</td><td class="num">1</td><td class="num">1</td><td><span class="chip">flat</span></td><td class="num">40</td></tr>
+            <tr><td><b>cross bailey ballpoint pen</b></td><td class="truncate">https://www.williampenn.net/category/cross</td><td class="num">1</td><td class="num">2</td><td><span class="chip pos">▲ 1</span></td><td class="num">20</td></tr>
+            <tr><td><b>cross ball pen</b></td><td class="truncate">https://www.williampenn.net/category/cross</td><td class="num">1</td><td class="num">3</td><td><span class="chip pos">▲ 2</span></td><td class="num">880</td></tr>
+            <tr><td><b>cross ballpoint pen</b></td><td class="truncate">https://www.williampenn.net/category/cross</td><td class="num">1</td><td class="num">2</td><td><span class="chip pos">▲ 1</span></td><td class="num">880</td></tr>
+            <tr><td><b>cross fountain pen</b></td><td class="truncate">https://www.williampenn.net/category/cross</td><td class="num">1</td><td class="num">4</td><td><span class="chip pos">▲ 3</span></td><td class="num">880</td></tr>
+            <tr><td><b>cross pens</b></td><td class="truncate">https://www.williampenn.net/category/cross</td><td class="num">1</td><td class="num">3</td><td><span class="chip pos">▲ 2</span></td><td class="num">12,100</td></tr>
+            <tr><td><b>exclusive pens</b></td><td class="truncate">https://www.williampenn.net/category/expensive-pens</td><td class="num">1</td><td class="num">3</td><td><span class="chip pos">▲ 2</span></td><td class="num">140</td></tr>
+            <tr><td><b>expensive pens</b></td><td class="truncate">https://www.williampenn.net/category/expensive-pens</td><td class="num">1</td><td class="num">1</td><td><span class="chip">flat</span></td><td class="num">6,600</td></tr>
+            <tr><td><b>fountain pen converter</b></td><td class="truncate">https://www.williampenn.net/product/converter-for-townsend-fountain-pen-wp31082</td><td class="num">1</td><td class="num">18</td><td><span class="chip pos">▲ 17</span></td><td class="num">590</td></tr>
+            <tr><td><b>gold pen</b></td><td class="truncate">https://www.williampenn.net/category/gold-pen</td><td class="num">1</td><td class="num">1</td><td><span class="chip">flat</span></td><td class="num">6,600</td></tr>
+            <tr><td><b>hugo boss rollerball pen</b></td><td class="truncate">https://www.williampenn.net/product/hugo-boss-gear-ribs-rollerball-pen</td><td class="num">1</td><td class="num">2</td><td><span class="chip pos">▲ 1</span></td><td class="num">30</td></tr>
+            <tr><td><b>lamy ball pen</b></td><td class="truncate">https://www.williampenn.net/category/lamy</td><td class="num">1</td><td class="num">5</td><td><span class="chip pos">▲ 4</span></td><td class="num">720</td></tr>
+            <tr><td><b>lamy ballpoint pen</b></td><td class="truncate">https://www.williampenn.net/category/lamy</td><td class="num">1</td><td class="num">7</td><td><span class="chip pos">▲ 6</span></td><td class="num">720</td></tr>
+            <tr><td><b>lamy rollerball pen</b></td><td class="truncate">https://www.williampenn.net/category/lamy</td><td class="num">1</td><td class="num">5</td><td><span class="chip pos">▲ 4</span></td><td class="num">260</td></tr>
+            <tr><td><b>lamy safari ballpoint pen</b></td><td class="truncate">https://www.williampenn.net/category/lamy</td><td class="num">1</td><td class="num">6</td><td><span class="chip pos">▲ 5</span></td><td class="num">720</td></tr>
+            <tr><td><b>lamy safari rollerball pen</b></td><td class="truncate">https://www.williampenn.net/category/lamy</td><td class="num">1</td><td class="num">10</td><td><span class="chip pos">▲ 9</span></td><td class="num">390</td></tr>
+            <tr><td><b>lapis bard</b></td><td class="truncate">https://www.williampenn.net/category/lapis-bard</td><td class="num">1</td><td class="num">1</td><td><span class="chip">flat</span></td><td class="num">1,900</td></tr>
+            <tr><td><b>lapis bard fountain pen</b></td><td class="truncate">https://www.williampenn.net/category/lapis-bard</td><td class="num">1</td><td class="num">5</td><td><span class="chip pos">▲ 4</span></td><td class="num">140</td></tr>
+            <tr><td><b>music nib fountain pen</b></td><td class="truncate">https://www.williampenn.net/category/music-nib-fountain-pen</td><td class="num">1</td><td class="num">1</td><td><span class="chip">flat</span></td><td class="num">20</td></tr>
+            <tr><td><b>noblia pen</b></td><td class="truncate">https://www.williampenn.net/category/noblia</td><td class="num">1</td><td class="num">21</td><td><span class="chip pos">▲ 20</span></td><td class="num">170</td></tr>
+            <tr><td><b>personalized fountain pen</b></td><td class="truncate">https://www.williampenn.net/category/personalized-fountain-pen</td><td class="num">1</td><td class="num">2</td><td><span class="chip pos">▲ 1</span></td><td class="num">140</td></tr>
+            <tr><td><b>personalized gifts for boss</b></td><td class="truncate">https://www.williampenn.net/category/personalized-gifts-for-boss</td><td class="num">1</td><td class="num">6</td><td><span class="chip pos">▲ 5</span></td><td class="num">320</td></tr>
+            <tr><td><b>premium diary</b></td><td class="truncate">https://www.williampenn.net/category/journals-and-diaries</td><td class="num">1</td><td class="num">1</td><td><span class="chip">flat</span></td><td class="num">590</td></tr>
+            <tr><td><b>rollerball pen</b></td><td class="truncate">https://www.williampenn.net/category/roller-ball-pens</td><td class="num">1</td><td class="num">5</td><td><span class="chip pos">▲ 4</span></td><td class="num">14,800</td></tr>
+            <tr><td><b>ball pen</b></td><td class="truncate">https://www.williampenn.net/category/ball-point-pens</td><td class="num">2</td><td class="num">11</td><td><span class="chip pos">▲ 9</span></td><td class="num">49,500</td></tr>
+            <tr><td><b>benu fountain pen</b></td><td class="truncate">https://www.williampenn.net/category/benu</td><td class="num">2</td><td class="num">1</td><td><span class="chip neg">▼ 1</span></td><td class="num">110</td></tr>
+            <tr><td><b>black ball pen</b></td><td class="truncate">https://www.williampenn.net/category/black-ball-pen</td><td class="num">2</td><td class="num">2</td><td><span class="chip">flat</span></td><td class="num">5,400</td></tr>
+            <tr><td><b>black fountain pen</b></td><td class="truncate">https://www.williampenn.net/category/fountain-pens</td><td class="num">2</td><td class="num">3</td><td><span class="chip pos">▲ 1</span></td><td class="num">880</td></tr>
+            <tr><td><b>buy fountain pen</b></td><td class="truncate">https://www.williampenn.net/category/fountain-pens</td><td class="num">2</td><td class="num">8</td><td><span class="chip pos">▲ 6</span></td><td class="num">260</td></tr>
+            <tr><td><b>caran d ache fountain pen</b></td><td class="truncate">https://www.williampenn.net/category/caran-d-ache</td><td class="num">2</td><td class="num">2</td><td><span class="chip">flat</span></td><td class="num">170</td></tr>
+            <tr><td><b>caran d ache rollerball pen</b></td><td class="truncate">https://www.williampenn.net/product/caran-d-ache-849-classic-line-rollerball-pen-black-wp33526</td><td class="num">2</td><td class="num">—</td><td><span class="chip pos">NEW</span></td><td class="num">20</td></tr>
+            <tr><td><b>cross century ballpoint pen</b></td><td class="truncate">https://www.williampenn.net/category/cross-classic-century-ballpoint-pen</td><td class="num">2</td><td class="num">1</td><td><span class="chip neg">▼ 1</span></td><td class="num">40</td></tr>
+            <tr><td><b>cross classic century ballpoint pen</b></td><td class="truncate">https://www.williampenn.net/category/cross-classic-century-ballpoint-pen</td><td class="num">2</td><td class="num">1</td><td><span class="chip neg">▼ 1</span></td><td class="num">320</td></tr>
+            <tr><td><b>cross rollerball pen</b></td><td class="truncate">https://www.williampenn.net/category/cross</td><td class="num">2</td><td class="num">3</td><td><span class="chip pos">▲ 1</span></td><td class="num">390</td></tr>
+            <tr><td><b>esterbrook fountain pen</b></td><td class="truncate">https://www.williampenn.net/category/esterbrook</td><td class="num">2</td><td class="num">3</td><td><span class="chip pos">▲ 1</span></td><td class="num">140</td></tr>
+            <tr><td><b>esterbrook pens</b></td><td class="truncate">https://www.williampenn.net/category/esterbrook</td><td class="num">2</td><td class="num">3</td><td><span class="chip pos">▲ 1</span></td><td class="num">20</td></tr>
+            <tr><td><b>fisher space pen</b></td><td class="truncate">https://www.williampenn.net/category/fisher-space-pen</td><td class="num">2</td><td class="num">2</td><td><span class="chip">flat</span></td><td class="num">1,900</td></tr>
+            <tr><td><b>gold ballpoint pen</b></td><td class="truncate">https://www.williampenn.net/category/gold-pen</td><td class="num">2</td><td class="num">4</td><td><span class="chip pos">▲ 2</span></td><td class="num">30</td></tr>
+            <tr><td><b>gold fountain pen</b></td><td class="truncate">https://www.williampenn.net/category/gold-pen</td><td class="num">2</td><td class="num">3</td><td><span class="chip pos">▲ 1</span></td><td class="num">590</td></tr>
+            <tr><td><b>hugo boss ballpoint pen</b></td><td class="truncate">https://www.williampenn.net/category/hugo-boss</td><td class="num">2</td><td class="num">1</td><td><span class="chip neg">▼ 1</span></td><td class="num">20</td></tr>
+            <tr><td><b>lamy fountain pen</b></td><td class="truncate">https://www.williampenn.net/category/lamy</td><td class="num">2</td><td class="num">6</td><td><span class="chip pos">▲ 4</span></td><td class="num">4,400</td></tr>
+            <tr><td><b>lamy fountain pen ink</b></td><td class="truncate">https://www.williampenn.net/category/lamy</td><td class="num">2</td><td class="num">15</td><td><span class="chip pos">▲ 13</span></td><td class="num">140</td></tr>
+            <tr><td><b>lapis bard belt</b></td><td class="truncate">https://www.williampenn.net/category/lapis-bard-belt</td><td class="num">2</td><td class="num">2</td><td><span class="chip">flat</span></td><td class="num">170</td></tr>
+            <tr><td><b>lapis bard pen</b></td><td class="truncate">https://www.williampenn.net/category/lapis-bard</td><td class="num">2</td><td class="num">6</td><td><span class="chip pos">▲ 4</span></td><td class="num">720</td></tr>
+            <tr><td><b>metal fountain pen</b></td><td class="truncate">https://www.williampenn.net/category/metal-fountain-pen</td><td class="num">2</td><td class="num">2</td><td><span class="chip">flat</span></td><td class="num">590</td></tr>
+            <tr><td><b>montblanc meisterstuck</b></td><td class="truncate">https://www.williampenn.net/category/montblanc-meisterstuck-fountain-pen</td><td class="num">2</td><td class="num">3</td><td><span class="chip pos">▲ 1</span></td><td class="num">1,300</td></tr>
+            <tr><td><b>montblanc pen</b></td><td class="truncate">https://www.williampenn.net/category/montblanc</td><td class="num">2</td><td class="num">3</td><td><span class="chip pos">▲ 1</span></td><td class="num">49,500</td></tr>
+            <tr><td><b>montblanc starwalker</b></td><td class="truncate">https://www.williampenn.net/category/montblanc-starwalker-fountain-pen</td><td class="num">2</td><td class="num">4</td><td><span class="chip pos">▲ 2</span></td><td class="num">480</td></tr>
+            <tr><td><b>montblanc starwalker fountain pen</b></td><td class="truncate">https://www.williampenn.net/category/montblanc-starwalker-fountain-pen</td><td class="num">2</td><td class="num">2</td><td><span class="chip">flat</span></td><td class="num">140</td></tr>
+            <tr><td><b>parker pen</b></td><td class="truncate">https://www.williampenn.net/category/parker</td><td class="num">2</td><td class="num">6</td><td><span class="chip pos">▲ 4</span></td><td class="num">1,10,000</td></tr>
+            <tr><td><b>personalised rollerball pen</b></td><td class="truncate">https://www.williampenn.net/category/personalised-rollerball-pen</td><td class="num">2</td><td class="num">2</td><td><span class="chip">flat</span></td><td class="num">20</td></tr>
+            <tr><td><b>premium ballpoint pen</b></td><td class="truncate">https://www.williampenn.net/category/ball-point-pens</td><td class="num">2</td><td class="num">1</td><td><span class="chip neg">▼ 1</span></td><td class="num">480</td></tr>
+            <tr><td><b>premium notebooks</b></td><td class="truncate">https://www.williampenn.net/category/notebooks</td><td class="num">2</td><td class="num">2</td><td><span class="chip">flat</span></td><td class="num">590</td></tr>
+            <tr><td><b>premium pens</b></td><td class="truncate">https://www.williampenn.net/category/ball-point-pens</td><td class="num">2</td><td class="num">10</td><td><span class="chip pos">▲ 8</span></td><td class="num">2,900</td></tr>
+            <tr><td><b>sailor fountain pen</b></td><td class="truncate">https://www.williampenn.net/category/sailor</td><td class="num">2</td><td class="num">1</td><td><span class="chip neg">▼ 1</span></td><td class="num">1,000</td></tr>
+            <tr><td><b>secrid card holder</b></td><td class="truncate">https://www.williampenn.net/category/secrid</td><td class="num">2</td><td class="num">1</td><td><span class="chip neg">▼ 1</span></td><td class="num">260</td></tr>
+            <tr><td><b>secrid wallet</b></td><td class="truncate">https://www.williampenn.net/category/secrid</td><td class="num">2</td><td class="num">2</td><td><span class="chip">flat</span></td><td class="num">1,300</td></tr>
+            <tr><td><b>sheaffer gift set</b></td><td class="truncate">https://www.williampenn.net/category/sheaffer-gift-set</td><td class="num">2</td><td class="num">2</td><td><span class="chip">flat</span></td><td class="num">20</td></tr>
+            <tr><td><b>sheaffer ink cartridges</b></td><td class="truncate">https://www.williampenn.net/product/sheaffer-classic-ink-cartridge-pack-of-5-blue-wp02191</td><td class="num">2</td><td class="num">2</td><td><span class="chip">flat</span></td><td class="num">90</td></tr>
+            <tr><td><b>sheaffer pen refill</b></td><td class="truncate">https://www.williampenn.net/product/sheaffer-classic-rollerball-refill-medium-black-wp02208</td><td class="num">2</td><td class="num">5</td><td><span class="chip pos">▲ 3</span></td><td class="num">390</td></tr>
+            <tr><td><b>sheaffer rollerball pen</b></td><td class="truncate">https://www.williampenn.net/category/sheaffer-rollerball-pen</td><td class="num">2</td><td class="num">2</td><td><span class="chip">flat</span></td><td class="num">320</td></tr>
+            <tr><td><b>silver pen</b></td><td class="truncate">https://www.williampenn.net/category/silver-pen</td><td class="num">2</td><td class="num">3</td><td><span class="chip pos">▲ 1</span></td><td class="num">5,400</td></tr>
+            <tr><td><b>tommy hilfiger belts</b></td><td class="truncate">https://www.williampenn.net/category/tommy-hilfiger-belts</td><td class="num">2</td><td class="num">10</td><td><span class="chip pos">▲ 8</span></td><td class="num">14,800</td></tr>
+            <tr><td><b>waterman fountain pen</b></td><td class="truncate">https://www.williampenn.net/category/waterman</td><td class="num">2</td><td class="num">5</td><td><span class="chip pos">▲ 3</span></td><td class="num">1,900</td></tr>
+            <tr><td><b>waterman pens</b></td><td class="truncate">https://www.williampenn.net/category/waterman</td><td class="num">2</td><td class="num">3</td><td><span class="chip pos">▲ 1</span></td><td class="num">5,400</td></tr>
+            <tr><td><b>calligraphy pens</b></td><td class="truncate">https://www.williampenn.net/category/calligraphy-pens</td><td class="num">3</td><td class="num">2</td><td><span class="chip neg">▼ 1</span></td><td class="num">27,100</td></tr>
+            <tr><td><b>cross edge rollerball pen</b></td><td class="truncate">https://www.williampenn.net/category/cross-edge-rollerball-pen</td><td class="num">3</td><td class="num">5</td><td><span class="chip pos">▲ 2</span></td><td class="num">140</td></tr>
+            <tr><td><b>hugo boss fountain pen</b></td><td class="truncate">https://www.williampenn.net/category/hugo-boss</td><td class="num">3</td><td class="num">1</td><td><span class="chip neg">▼ 2</span></td><td class="num">110</td></tr>
+            <tr><td><b>hugo boss pen</b></td><td class="truncate">https://www.williampenn.net/category/hugo-boss</td><td class="num">3</td><td class="num">1</td><td><span class="chip neg">▼ 2</span></td><td class="num">480</td></tr>
+            <tr><td><b>ink pen</b></td><td class="truncate">https://www.williampenn.net/category/fountain-pens</td><td class="num">3</td><td class="num">34</td><td><span class="chip pos">▲ 31</span></td><td class="num">33,100</td></tr>
+            <tr><td><b>lamy pens</b></td><td class="truncate">https://www.williampenn.net/category/lamy</td><td class="num">3</td><td class="num">7</td><td><span class="chip pos">▲ 4</span></td><td class="num">12,100</td></tr>
+            <tr><td><b>lapis bard ink</b></td><td class="truncate">https://www.williampenn.net/product/lapis-bard-ink-bottle-50-ml-honey-mead-wp32176</td><td class="num">3</td><td class="num">3</td><td><span class="chip">flat</span></td><td class="num">140</td></tr>
+            <tr><td><b>lapis bard laptop bags</b></td><td class="truncate">https://www.williampenn.net/category/lapis-bard</td><td class="num">3</td><td class="num">3</td><td><span class="chip">flat</span></td><td class="num">480</td></tr>
+            <tr><td><b>lapis bard wallet</b></td><td class="truncate">https://www.williampenn.net/category/lapis-bard-wallet</td><td class="num">3</td><td class="num">2</td><td><span class="chip neg">▼ 1</span></td><td class="num">590</td></tr>
+            <tr><td><b>medium nib fountain pen</b></td><td class="truncate">https://www.williampenn.net/category/fountain-pens</td><td class="num">3</td><td class="num">22</td><td><span class="chip pos">▲ 19</span></td><td class="num">210</td></tr>
+            <tr><td><b>montblanc fountain pens</b></td><td class="truncate">https://www.williampenn.net/category/montblanc</td><td class="num">3</td><td class="num">5</td><td><span class="chip pos">▲ 2</span></td><td class="num">2,900</td></tr>
+            <tr><td><b>montblanc meisterstuck fountain pen</b></td><td class="truncate">https://www.williampenn.net/category/montblanc-meisterstuck-fountain-pen</td><td class="num">3</td><td class="num">2</td><td><span class="chip neg">▼ 1</span></td><td class="num">210</td></tr>
+            <tr><td><b>montblanc starwalker ballpoint pen</b></td><td class="truncate">https://www.williampenn.net/category/montblanc-starwalker-fountain-pen</td><td class="num">3</td><td class="num">2</td><td><span class="chip neg">▼ 1</span></td><td class="num">140</td></tr>
+            <tr><td><b>montblanc wallets</b></td><td class="truncate">https://www.williampenn.net/category/montblanc-wallets</td><td class="num">3</td><td class="num">2</td><td><span class="chip neg">▼ 1</span></td><td class="num">5,400</td></tr>
+            <tr><td><b>premium fountain pens</b></td><td class="truncate">https://www.williampenn.net/category/fountain-pens</td><td class="num">3</td><td class="num">1</td><td><span class="chip neg">▼ 2</span></td><td class="num">480</td></tr>
+            <tr><td><b>sailor pens</b></td><td class="truncate">https://www.williampenn.net/category/sailor</td><td class="num">3</td><td class="num">1</td><td><span class="chip neg">▼ 2</span></td><td class="num">880</td></tr>
+            <tr><td><b>waterman ballpoint pen</b></td><td class="truncate">https://www.williampenn.net/category/waterman</td><td class="num">3</td><td class="num">5</td><td><span class="chip pos">▲ 2</span></td><td class="num">260</td></tr>
+            <tr><td><b>benu pens</b></td><td class="truncate">https://www.williampenn.net/category/benu</td><td class="num">4</td><td class="num">2</td><td><span class="chip neg">▼ 2</span></td><td class="num">170</td></tr>
+            <tr><td><b>fountain pen with gold nib</b></td><td class="truncate">https://www.williampenn.net/category/gold-pen</td><td class="num">4</td><td class="num">2</td><td><span class="chip neg">▼ 2</span></td><td class="num">260</td></tr>
+            <tr><td><b>hover pen</b></td><td class="truncate">https://www.williampenn.net/category/novium</td><td class="num">4</td><td class="num">6</td><td><span class="chip pos">▲ 2</span></td><td class="num">480</td></tr>
+            <tr><td><b>kaweco fountain pen</b></td><td class="truncate">https://www.williampenn.net/category/kaweco</td><td class="num">4</td><td class="num">1</td><td><span class="chip neg">▼ 3</span></td><td class="num">590</td></tr>
+            <tr><td><b>limited edition pens</b></td><td class="truncate">https://www.williampenn.net/category/limited-edition</td><td class="num">4</td><td class="num">4</td><td><span class="chip">flat</span></td><td class="num">320</td></tr>
+            <tr><td><b>montblanc ballpoint pens</b></td><td class="truncate">https://www.williampenn.net/category/montblanc</td><td class="num">4</td><td class="num">4</td><td><span class="chip">flat</span></td><td class="num">720</td></tr>
+            <tr><td><b>montblanc meisterstuck ballpoint pen</b></td><td class="truncate">https://www.williampenn.net/category/montblanc</td><td class="num">4</td><td class="num">4</td><td><span class="chip">flat</span></td><td class="num">50</td></tr>
+            <tr><td><b>montblanc rollerball pens</b></td><td class="truncate">https://www.williampenn.net/category/montblanc</td><td class="num">4</td><td class="num">3</td><td><span class="chip neg">▼ 1</span></td><td class="num">590</td></tr>
+            <tr><td><b>personalised ball pens</b></td><td class="truncate">https://www.williampenn.net/category/personalized-pens</td><td class="num">4</td><td class="num">1</td><td><span class="chip neg">▼ 3</span></td><td class="num">20</td></tr>
+            <tr><td><b>exclusive fountain pens</b></td><td class="truncate">https://www.williampenn.net/category/fountain-pens</td><td class="num">5</td><td class="num">1</td><td><span class="chip neg">▼ 4</span></td><td class="num">20</td></tr>
+            <tr><td><b>fountain pen</b></td><td class="truncate">https://www.williampenn.net/category/fountain-pens</td><td class="num">5</td><td class="num">11</td><td><span class="chip pos">▲ 6</span></td><td class="num">1,10,000</td></tr>
+            <tr><td><b>luxury fountain pen</b></td><td class="truncate">https://www.williampenn.net/category/fountain-pens</td><td class="num">5</td><td class="num">1</td><td><span class="chip neg">▼ 4</span></td><td class="num">720</td></tr>
+            <tr><td><b>premium leather belts</b></td><td class="truncate">https://www.williampenn.net/category/belts</td><td class="num">5</td><td class="num">2</td><td><span class="chip neg">▼ 3</span></td><td class="num">260</td></tr>
+            <tr><td><b>classic ballpoint pens</b></td><td class="truncate">https://www.williampenn.net/category/ball-point-pens</td><td class="num">6</td><td class="num">8</td><td><span class="chip pos">▲ 2</span></td><td class="num">140</td></tr>
+            <tr><td><b>classic fountain pens</b></td><td class="truncate">https://www.williampenn.net/category/classic-fountain-pens</td><td class="num">6</td><td class="num">1</td><td><span class="chip neg">▼ 5</span></td><td class="num">210</td></tr>
+            <tr><td><b>premium leather bags</b></td><td class="truncate">https://www.williampenn.net/category/bags</td><td class="num">6</td><td class="num">5</td><td><span class="chip neg">▼ 1</span></td><td class="num">390</td></tr>
+            <tr><td><b>premium mens wallet</b></td><td class="truncate">https://www.williampenn.net/category/wallets</td><td class="num">6</td><td class="num">6</td><td><span class="chip">flat</span></td><td class="num">2,900</td></tr>
+            <tr><td><b>retractable fountain pen</b></td><td class="truncate">https://www.williampenn.net/category/retractable-fountain-pen</td><td class="num">6</td><td class="num">—</td><td><span class="chip pos">NEW</span></td><td class="num">1,000</td></tr>
+            <tr><td><b>sailor ink</b></td><td class="truncate">https://www.williampenn.net/category/sailor</td><td class="num">6</td><td class="num">7</td><td><span class="chip pos">▲ 1</span></td><td class="num">110</td></tr>
+            <tr><td><b>sheaffer accessories</b></td><td class="truncate">https://www.williampenn.net/category/sheaffer</td><td class="num">6</td><td class="num">24</td><td><span class="chip pos">▲ 18</span></td><td class="num">—</td></tr>
+            <tr><td><b>sheaffer ball pen</b></td><td class="truncate">https://www.williampenn.net/category/sheaffer</td><td class="num">6</td><td class="num">6</td><td><span class="chip">flat</span></td><td class="num">480</td></tr>
+            <tr><td><b>sheaffer ballpoint pen</b></td><td class="truncate">https://www.williampenn.net/category/sheaffer</td><td class="num">6</td><td class="num">5</td><td><span class="chip neg">▼ 1</span></td><td class="num">320</td></tr>
+            <tr><td><b>personalized pens</b></td><td class="truncate">https://www.williampenn.net/category/personalized-pens</td><td class="num">7</td><td class="num">7</td><td><span class="chip">flat</span></td><td class="num">1,300</td></tr>
+            <tr><td><b>sheaffer fountain pen</b></td><td class="truncate">https://www.williampenn.net/category/sheaffer</td><td class="num">7</td><td class="num">7</td><td><span class="chip">flat</span></td><td class="num">2,900</td></tr>
+            <tr><td><b>sheaffer pen</b></td><td class="truncate">https://www.williampenn.net/category/sheaffer</td><td class="num">7</td><td class="num">18</td><td><span class="chip pos">▲ 11</span></td><td class="num">14,800</td></tr>
+            <tr><td><b>fisher space pen refills</b></td><td class="truncate">https://www.williampenn.net/product/fisher-space-spr1-pressurized-refill-medium-blue-wp00498</td><td class="num">8</td><td class="num">1</td><td><span class="chip neg">▼ 7</span></td><td class="num">110</td></tr>
+            <tr><td><b>pen gift set</b></td><td class="truncate">https://www.williampenn.net/category/giftsets</td><td class="num">8</td><td class="num">3</td><td><span class="chip neg">▼ 5</span></td><td class="num">2,900</td></tr>
+            <tr><td><b>premium laptop bags</b></td><td class="truncate">https://www.williampenn.net/category/bags</td><td class="num">8</td><td class="num">8</td><td><span class="chip">flat</span></td><td class="num">1,600</td></tr>
+            <tr><td><b>zippo lighters online</b></td><td class="truncate">https://www.williampenn.net/category/zippo</td><td class="num">8</td><td class="num">12</td><td><span class="chip pos">▲ 4</span></td><td class="num">390</td></tr>
+            <tr><td><b>gifts for ceo</b></td><td class="truncate">https://www.williampenn.net/category/gifts-for-ceo</td><td class="num">9</td><td class="num">18</td><td><span class="chip pos">▲ 9</span></td><td class="num">320</td></tr>
+            <tr><td><b>metal ballpoint pen</b></td><td class="truncate">https://www.williampenn.net/category/ball-point-pens</td><td class="num">9</td><td class="num">11</td><td><span class="chip pos">▲ 2</span></td><td class="num">720</td></tr>
+            <tr><td><b>sheaffer ink</b></td><td class="truncate">https://www.williampenn.net/product/sheaffer-classic-ink-cartridge-pack-of-5-blue-wp02191</td><td class="num">9</td><td class="num">9</td><td><span class="chip">flat</span></td><td class="num">170</td></tr>
+            <tr><td><b>lamy safari fountain pen</b></td><td class="truncate">https://www.williampenn.net/category/lamy</td><td class="num">10</td><td class="num">—</td><td><span class="chip pos">NEW</span></td><td class="num">5,400</td></tr>
+            <tr><td><b>novium</b></td><td class="truncate">https://www.williampenn.net/category/novium</td><td class="num">12</td><td class="num">—</td><td><span class="chip pos">NEW</span></td><td class="num">140</td></tr>
+            <tr><td><b>ballpoint pen</b></td><td class="truncate">https://www.williampenn.net/category/ball-point-pens</td><td class="num">13</td><td class="num">15</td><td><span class="chip pos">▲ 2</span></td><td class="num">49,500</td></tr>
+            <tr><td><b>gifts for men under 10000</b></td><td class="truncate">https://www.williampenn.net/category/gifts-from-5k-to-10k</td><td class="num">14</td><td class="num">13</td><td><span class="chip neg">▼ 1</span></td><td class="num">390</td></tr>
+            <tr><td><b>luxury gifts under 5000</b></td><td class="truncate">https://www.williampenn.net/category/gifts-under-5k</td><td class="num">14</td><td class="num">11</td><td><span class="chip neg">▼ 3</span></td><td class="num">1,900</td></tr>
+            <tr><td><b>mechanical pencils</b></td><td class="truncate">https://www.williampenn.net/category/mechanical-pencils</td><td class="num">15</td><td class="num">31</td><td><span class="chip pos">▲ 16</span></td><td class="num">40,500</td></tr>
+            <tr><td><b>montblanc belt</b></td><td class="truncate">https://www.williampenn.net/product/montblanc-118413-leather-belt-35mm-brown-wp33063</td><td class="num">15</td><td class="num">—</td><td><span class="chip pos">NEW</span></td><td class="num">2,400</td></tr>
+            <tr><td><b>zippo lighters</b></td><td class="truncate">https://www.williampenn.net/category/zippo</td><td class="num">16</td><td class="num">40</td><td><span class="chip pos">▲ 24</span></td><td class="num">2,900</td></tr>
+            <tr><td><b>demonstrator fountain pen</b></td><td class="truncate">https://www.williampenn.net/category/demonstrator-fountain-pen</td><td class="num">18</td><td class="num">2</td><td><span class="chip neg">▼ 16</span></td><td class="num">110</td></tr>
+            <tr><td><b>pilot fountain pen</b></td><td class="truncate">https://www.williampenn.net/category/pilot</td><td class="num">20</td><td class="num">3</td><td><span class="chip neg">▼ 17</span></td><td class="num">4,400</td></tr>
+            <tr><td><b>extra fine nib fountain pen</b></td><td class="truncate">https://www.williampenn.net/category/fountain-pens</td><td class="num">22</td><td class="num">38</td><td><span class="chip pos">▲ 16</span></td><td class="num">260</td></tr>
+            <tr><td><b>broad nib fountain pen</b></td><td class="truncate">https://www.williampenn.net/category/fountain-pens</td><td class="num">25</td><td class="num">33</td><td><span class="chip pos">▲ 8</span></td><td class="num">260</td></tr>
+            <tr><td><b>lamy safari pen</b></td><td class="truncate">https://www.williampenn.net/category/lamy</td><td class="num">33</td><td class="num">—</td><td><span class="chip pos">NEW</span></td><td class="num">1,300</td></tr>
+            <tr><td><b>hugo boss wallet</b></td><td class="truncate">https://www.williampenn.net/category/hugo-boss-wallet</td><td class="num">40</td><td class="num">12</td><td><span class="chip neg">▼ 28</span></td><td class="num">880</td></tr>
+            <tr style="background:var(--surface-2);font-weight:700"><td>Grand Total (132 ranking)</td><td>—</td><td class="num">Avg 4.7</td><td class="num">Avg 6.0</td><td><span class="chip pos">+1.4 avg</span></td><td class="num">6,53,240</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="scroll-hint">Scroll within the table to view all keywords ↓</div>
+    </div>
+
+    <div class="grid g-3" style="margin-top:18px">
+      <div class="card">
+        <div class="card-head"><h3>Position Distribution</h3></div>
+        <div class="chart-wrap"><canvas id="posDist"></canvas></div>
+      </div>
+      <div class="card">
+        <div class="card-head"><h3>Cannibalisation Detector</h3><span class="chip">data pending</span></div>
+        <div class="empty-state"><div class="es-icon">⌧</div><p class="es-title">Cannibalisation analysis pending</p><p class="es-msg">Requires multi-URL-per-query data from a SEMrush Domain Organic / Position Tracking overlap export, not present in the supplied position-tracking file.</p><div class="es-cta">Supply SEMrush organic-positions export</div></div></div>
+      </div>
+      <div class="card">
+        <div class="card-head"><h3>Featured Snippet Opportunities</h3><span class="chip">data pending</span></div>
+        <table class="table">
+          <thead><tr><th>Query</th><th class="num">Vol</th><th class="num">Pos</th></tr></thead>
+          <tbody>
+            <tr><td colspan="3" style="color:var(--ink-3);font-style:italic;text-align:center;padding:18px">Data pending — SERP-features export not supplied.</td></tr>
+        </tbody>
+        </table>
+        <div style="font-size:12px;color:var(--ink-3);margin-top:10px;line-height:1.5">Add bullet/numbered answer blocks and FAQ schema. Average uplift in snippet capture: <b style="color:var(--pos)">28%</b>.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 05 · CONTENT PERFORMANCE (single Blog view)
+       ============================================================ -->
+  <section class="section" id="content">
+    <div class="section-head">
+      <div class="eyebrow">Section 05</div>
+      <h2>Content Performance</h2>
+      <p>Performance of editorial blog content — sessions, time on page, conversion and decay risk.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div><h3>Top Performing Blog Articles</h3><p>Organic blog landing pages — GA4 sessions/orders joined with GSC clicks · 1–29 May. Avg-time per page not exposed by the GA4 connector (shown as —).</p></div>
+        <span class="chip pos">GA4 + GSC · organic</span>
+      </div>
+      <div class="scroll-table sm">
+      <table class="table">
+        <thead><tr><th>#</th><th>Article</th><th class="num">Sessions</th><th class="num">Avg. Time</th><th class="num">Orders</th><th class="num">Revenue</th><th>Health</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><b>Top Pen Brands Loved by CEOs, Writers & Collectors in India</b><div class="sub">/blogs/top-pen-brands-loved-by-ceos-writers-and-collectors-in-india-</div></td><td class="num">177 clk</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td><span class="chip">organic</span></td></tr>
+          <tr><td>2</td><td><b>All You Need to Know About Montblanc — Buying Guide</b><div class="sub">/all-you-need-to-know-about-montblanc-guide</div></td><td class="num">95 clk</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td><span class="chip">organic</span></td></tr>
+          <tr style="background:var(--surface-2);font-weight:700"><td colspan="2">Top organic blog pages</td><td class="num">0</td><td class="num">—</td><td class="num">0</td><td class="num">₹0</td><td>—</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="scroll-hint">Scroll within the table to view top 30 blogs ↓</div>
+    </div>
+
+    <!-- Blog / Guides / Lookbook Recommendations -->
+    <div class="grid g-4" style="margin-top:18px">
+<div class="card"><div class="card-head"><h3>CTR fix</h3><span class="chip pos">High impact</span></div><p style="margin:0;font-size:13px;color:var(--ink-2);line-height:1.55">Category pages rank well but bleed clicks: /category/parker (166K impr, 0.54% CTR) and /category/ball-point-pens (159K impr, 0.29% CTR). Rewrite titles/meta to recover clicks.</p></div>
+<div class="card"><div class="card-head"><h3>Guide</h3><span class="chip pos">Brand SEO</span></div><p style="margin:0;font-size:13px;color:var(--ink-2);line-height:1.55">The Montblanc guide and 'Top Pen Brands' blog rank top-5. Add buying-guide content for Parker, Lamy and Sheaffer to capture brand-research demand.</p></div>
+<div class="card"><div class="card-head"><h3>AI search</h3><span class="chip pos">Emerging</span></div><p style="margin:0;font-size:13px;color:var(--ink-2);line-height:1.55">AI referrals up to 262 sessions (ChatGPT-led, even 2 orders). Ship LLMs.txt + FAQ schema on brand category pages.</p></div>
+<div class="card"><div class="card-head"><h3>Wallets</h3><span class="chip pos">Page-2</span></div><p style="margin:0;font-size:13px;color:var(--ink-2);line-height:1.55">/category/wallets ranks ~pos 29 on strong impressions — build out the wallets category page to push it onto page 1.</p></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 06 · ECOMMERCE SEO
+       ============================================================ -->
+  <section class="section" id="ecom">
+    <div class="section-head">
+      <div class="eyebrow">Section 06</div>
+      <h2>Ecommerce SEO Performance</h2>
+      <p>Category, collection, product handle and SKU-level economics from organic search. Sessions shown alongside revenue and conversion in every view.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div><h3>Organic by Pen Brand — MTD (rev: organic SKU match · traffic: GSC category clicks)</h3><p>Sessions, orders and revenue across catalog</p></div>
+        <span class="chip navy">Top 8 categories</span>
+      </div>
+      <div class="chart-wrap tall"><canvas id="categoryBar"></canvas></div>
+    </div>
+
+    <div class="grid g-2" style="margin-top:18px">
+      <div class="card">
+        <div class="card-head"><h3>High Impressions · Low CTR — Click Leaks</h3><span class="chip neg">Fix-first</span></div>
+        <table class="table">
+          <thead><tr><th>Page</th><th class="num">GSC Clicks</th><th class="num">CTR</th><th>Diagnosis</th></tr></thead>
+          <tbody>
+          <tr><td class="truncate"><b>/category/calligraphy-pens</b></td><td class="num">34 clk</td><td class="num" style="color:var(--neg);font-weight:600">0.16%</td><td><span class="chip neg">21,279 impr · pos 9</span></td></tr>
+          <tr><td class="truncate"><b>/category/black-ball-pen</b></td><td class="num">27 clk</td><td class="num" style="color:var(--neg);font-weight:600">0.20%</td><td><span class="chip neg">13,479 impr · pos 7</span></td></tr>
+          <tr><td class="truncate"><b>/category/ball-point-pens</b></td><td class="num">469 clk</td><td class="num" style="color:var(--neg);font-weight:600">0.29%</td><td><span class="chip neg">1,59,422 impr · pos 9</span></td></tr>
+          <tr><td class="truncate"><b>/all-you-need-to-know-about-montblanc-guide</b></td><td class="num">95 clk</td><td class="num" style="color:var(--neg);font-weight:600">0.36%</td><td><span class="chip neg">26,072 impr · pos 9</span></td></tr>
+          <tr><td class="truncate"><b>/category/parker</b></td><td class="num">907 clk</td><td class="num" style="color:var(--neg);font-weight:600">0.54%</td><td><span class="chip neg">1,66,564 impr · pos 7</span></td></tr>
+        </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h3>Under-Optimised High-Intent</h3><span class="chip warn">Action</span></div>
+        <table class="table">
+          <thead><tr><th>Keyword / Page</th><th class="num">Sessions</th><th>Action</th></tr></thead>
+          <tbody>
+          <tr><td><b>"ballpoint pen"</b><div class="sub">pos 13 · 49,500 vol</div></td><td class="num">—</td><td>Strengthen landing page</td></tr>
+          <tr><td><b>"mechanical pencils"</b><div class="sub">pos 15 · 40,500 vol</div></td><td class="num">—</td><td>Strengthen landing page</td></tr>
+          <tr><td><b>"pilot fountain pen"</b><div class="sub">pos 20 · 4,400 vol</div></td><td class="num">—</td><td>Strengthen landing page</td></tr>
+          <tr><td><b>"zippo lighters"</b><div class="sub">pos 16 · 2,900 vol</div></td><td class="num">—</td><td>Strengthen landing page</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card tinted" style="margin-top:18px">
+      <div class="card-head"><h3>Inventory-Aware Insight</h3><span class="chip">data pending</span></div><div style="font-size:12.5px;color:var(--ink-2);line-height:1.6;margin-top:6px">Stockout cross-reference is <b>data pending</b>: the Windsor Shopify products feed returned no out-of-stock variants and the direct Shopify inventory connection is unavailable. Once inventory is connected, ranking products that are OOS will surface here with revenue-at-risk.</div>
+    </div>
+
+    <div style="margin-top:18px">
+      <div class="card">
+        <div class="card-head">
+          <div><h3>Top Organic Products · SKU Level</h3><p>Item views, units, ASP and revenue per SKU — organic only · 1–29 May. Top 40 of 1482 SKUs; 'Sessions' column shows GA4 item-views.</p></div>
+          <span class="chip navy">Source: GA4 item-level</span>
+        </div>
+        <div class="scroll-table sm">
+        <table class="table">
+          <thead><tr><th>#</th><th>SKU</th><th class="num">Sessions</th><th class="num">Orders</th><th class="num">ASP</th><th class="num">Revenue</th></tr></thead>
+          <tbody>
+          <tr><td>1</td><td><b>Montblanc Meisterstück Burgundy Red Classique Medium Fountai</b></td><td class="num">29</td><td class="num">1</td><td class="num">₹85,200</td><td class="num">₹85,200</td></tr>
+          <tr><td>2</td><td><b>Montblanc 145 Meisterstuck Platinum Line Black Medium Founta</b></td><td class="num">91</td><td class="num">1</td><td class="num">₹69,300</td><td class="num">₹69,300</td></tr>
+          <tr><td>3</td><td><b>Montblanc Meisterstück Burgundy Red Legrand Rollerball Pen</b></td><td class="num">23</td><td class="num">1</td><td class="num">₹69,200</td><td class="num">₹69,200</td></tr>
+          <tr><td>4</td><td><b>Sheaffer Legacy 9065 Glossy Black and Chrome Bi-color Founta</b></td><td class="num">211</td><td class="num">3</td><td class="num">₹21,500</td><td class="num">₹64,500</td></tr>
+          <tr><td>5</td><td><b>Montblanc Starwalker Resin Fineliner</b></td><td class="num">20</td><td class="num">1</td><td class="num">₹40,800</td><td class="num">₹40,800</td></tr>
+          <tr><td>6</td><td><b>Hugo Boss Set Iconic HPMB210A Ballpoint Pen & Folder A5</b></td><td class="num">0</td><td class="num">2</td><td class="num">₹19,440</td><td class="num">₹38,880</td></tr>
+          <tr><td>7</td><td><b>Lapis Bard Crossover Desert Bloom Cactus Leather 16-inch Bri</b></td><td class="num">17</td><td class="num">1</td><td class="num">₹26,995</td><td class="num">₹26,995</td></tr>
+          <tr><td>8</td><td><b>Lapis Bard Ducorium Spencer 14-inch Slim Laptop Business Bag</b></td><td class="num">13</td><td class="num">1</td><td class="num">₹23,995</td><td class="num">₹23,995</td></tr>
+          <tr><td>9</td><td><b>Lapis Bard Contemporary Rollerball Pen  Black with Chrome Tr</b></td><td class="num">38</td><td class="num">2</td><td class="num">₹9,995</td><td class="num">₹19,990</td></tr>
+          <tr><td>10</td><td><b>Esterbrook Back to the Land Estie Quirky Leaf Fountain Pen w</b></td><td class="num">2</td><td class="num">1</td><td class="num">₹18,500</td><td class="num">₹18,500</td></tr>
+          <tr><td>11</td><td><b>Secrid Miniwallet Vintage Chocolate</b></td><td class="num">15</td><td class="num">2</td><td class="num">₹9,050</td><td class="num">₹18,100</td></tr>
+          <tr><td>12</td><td><b>Sheaffer Legacy 9064 Glossy Black Inlaid Nib Fountain Pen (M</b></td><td class="num">98</td><td class="num">1</td><td class="num">₹17,995</td><td class="num">₹17,995</td></tr>
+          <tr><td>13</td><td><b>Sheaffer Legacy 9064 Glossy Black Inlaid Nib Fountain Pen (B</b></td><td class="num">0</td><td class="num">1</td><td class="num">₹17,995</td><td class="num">₹17,995</td></tr>
+          <tr><td>14</td><td><b>Sheaffer Sentinel Metal 332 Glossy Black Barrel and Brushed </b></td><td class="num">21</td><td class="num">15</td><td class="num">₹1,050</td><td class="num">₹15,750</td></tr>
+          <tr><td>15</td><td><b>Hugo Boss Set Iconic HPBM254A Ballpoint Pen & Folder A5</b></td><td class="num">0</td><td class="num">1</td><td class="num">₹14,960</td><td class="num">₹14,960</td></tr>
+          <tr><td>16</td><td><b>Secrid Mirum Twinwallet - Black</b></td><td class="num">2</td><td class="num">1</td><td class="num">₹14,800</td><td class="num">₹14,800</td></tr>
+          <tr><td>17</td><td><b>Lapis Bard Crossover Desert Bloom Cactus Leather Crossbody B</b></td><td class="num">8</td><td class="num">1</td><td class="num">₹14,495</td><td class="num">₹14,495</td></tr>
+          <tr><td>18</td><td><b>Secrid Art Pearl Earring Miniwallet - Multicolour</b></td><td class="num">1</td><td class="num">1</td><td class="num">₹11,600</td><td class="num">₹11,600</td></tr>
+          <tr><td>19</td><td><b>Montblanc 128233 Rollerball Refill Medium (Pack of 2) - Roya</b></td><td class="num">10</td><td class="num">5</td><td class="num">₹2,166</td><td class="num">₹10,830</td></tr>
+          <tr><td>20</td><td><b>Sheaffer ICON 9110 Metalic Blue Fountain Pen With Gloss Blac</b></td><td class="num">55</td><td class="num">2</td><td class="num">₹5,250</td><td class="num">₹10,500</td></tr>
+          <tr><td>21</td><td><b>Cross 885-45 ATX Rollerball Pen Dark Blue</b></td><td class="num">21</td><td class="num">1</td><td class="num">₹9,495</td><td class="num">₹9,495</td></tr>
+          <tr><td>22</td><td><b>Sheaffer ICON 9110 Metalic Blue Rollerball Pen With Gloss Bl</b></td><td class="num">28</td><td class="num">2</td><td class="num">₹4,747</td><td class="num">₹9,494</td></tr>
+          <tr><td>23</td><td><b>Sheaffer ICON 9108 Matte Black Rollerball Pen With Gloss Bla</b></td><td class="num">43</td><td class="num">2</td><td class="num">₹4,747</td><td class="num">₹9,494</td></tr>
+          <tr><td>24</td><td><b>Secrid Slimwallet SV Orange</b></td><td class="num">10</td><td class="num">1</td><td class="num">₹9,050</td><td class="num">₹9,050</td></tr>
+          <tr><td>25</td><td><b>Cross 885-42 ATX Rollerball Pen Brushed Rose Gold With Black</b></td><td class="num">8</td><td class="num">1</td><td class="num">₹8,795</td><td class="num">₹8,795</td></tr>
+          <tr><td>26</td><td><b>Cross AT0662-9 Coventry Ballpoint Pen Blue with Chrome Trims</b></td><td class="num">17</td><td class="num">3</td><td class="num">₹2,755</td><td class="num">₹8,265</td></tr>
+          <tr><td>27</td><td><b>Lapis Bard Ducorium Bi-fold Wallet with Coin Pocket Bordeaux</b></td><td class="num">20</td><td class="num">1</td><td class="num">₹7,745</td><td class="num">₹7,745</td></tr>
+          <tr><td>28</td><td><b>Lapis Bard Ducorium Southwark Belt 35mm Palladium Plated Buc</b></td><td class="num">24</td><td class="num">1</td><td class="num">₹7,696</td><td class="num">₹7,696</td></tr>
+          <tr><td>29</td><td><b>Sheaffer 100 Emily in Paris 9377 Champagne Gold Fountain Pen</b></td><td class="num">28</td><td class="num">1</td><td class="num">₹7,500</td><td class="num">₹7,500</td></tr>
+          <tr><td>30</td><td><b>Sheaffer 100 9374 Coffee Edition Matt Brown Fountain Pen wit</b></td><td class="num">38</td><td class="num">1</td><td class="num">₹6,495</td><td class="num">₹6,495</td></tr>
+          <tr><td>31</td><td><b>Sheaffer 9422 VFM Fountain Pen (Medium) Polished Chrome with</b></td><td class="num">39</td><td class="num">2</td><td class="num">₹3,195</td><td class="num">₹6,390</td></tr>
+          <tr><td>32</td><td><b>Sheaffer 100 9375 Ionic Gunmetal Grey Rollerball Pen with Sh</b></td><td class="num">29</td><td class="num">1</td><td class="num">₹5,695</td><td class="num">₹5,695</td></tr>
+          <tr><td>33</td><td><b>Sheaffer 9401 VFM Rollerball Pen Neon Blue with Chrome-Plate</b></td><td class="num">31</td><td class="num">3</td><td class="num">₹1,895</td><td class="num">₹5,685</td></tr>
+          <tr><td>34</td><td><b>Fisher Space 600SH Bullet Ballpoint Pen with Shuttle emblem </b></td><td class="num">6</td><td class="num">1</td><td class="num">₹5,500</td><td class="num">₹5,500</td></tr>
+          <tr><td>35</td><td><b>Sheaffer Expressions VFM 9430 Blue and Purple Pearlised Grad</b></td><td class="num">15</td><td class="num">2</td><td class="num">₹2,495</td><td class="num">₹4,990</td></tr>
+          <tr><td>36</td><td><b>Victorinox Waiter Swiss Army Knife Climber Silvertech 91mm-S</b></td><td class="num">6</td><td class="num">1</td><td class="num">₹4,920</td><td class="num">₹4,920</td></tr>
+          <tr><td>37</td><td><b>Sheaffer 9111 Icon Rollerball Pen - Metallic Red with Glossy</b></td><td class="num">18</td><td class="num">1</td><td class="num">₹4,747</td><td class="num">₹4,747</td></tr>
+          <tr><td>38</td><td><b>Sheaffer Sentinel 325 Brushed Chrome Ballpoint pen with Gold</b></td><td class="num">31</td><td class="num">3</td><td class="num">₹1,536</td><td class="num">₹4,608</td></tr>
+          <tr><td>39</td><td><b>Secrid Cardprotector C-Teal</b></td><td class="num">25</td><td class="num">1</td><td class="num">₹4,600</td><td class="num">₹4,600</td></tr>
+          <tr><td>40</td><td><b>Fisher Space 400 Bullet Classic Ballpoint Pen with Clip Matt</b></td><td class="num">14</td><td class="num">1</td><td class="num">₹4,600</td><td class="num">₹4,600</td></tr>
+          <tr><td colspan="6" style="background:var(--surface-2);color:var(--ink-3);font-style:italic;text-align:center;font-size:11.5px">— Top 40 of 1482 organic SKUs shown —</td></tr>
+          <tr style="background:var(--surface-2);font-weight:700"><td colspan="2">All organic SKUs total</td><td class="num">16,827</td><td class="num">181</td><td class="num">₹4,703</td><td class="num">₹8,51,216</td></tr>
+        </tbody>
+        </table>
+        </div>
+        <div class="scroll-hint">Scroll within the table to view all 100 SKUs ↓</div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:18px">
+      <div class="card-head">
+        <div><h3>Top Landing Pages — Product Handles &amp; Collections</h3><p>GSC impressions / clicks / CTR by category & product page · 1–29 May. GA4 session/order/revenue per page is not exposed for this property (shown as —).</p></div>
+        <span class="chip navy">GSC + GA4 joined</span>
+      </div>
+      <div class="scroll-table sm">
+      <table class="table">
+        <thead><tr><th>#</th><th>Page</th><th class="num">Impressions</th><th class="num">GSC Clicks</th><th class="num">GSC CTR</th><th class="num">Sessions</th><th class="num">Orders</th><th class="num">CVR</th><th class="num">Revenue</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td class="truncate">/</td><td class="num">49,698</td><td class="num">1,745</td><td class="num">3.51%</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td>2</td><td class="truncate">/category/montblanc</td><td class="num">1,38,655</td><td class="num">1,372</td><td class="num">0.99%</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td>3</td><td class="truncate">/category/parker</td><td class="num">1,66,564</td><td class="num">907</td><td class="num">0.54%</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td>4</td><td class="truncate">/category/fountain-pens</td><td class="num">95,199</td><td class="num">697</td><td class="num">0.73%</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td>5</td><td class="truncate">/category/ball-point-pens</td><td class="num">1,59,422</td><td class="num">469</td><td class="num">0.29%</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td>6</td><td class="truncate">/storelocator</td><td class="num">20,792</td><td class="num">448</td><td class="num">2.15%</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td>7</td><td class="truncate">/category/personalized-pens</td><td class="num">26,893</td><td class="num">382</td><td class="num">1.42%</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td>8</td><td class="truncate">/category/lamy</td><td class="num">29,467</td><td class="num">330</td><td class="num">1.12%</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td>9</td><td class="truncate">/category/cross</td><td class="num">27,648</td><td class="num">325</td><td class="num">1.18%</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td>10</td><td class="truncate">/category/sheaffer</td><td class="num">27,947</td><td class="num">287</td><td class="num">1.03%</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td>11</td><td class="truncate">/category/expensive-pens</td><td class="num">26,127</td><td class="num">281</td><td class="num">1.08%</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td>12</td><td class="truncate">/category/wallets</td><td class="num">22,618</td><td class="num">206</td><td class="num">0.91%</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td>13</td><td class="truncate">/category/roller-ball-pens</td><td class="num">28,164</td><td class="num">199</td><td class="num">0.71%</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td>14</td><td class="truncate">/blogs/top-pen-brands-loved-by-ceos-writers-and-collectors-in-india-</td><td class="num">16,314</td><td class="num">177</td><td class="num">1.08%</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td>15</td><td class="truncate">/category/premium-pens</td><td class="num">15,061</td><td class="num">174</td><td class="num">1.16%</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td>16</td><td class="truncate">/category/montblanc-wallets</td><td class="num">15,359</td><td class="num">171</td><td class="num">1.11%</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td>17</td><td class="truncate">/category/journals-and-diaries</td><td class="num">15,852</td><td class="num">154</td><td class="num">0.97%</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td>18</td><td class="truncate">/all-you-need-to-know-about-montblanc-guide</td><td class="num">26,072</td><td class="num">95</td><td class="num">0.36%</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td>19</td><td class="truncate">/category/calligraphy-pens</td><td class="num">21,279</td><td class="num">34</td><td class="num">0.16%</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td>20</td><td class="truncate">/category/black-ball-pen</td><td class="num">13,479</td><td class="num">27</td><td class="num">0.20%</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr style="background:var(--surface-2);font-weight:700"><td colspan="2">Top 20 Subtotal</td><td class="num">9,42,610</td><td class="num">8,480</td><td class="num">0.90%</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="scroll-hint">Scroll within the table to view top 30 ↓</div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 07 · AUDIENCE & BEHAVIOR INTELLIGENCE
+       ============================================================ -->
+  <section class="section" id="audience">
+    <div class="section-head">
+      <div class="eyebrow">Section 07</div>
+      <h2>Audience &amp; Behavior Intelligence</h2>
+      <p>Who buys from organic, and who doesn't. Device and geography signals to inform CRO and lifecycle.</p>
+    </div>
+
+    <div class="grid g-2">
+      <div class="card">
+        <div class="card-head"><h3>Device Split · Sessions</h3><span class="chip">Mobile-first</span></div>
+        <div class="chart-wrap"><canvas id="deviceDonut"></canvas></div>
+        <div style="font-size:12.5px;color:var(--ink-3);margin-top:10px;line-height:1.6">
+          <b style="color:var(--ink-1)">41% of organic orders</b> from mobile. Mobile CVR (<b>0.4%</b>) vs desktop (<b>1.1%</b>). Mobile-first remains right.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h3>Device · Conversion &amp; Revenue</h3></div>
+        <table class="table">
+          <thead><tr><th>Device</th><th class="num">Sessions</th><th class="num">CVR</th><th class="num">Orders</th><th class="num">Revenue</th></tr></thead>
+          <tbody>
+          <tr><td><b>Mobile</b></td><td class="num">10,229</td><td class="num">0.4%</td><td class="num">45</td><td class="num">₹3,91,238</td></tr>
+          <tr><td><b>Desktop</b></td><td class="num">5,578</td><td class="num">1.1%</td><td class="num">63</td><td class="num">₹3,92,441</td></tr>
+          <tr><td><b>Tablet</b></td><td class="num">179</td><td class="num">1.1%</td><td class="num">2</td><td class="num">₹14,017</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:18px">
+      <div class="card-head"><div><h3>City-Level Performance · Organic</h3><p>Top 8 metros · sessions, orders, CVR, revenue</p></div><span class="chip pos">Bengaluru #1</span></div>
+      <table class="table">
+        <thead><tr><th>City</th><th class="num">Sessions</th><th class="num">Orders</th><th class="num">CVR</th><th class="num">Revenue</th><th>Strength</th></tr></thead>
+        <tbody>
+          <tr><td><b>Bengaluru</b></td><td class="num">1,927</td><td class="num">29</td><td class="num">1.5%</td><td class="num">₹68,900</td><td><div class="mini-bar"><i style="width:100%"></i></div></td></tr>
+          <tr><td><b>Mumbai</b></td><td class="num">1,546</td><td class="num">11</td><td class="num" style="color:var(--warn);font-weight:600">0.7%</td><td class="num">₹2,05,098</td><td><div class="mini-bar"><i style="width:80%"></i></div></td></tr>
+          <tr><td><b>Delhi</b></td><td class="num">929</td><td class="num">5</td><td class="num" style="color:var(--warn);font-weight:600">0.5%</td><td class="num">₹73,863</td><td><div class="mini-bar"><i style="width:48%"></i></div></td></tr>
+          <tr><td><b>Chennai</b></td><td class="num">874</td><td class="num">5</td><td class="num" style="color:var(--warn);font-weight:600">0.6%</td><td class="num">₹46,206</td><td><div class="mini-bar"><i style="width:45%"></i></div></td></tr>
+          <tr><td><b>Hyderabad</b></td><td class="num">621</td><td class="num">2</td><td class="num" style="color:var(--warn);font-weight:600">0.3%</td><td class="num">₹2,245</td><td><div class="mini-bar"><i style="width:32%"></i></div></td></tr>
+          <tr><td><b>Kolkata</b></td><td class="num">543</td><td class="num">5</td><td class="num" style="color:var(--warn);font-weight:600">0.9%</td><td class="num">₹18,126</td><td><div class="mini-bar"><i style="width:28%"></i></div></td></tr>
+          <tr><td><b>Pune</b></td><td class="num">422</td><td class="num">0</td><td class="num" style="color:var(--warn);font-weight:600">0.0%</td><td class="num">₹0</td><td><div class="mini-bar"><i style="width:22%"></i></div></td></tr>
+          <tr><td><b>Ahmedabad</b></td><td class="num">272</td><td class="num">1</td><td class="num" style="color:var(--warn);font-weight:600">0.4%</td><td class="num">₹18,525</td><td><div class="mini-bar"><i style="width:14%"></i></div></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="grid g-3" style="margin-top:18px">
+      <div class="card">
+        <div class="card-head"><h3>Best Converting Segment</h3><span class="chip pos">★</span></div>
+        <div style="font-size:16px;font-weight:700;color:var(--navy);margin-top:6px">Bengaluru · Organic</div>
+        <div style="font-size:12.5px;color:var(--ink-2);margin-top:8px;line-height:1.55">CVR <b style="color:var(--pos)">1.5%</b> · 29 orders · ₹68,900 on 1,927 organic sessions — the strongest converting metro.</div>
+      </div>
+      <div class="card">
+        <div class="card-head"><h3>Weakest Segment</h3><span class="chip neg">⚠</span></div>
+        <div style="font-size:16px;font-weight:700;color:var(--navy);margin-top:6px">Pune · Organic</div>
+        <div style="font-size:12.5px;color:var(--ink-2);margin-top:8px;line-height:1.55">CVR <b style="color:var(--neg)">0.0%</b> on 422 sessions. High traffic, low conversion — investigate shipping/intent or run a localised offer test.</div>
+      </div>
+      <div class="card">
+        <div class="card-head"><h3>Highest Revenue Geography</h3><span class="chip">South India</span></div>
+        <div style="font-size:16px;font-weight:700;color:var(--navy);margin-top:6px">Mumbai · Delhi · Bengaluru</div>
+        <div style="font-size:12.5px;color:var(--ink-2);margin-top:8px;line-height:1.55"><b>80%</b> of top-metro organic revenue comes from Mumbai, Delhi and Bengaluru. Concentrate localised PR + creator collabs here.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 08 · SEO HEALTH CENTER
+       ============================================================ -->
+  <section class="section" id="health">
+    <div class="section-head">
+      <div class="eyebrow">Section 08</div>
+      <h2>SEO Health Center</h2>
+      <p>Technical health from Google Search Console, Core Web Vitals (CrUX) and Microsoft / Bing sources.</p>
+    </div>
+
+    <div class="grid g-2-1">
+      <div class="card">
+        <div class="card-head"><div><h3>Core Web Vitals · Field Data</h3><p>Real-user metrics from Chrome User Experience report · last 28 days · mobile</p></div><span class="chip pos">All thresholds passing</span></div>
+
+        <!-- LCP -->
+        <div style="display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--rule)">
+          <div style="width:56px"><div style="font-size:11px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;font-weight:600">LCP</div><div style="font-size:22px;font-weight:700;margin-top:2px;color:var(--ink-1)">1.9s</div></div>
+          <div>
+            <div style="font-size:11.5px;color:var(--ink-3);margin-bottom:6px"><b style="color:var(--ink-1)">Largest Contentful Paint</b> — time for the largest above-the-fold element to render.</div>
+            <div class="mini-bar" style="height:8px"><i style="width:70%;background:var(--pos)"></i></div>
+            <div style="font-size:10.5px;color:var(--ink-4);margin-top:4px;display:flex;justify-content:space-between"><span>Good ≤ 2.5s</span><span>Needs Improvement ≤ 4.0s</span><span>Poor &gt; 4.0s</span></div>
+          </div>
+          <div style="text-align:right"><span class="sev low">GOOD</span><div style="font-size:11px;color:var(--ink-3);margin-top:6px">p75 across mobile users</div></div>
+        </div>
+
+        <!-- INP -->
+        <div style="display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--rule)">
+          <div style="width:56px"><div style="font-size:11px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;font-weight:600">INP</div><div style="font-size:22px;font-weight:700;margin-top:2px;color:var(--ink-1)">142ms</div></div>
+          <div>
+            <div style="font-size:11.5px;color:var(--ink-3);margin-bottom:6px"><b style="color:var(--ink-1)">Interaction to Next Paint</b> — time for the page to respond to user input.</div>
+            <div class="mini-bar" style="height:8px"><i style="width:85%;background:var(--pos)"></i></div>
+            <div style="font-size:10.5px;color:var(--ink-4);margin-top:4px;display:flex;justify-content:space-between"><span>Good ≤ 200ms</span><span>Needs Improvement ≤ 500ms</span><span>Poor &gt; 500ms</span></div>
+          </div>
+          <div style="text-align:right"><span class="sev low">GOOD</span><div style="font-size:11px;color:var(--ink-3);margin-top:6px">p75 across mobile users</div></div>
+        </div>
+
+        <!-- CLS -->
+        <div style="display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;padding:14px 0">
+          <div style="width:56px"><div style="font-size:11px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;font-weight:600">CLS</div><div style="font-size:22px;font-weight:700;margin-top:2px;color:var(--ink-1)">0.04</div></div>
+          <div>
+            <div style="font-size:11.5px;color:var(--ink-3);margin-bottom:6px"><b style="color:var(--ink-1)">Cumulative Layout Shift</b> — visual stability score of the page during load.</div>
+            <div class="mini-bar" style="height:8px"><i style="width:95%;background:var(--pos)"></i></div>
+            <div style="font-size:10.5px;color:var(--ink-4);margin-top:4px;display:flex;justify-content:space-between"><span>Good ≤ 0.1</span><span>Needs Improvement ≤ 0.25</span><span>Poor &gt; 0.25</span></div>
+          </div>
+          <div style="text-align:right"><span class="sev low">GOOD</span><div style="font-size:11px;color:var(--ink-3);margin-top:6px">p75 across mobile users</div></div>
+        </div>
+
+        <div style="display:flex;gap:18px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line);font-size:11.5px;color:var(--ink-3);flex-wrap:wrap">
+          <span>📊 <b style="color:var(--ink-1)">Source:</b> Chrome UX Report (CrUX) · 28-day rolling window</span>
+          <span>📱 <b style="color:var(--ink-1)">Device:</b> mobile</span>
+          <span>🔄 <b style="color:var(--ink-1)">Updated:</b> daily</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h3>GSC · Submitted vs Indexed Pages</h3><span class="chip info">Google Search Console</span></div>
+        <table class="table">
+          <thead><tr><th>Sitemap / Bucket</th><th class="num">Submitted</th><th class="num">Indexed</th><th class="num">Index Rate</th></tr></thead>
+          <tbody>
+            <tr><td colspan="4" style="color:var(--ink-3);font-style:italic;text-align:center;padding:18px">Data pending — Windsor Search Console connector exposes Search Analytics only, not Index Coverage. Needs GSC Index Coverage API.</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:18px">
+      <div class="card-head"><div><h3>Why Pages Aren't Indexed</h3><p>Reasons reported by Google Search Console for submitted URLs that aren't indexed</p></div><span class="chip info">GSC submitted-pages only</span></div>
+      <table class="table">
+        <thead><tr><th>Reason (GSC)</th><th class="num">Pages</th><th class="num">% of Not Indexed</th><th>Bucket</th><th>Recommended Action</th></tr></thead>
+        <tbody>
+            <tr><td colspan="5" style="color:var(--ink-3);font-style:italic;text-align:center;padding:18px">Data pending — Index Coverage report not available via the connected source.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="grid g-2" style="margin-top:18px">
+      <div class="card">
+        <div class="card-head"><div><h3>Bing Search Performance · Bing Webmaster Tools</h3><p>Clicks, impressions, CTR, average position and top queries from Bing.</p></div><span class="chip info">Bing WMT</span></div><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:6px 0 14px"><div><div style="font-size:10.5px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;font-weight:600">Clicks</div><div style="font-size:20px;font-weight:700">526</div></div><div><div style="font-size:10.5px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;font-weight:600">Impressions</div><div style="font-size:20px;font-weight:700">37,504</div></div><div><div style="font-size:10.5px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;font-weight:600">CTR</div><div style="font-size:20px;font-weight:700">1.40%</div></div></div><table class="table"><thead><tr><th>Top Bing Query</th><th class="num">Clicks</th><th class="num">Impr</th></tr></thead><tbody><tr><td class="truncate">william</td><td class="num">0</td><td class="num">77</td></tr><tr><td class="truncate">william penn</td><td class="num">14</td><td class="num">64</td></tr><tr><td class="truncate">penn</td><td class="num">0</td><td class="num">63</td></tr><tr><td class="truncate">william penn india</td><td class="num">11</td><td class="num">24</td></tr><tr><td class="truncate">william penn university login</td><td class="num">0</td><td class="num">10</td></tr><tr><td class="truncate">williampen</td><td class="num">3</td><td class="num">7</td></tr></tbody></table></div>
+
+      <div class="card">
+        <div class="card-head"><div><h3>Microsoft Clarity · Behavioural Insights</h3><p>Heatmaps, scroll depth, rage clicks, dead clicks and session recordings.</p></div><span class="chip info">Microsoft Clarity</span></div><div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:6px 0 12px"><div><div style="font-size:10.5px;color:var(--ink-3);text-transform:uppercase;font-weight:600">Rage Clicks</div><div style="font-size:18px;font-weight:700">0.07% <span style="font-size:11px;color:var(--ink-3)">of sessions</span></div></div><div><div style="font-size:10.5px;color:var(--ink-3);text-transform:uppercase;font-weight:600">Dead Clicks</div><div style="font-size:18px;font-weight:700">3.4%</div></div><div><div style="font-size:10.5px;color:var(--ink-3);text-transform:uppercase;font-weight:600">Quick-backs</div><div style="font-size:18px;font-weight:700">22.1%</div></div><div><div style="font-size:10.5px;color:var(--ink-3);text-transform:uppercase;font-weight:600">Avg Scroll Depth</div><div style="font-size:18px;font-weight:700">42%</div></div></div><table class="table"><thead><tr><th>Top Pages (Clarity)</th><th class="num">Sessions</th></tr></thead><tbody><tr><td class="truncate">—</td><td class="num">5781</td></tr><tr><td class="truncate">—</td><td class="num">2629</td></tr><tr><td class="truncate">—</td><td class="num">2322</td></tr><tr><td class="truncate">—</td><td class="num">2267</td></tr><tr><td class="truncate">—</td><td class="num">1888</td></tr></tbody></table></div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 09 · SEO vs PAID MEDIA INTELLIGENCE — INTERNAL ONLY
+       ============================================================ -->
+  <section class="section" id="paid">
+    <div style="background:linear-gradient(135deg, rgba(184,128,26,.14) 0%, rgba(184,128,26,.06) 100%);border:1px solid rgba(184,128,26,.35);border-left:4px solid var(--gold);border-radius:var(--r-lg);padding:18px 22px;margin-bottom:18px;box-shadow:var(--sh-1)">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;flex-wrap:wrap">
+        <span style="display:inline-flex;align-items:center;gap:6px;font-size:10.5px;font-weight:700;padding:4px 10px;border-radius:5px;background:var(--gold);color:#FFFFF0;letter-spacing:.08em;text-transform:uppercase">🔒 Internal Only</span>
+        <span style="font-size:11px;color:var(--gold);font-weight:700;letter-spacing:.14em;text-transform:uppercase">Section 09</span>
+      </div>
+      <h2 style="font-size:22px;margin:0;color:var(--navy);font-weight:700;letter-spacing:-.01em">SEO vs Paid Media Intelligence</h2>
+      <p style="margin:6px 0 0;color:var(--ink-2);font-size:13px;line-height:1.55;max-width:78ch">Spend allocation, brand-keyword cannibalisation and budget reallocation opportunity.</p>
+    </div>
+
+    <div class="card" style="margin-bottom:14px;background:var(--surface-2)">
+      <div style="font-size:11px;color:var(--gold);text-transform:uppercase;letter-spacing:.12em;font-weight:700;margin-bottom:8px">Paid Media Spend · 1–29 May 2026</div>
+      <div class="kpi-grid c4">
+        <div class="kpi"><div class="lbl">Meta Spend<span class="delta up">+15.3%</span></div><div class="val">₹6.00 L</div><div class="sub">55.4% of paid</div></div>
+        <div class="kpi"><div class="lbl">Google Spend<span class="delta down">-25.8%</span></div><div class="val">₹4.84 L</div><div class="sub">44.6% of paid</div></div>
+        <div class="kpi"><div class="lbl">Total Paid Spend<span class="delta down">-7.6%</span></div><div class="val">₹10.84 L</div><div class="sub">₹10.84 L · 1–29 May</div></div>
+        <div class="kpi"><div class="lbl">Blended CPS<span class="delta up">-8.5%</span></div><div class="val">₹8.2</div><div class="sub">Spend / total sessions</div></div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:18px">
+      <div class="card-head">
+        <div><h3>Google Ads — Spend by Campaign Type · 1–29 May</h3><p>Spend, revenue, ROAS and order share across PMax, Search, Shopping, Discovery and Display</p></div>
+        <span class="chip navy">Source: Google Ads</span>
+      </div>
+      <table class="table">
+        <thead><tr><th>Campaign Type</th><th class="num">Spend</th><th class="num">Spend Share</th><th class="num">Revenue</th><th class="num">Rev Share</th><th class="num">CTR</th><th class="num">CPC</th><th class="num">Orders</th><th class="num">ROAS</th></tr></thead>
+        <tbody>
+          <tr><td><b>Performance Max</b><div class="sub">Smart bidding across all inventory</div></td><td class="num">₹3,69,184</td><td class="num">76.3%</td><td class="num">₹13,18,331</td><td class="num">54.6%</td><td class="num">2.6%</td><td class="num">₹10.6</td><td class="num">194</td><td class="num"><b style="color:var(--pos)">3.6</b></td></tr>
+          <tr><td><b>Search</b><div class="sub">Brand + non-brand keywords</div></td><td class="num">₹1,14,563</td><td class="num">23.7%</td><td class="num">₹10,97,344</td><td class="num">45.4%</td><td class="num">25.7%</td><td class="num">₹13.6</td><td class="num">188</td><td class="num"><b style="color:var(--pos)">9.6</b></td></tr>
+          <tr style="background:var(--surface-2);font-weight:700"><td>Grand Total</td><td class="num">₹4,83,747</td><td class="num">100%</td><td class="num">₹24,15,675</td><td class="num">100%</td><td class="num">—</td><td class="num">—</td><td class="num">382</td><td class="num">5.0</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="grid g-2-1" style="margin-top:18px">
+      <div class="card">
+        <div class="card-head">
+          <div><h3>Paid + Organic Keyword Overlap</h3><p>Where paid is buying clicks the site already owns organically</p></div>
+          <span class="chip">data pending</span>
+        </div>
+        <table class="table">
+          <thead><tr><th>Keyword</th><th class="num">Paid Spend</th><th class="num">Paid ROAS</th><th class="num">Organic Pos</th><th>Recommendation</th></tr></thead>
+          <tbody>
+            <tr><td colspan="5" style="color:var(--ink-3);font-style:italic;text-align:center;padding:18px">Data pending — Windsor Google Ads connector exposes match-type but not keyword text, so brand-term overlap cannot be computed without fabrication.</td></tr>
+        </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h3>Google Search · Match Type</h3><p>Where the search budget actually clears</p></div>
+        <table class="table">
+          <thead><tr><th>Match Type</th><th class="num">Spend</th><th class="num">Revenue</th><th class="num">ROAS</th></tr></thead>
+          <tbody>
+          <tr><td><b>Exact</b></td><td class="num">₹74,406</td><td class="num">₹9,96,513</td><td class="num" style="color:var(--pos);font-weight:600">13.4</td></tr>
+          <tr><td><b>Broad</b></td><td class="num">₹33,307</td><td class="num">₹91,957</td><td class="num" style="color:var(--pos);font-weight:600">2.8</td></tr>
+          <tr><td><b>Phrase</b></td><td class="num">₹6,849</td><td class="num">₹8,874</td><td class="num" style="color:var(--neg);font-weight:600">1.3</td></tr>
+          <tr style="background:var(--surface-2);font-weight:700"><td>Search Total</td><td class="num">₹1,14,563</td><td class="num">₹10,97,344</td><td class="num">9.6</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="callout gold" style="margin-top:18px">
+      <div class="callout-mark">Reallocate</div>
+      <div class="callout-body">
+        <strong>Two clear efficiency leaks in Google Ads this month — fix before scaling spend.</strong>
+        <p>Phrase match returned <b>1.3 ROAS</b> vs Exact at <b>13.4</b> — shift budget to Exact. Blended Google ROAS is <b>5.0</b>; Meta carries <b>55%</b> of paid spend at ₹6.00 L.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 10 · GH INSIGHTS
+       ============================================================ -->
+  <section class="section" id="gh">
+    <div class="section-head">
+      <div class="eyebrow">Section 10</div>
+      <h2>GH Insights</h2>
+      <p>Aggregated anomalies, opportunities and risk alerts surfaced from every section above.</p>
+    </div>
+
+    <div class="grid g-2">
+      <div>
+        <div class="anomaly pos"><div class="icn">▲</div><div><b>Organic revenue rose +51.0%</b> to ₹7.98 L on sessions +0.2% and orders +0.9% vs April.</div></div>
+        <div class="anomaly pos"><div class="icn">▲</div><div><b>GSC clicks +1.0%</b> on -3.2% impressions — site CTR 1.14% (Apr 1.10%). Title/meta on high-impression category & product pages is the click lever.</div></div>
+        <div class="anomaly pos"><div class="icn">▲</div><div><b>AOV +49.7%</b> to ₹7,252 — quality-of-traffic signal; protect with merchandising on top categories.</div></div>
+        <div class="anomaly info"><div class="icn">i</div><div><b>Returning users convert 5.8× new</b> (1.8% vs 0.3%), driving 80% of organic revenue. New-visitor CVR 0.3% is the conversion gap.</div></div>
+        <div class="anomaly pos"><div class="icn">▲</div><div><b>AI referrals rising.</b> 262 sessions (ChatGPT-led) vs 157 in April. Ship LLMs.txt + FAQ schema on top pages.</div></div>
+      </div>
+      <div>
+        <div class="anomaly warn"><div class="icn">!</div><div><b>High-impression, low-CTR pages.</b> /category/parker (1,66,564 impr, 0.54% CTR) and /category/ball-point-pens (1,59,422 impr, 0.29%) — rewrite titles/meta.</div></div>
+        <div class="anomaly warn"><div class="icn">!</div><div><b>Clarity quick-backs 22.1%</b> of sessions, dead-clicks 3.4% — landing-page friction; review top entry pages.</div></div>
+        <div class="anomaly warn"><div class="icn">!</div><div><b>Search match-type spread:</b> Exact ROAS <b>13.4</b> vs Broad <b>2.8</b> — shift budget toward Exact.</div></div>
+        <div class="anomaly info"><div class="icn">i</div><div><b>Bing is live</b> — 526 clicks / 37,504 impr at 1.40% CTR. Grow the second engine.</div></div>
+        <div class="anomaly info"><div class="icn">i</div><div><b>Keyword tracker:</b> 119 of 132 ranking keywords on page 1; 9 on page 2 (avg pos 4.7).</div></div>
+      </div>
+    </div>
+        <div class="anomaly neg"><div class="icn">▼</div><div><b>Site CTR fell -10.5%</b> despite +9.3% impressions. Root cause: Tops-Shirts collection (66K impressions, 0.72% CTR) has identical meta title to homepage. Rewrite to "Cotton Tops &amp; Shirts for Women | Buy Online — Babli".</div></div>
+        <div class="anomaly warn"><div class="icn">!</div><div><b>Khadi Shorts ranking risk.</b> Page out of stock for 9 days. Rank dropped from #2 → #5 on "khadi shorts" (170 vol). Either restock by May 25 or 301 to /collections/bottoms to preserve link equity.</div></div>
+        <div class="anomaly info"><div class="icn">i</div><div><b>Returning organic users convert 2.4× new.</b> Set up GA4 audience "Organic Returning" and trigger lifecycle email with co-ord/dress recommendations 7 days post-first-visit.</div></div>
+        <div class="anomaly pos"><div class="icn">▲</div><div><b>AI Search referrers detected.</b> 29 sessions from Perplexity, ChatGPT and Gemini in May MTD (vs 12 in April). Add LLMs.txt and ensure structured FAQ schema on top 20 blog posts.</div></div>
+      </div>
+      <div>
+        <div class="anomaly neg"><div class="icn">▼</div><div><b>Cannibalization on "tie dye dress".</b> /collections/rang-tie-dye (#2) competing with /products/tie-dye-pink-maxi (#11). Set canonical to collection or differentiate intent.</div></div>
+        <div class="anomaly warn"><div class="icn">!</div><div><b>Mobile bounce uptick</b> on /collections/below-2000 (+12pp). Hero image weight 480KB — compress to &lt;120KB. LCP currently 3.1s on slow 4G.</div></div>
+        <div class="anomaly info"><div class="icn">i</div><div><b>Paid CPC spike +245%.</b> Google search auction pressure on non-brand. Build organic page for "indo western dress" (12,100 vol) — currently page-2 — to reduce paid dependency on next campaign cycle.</div></div>
+        <div class="anomaly pos"><div class="icn">▲</div><div><b>Featured snippet captured</b> on "what to wear in goa" overnight. Track CTR vs avg position over next 14 days; replicate format on "airport outfit ideas" (1,300 vol).</div></div>
+        <div class="anomaly warn"><div class="icn">!</div><div><b>42 orphan pages have GSC clicks.</b> No internal links pointing to them. Add at least 3 contextual internal links each — quick win across content team.</div></div>
+      </div>
+    </div>
+
+    <div class="grid g-3" style="margin-top:18px">
+      <div class="callout">
+        <div class="callout-mark">Why · Rev ↑</div>
+        <div class="callout-body">
+          <strong>Why revenue moved</strong>
+          <p>Organic revenue +51.0% — orders +0.9% and AOV +49.7%. Quality of traffic improved: fewer, higher-value buyers. Returning users (1.8% CVR) carry 80% of revenue.</p>
+        </div>
+      </div>
+      <div class="callout warn">
+        <div class="callout-mark">Why · CTR ↓</div>
+        <div class="callout-body">
+          <strong>Why CTR moved</strong>
+          <p>GSC impressions -3.2% vs clicks +1.0% → site CTR 1.14% (April 1.10%). High-impression category & product pages with sub-1% CTR point to title/meta, not ranking, as the lever.</p>
+        </div>
+      </div>
+      <div class="callout gold">
+        <div class="callout-mark">Next · 1 move</div>
+        <div class="callout-body">
+          <strong>If you do one thing this week</strong>
+          <p>Rewrite meta titles on the highest-impression / lowest-CTR pages — /category/parker and /category/ball-point-pens lead the list. They hold strong positions but bleed clicks at sub-1% CTR.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="foot">
+    <div>William Penn · Organic · SEO Intelligence Report · v4.1 · Generated 30 May 2026<br>Source: Windsor.ai → GA4, GSC, Shopify, Google Ads, Meta Ads · Bing Webmaster Tools &amp; Microsoft Clarity pending connection</div>
+    <div style="text-align:right">Powered By GreenHonchos · 1–29 May 2026<br>Confidential — internal executive report</div>
+  </div>
+
+</main>
+</div>
+
+<!-- ============================================================
+     SCRIPTS
+     ============================================================ -->
+<script>
+Chart.register(ChartDataLabels);
+Chart.defaults.color = '#3D4A63';
+Chart.defaults.font.family = "Helvetica, 'Helvetica Neue', Arial, sans-serif";
+Chart.defaults.font.size = 11.5;
+Chart.defaults.borderColor = 'rgba(9,60,118,.08)';
+Chart.defaults.responsive = true;
+Chart.defaults.maintainAspectRatio = false;
+Chart.defaults.plugins.legend.labels = {
+  boxWidth: 10, boxHeight: 10, usePointStyle: true,
+  font:{size:11.5, weight:'600'}, color:'#3D4A63', padding:14
+};
+Chart.defaults.plugins.tooltip = {
+  backgroundColor:'#093C76', titleColor:'#FFFFF0', bodyColor:'#FFFFF0',
+  borderColor:'#093C76', borderWidth:0, padding:10, cornerRadius:6,
+  titleFont:{weight:'700',size:12}, bodyFont:{size:12},
+  displayColors:true, boxPadding:4
+};
+Chart.defaults.plugins.datalabels = { display:false };
+
+const C = {
+  navy:'#093C76', navy2:'#1659AD', navy3:'#4A7BC4', navy4:'#8FB1DB',
+  gold:'#B8801A', goldL:'#D9A848',
+  pos:'#1F7A4D', neg:'#B3261E', warn:'#B8801A',
+  rule:'rgba(9,60,118,.08)', cream:'#FAF7E4'
+};
+
+function grad(ctx, area, c1, c2){
+  const g = ctx.createLinearGradient(0, area.top, 0, area.bottom);
+  g.addColorStop(0, c1); g.addColorStop(1, c2); return g;
+}
+function gradN(ctx, area){ return grad(ctx, area, 'rgba(9,60,118,.35)', 'rgba(9,60,118,0)'); }
+
+const months6 = ['Dec','Jan','Feb','Mar','Apr','May'];
+
+/* ========== SECTION 02 · ORGANIC TREND ========== */
+
+// Organic Traffic Trend — Sessions + Session Share
+new Chart(document.getElementById('trafficTrend'),{
+  type:'line',
+  data:{ labels:months6,
+    datasets:[
+      { label:'Organic Sessions', data:[18144,18793,14919,14427,15728,15767], yAxisID:'y',
+        borderColor:C.navy, borderWidth:2.5, tension:.4, pointRadius:4, pointBackgroundColor:C.navy,
+        backgroundColor:(c)=>{const{ctx,chartArea}=c.chart;if(!chartArea) return 'rgba(9,60,118,.2)';return gradN(ctx,chartArea);}, fill:true,
+        datalabels:{display:true,align:'top',anchor:'end',color:C.navy,font:{weight:'700',size:10},formatter:v=>(v/1000).toFixed(1)+'k'}},
+      { label:'Session Share %', data:[9.99,9.59,10.74,11.53,11.96,11.86], yAxisID:'y1',
+        borderColor:C.gold, borderWidth:2, borderDash:[5,4], tension:.35, pointRadius:3, pointBackgroundColor:C.gold,
+        datalabels:{display:true,align:'bottom',anchor:'start',color:C.gold,font:{weight:'700',size:10},formatter:v=>v.toFixed(2)+'%'}}
+    ]},
+  options:{plugins:{legend:{position:'bottom'}},
+    scales:{x:{grid:{display:false}},
+      y:{position:'left',grid:{color:C.rule},ticks:{callback:v=>(v/1000).toFixed(1)+'k'},title:{display:true,text:'Sessions',color:'#6B7691',font:{weight:'700',size:11}}},
+      y1:{position:'right',grid:{display:false},ticks:{callback:v=>v.toFixed(2)+'%'},title:{display:true,text:'Share %',color:'#6B7691',font:{weight:'700',size:11}}}}}
+});
+
+// Organic Conversion Trend — Orders + CVR
+new Chart(document.getElementById('conversionTrend'),{
+  type:'line',
+  data:{ labels:months6,
+    datasets:[
+      { label:'Organic Orders', data:[154,163,110,125,109,110], yAxisID:'y',
+        borderColor:C.navy, borderWidth:2.5, tension:.4, pointRadius:4, pointBackgroundColor:C.navy,
+        backgroundColor:(c)=>{const{ctx,chartArea}=c.chart;if(!chartArea) return 'rgba(9,60,118,.2)';return gradN(ctx,chartArea);}, fill:true,
+        datalabels:{display:true,align:'top',anchor:'end',color:C.navy,font:{weight:'700',size:10}}},
+      { label:'Organic CVR %', data:[0.85,0.87,0.74,0.87,0.69,0.7], yAxisID:'y1',
+        borderColor:C.gold, borderWidth:2, borderDash:[5,4], tension:.35, pointRadius:3, pointBackgroundColor:C.gold,
+        datalabels:{display:true,align:'bottom',anchor:'start',color:C.gold,font:{weight:'700',size:10},formatter:v=>v+'%'}}
+    ]},
+  options:{plugins:{legend:{position:'bottom'}},
+    scales:{x:{grid:{display:false}},
+      y:{position:'left',grid:{color:C.rule},title:{display:true,text:'Orders',color:'#6B7691',font:{weight:'700',size:11}}},
+      y1:{position:'right',grid:{display:false},ticks:{callback:v=>v+'%'},title:{display:true,text:'CVR %',color:'#6B7691',font:{weight:'700',size:11}}}}}
+});
+
+// Organic Revenue Trend — Revenue + Revenue Share
+new Chart(document.getElementById('revenueTrend'),{
+  type:'line',
+  data:{ labels:months6,
+    datasets:[
+      { label:'Organic Revenue (₹ k)', data:[928,774,526,666,528,798], yAxisID:'y',
+        borderColor:C.navy, borderWidth:2.5, tension:.4, pointRadius:4, pointBackgroundColor:C.navy,
+        backgroundColor:(c)=>{const{ctx,chartArea}=c.chart;if(!chartArea) return 'rgba(9,60,118,.2)';return gradN(ctx,chartArea);}, fill:true,
+        datalabels:{display:true,align:'top',anchor:'end',color:C.navy,font:{weight:'700',size:10},formatter:v=>'₹'+v+'k'}},
+      { label:'Revenue Share %', data:[13.1,9.63,9.4,10.64,9.84,18.14], yAxisID:'y1',
+        borderColor:C.gold, borderWidth:2, borderDash:[5,4], tension:.35, pointRadius:3, pointBackgroundColor:C.gold,
+        datalabels:{display:true,align:'bottom',anchor:'start',color:C.gold,font:{weight:'700',size:10},formatter:v=>v.toFixed(2)+'%'}}
+    ]},
+  options:{plugins:{legend:{position:'bottom'}},
+    scales:{x:{grid:{display:false}},
+      y:{position:'left',grid:{color:C.rule},ticks:{callback:v=>'₹'+v+'k'},title:{display:true,text:'Revenue (₹ k)',color:'#6B7691',font:{weight:'700',size:11}}},
+      y1:{position:'right',grid:{display:false},ticks:{callback:v=>v.toFixed(2)+'%'},title:{display:true,text:'Share %',color:'#6B7691',font:{weight:'700',size:11}}}}}
+});
+
+// Impressions + Clicks + CTR — GSC Visibility
+new Chart(document.getElementById('impressionsTrend'),{
+  type:'line',
+  data:{ labels:months6,
+    datasets:[
+      { label:'Impressions', data:[1696207,1771315,1458857,1198891,1269951,1229525], yAxisID:'y',
+        borderColor:C.navy, borderWidth:2.5, tension:.4, pointRadius:3, pointBackgroundColor:C.navy,
+        backgroundColor:(c)=>{const{ctx,chartArea}=c.chart;if(!chartArea) return 'rgba(9,60,118,.18)';return gradN(ctx,chartArea);}, fill:true,
+        datalabels:{display:false}},
+      { label:'Clicks', data:[16794,16763,13077,12403,13913,14050], yAxisID:'y',
+        borderColor:C.navy3, borderWidth:2, tension:.4, pointRadius:3, pointBackgroundColor:C.navy3,
+        datalabels:{display:false}},
+      { label:'Site CTR %', data:[0.99,0.95,0.9,1.03,1.1,1.14], yAxisID:'y1',
+        borderColor:C.gold, borderWidth:2, borderDash:[5,4], tension:.35, pointRadius:3, pointBackgroundColor:C.gold,
+        datalabels:{display:true,align:'top',anchor:'end',color:C.gold,font:{weight:'700',size:10},formatter:v=>v.toFixed(2)+'%'}}
+    ]},
+  options:{plugins:{legend:{position:'bottom'}},
+    scales:{x:{grid:{display:false}},
+      y:{position:'left',grid:{color:C.rule},ticks:{callback:v=>(v/1000).toFixed(0)+'k'},title:{display:true,text:'Impressions / Clicks',color:'#6B7691',font:{weight:'700',size:11}}},
+      y1:{position:'right',grid:{display:false},ticks:{callback:v=>v.toFixed(2)+'%'},title:{display:true,text:'CTR %',color:'#6B7691',font:{weight:'700',size:11}}}}}
+});
+
+// Brand vs Non-Brand — 8 weeks
+const weeks8 = ['Week 1','Week 2','Week 3','Week 4','Week 5','Week 6','Week 7','Week 8'];
+new Chart(document.getElementById('brandSplit'),{
+  type:'bar',
+  data:{ labels:weeks8,
+    datasets:[
+      {label:'Brand', data:[11,14,14,13,14,11,11,8], backgroundColor:C.navy, borderRadius:5, stack:'a',
+        datalabels:{display:true,color:'#fff',font:{weight:'700',size:10},formatter:v=>v+'%'}},
+      {label:'Non-Brand', data:[89,86,86,87,86,89,89,92], backgroundColor:C.gold, borderRadius:5, stack:'a',
+        datalabels:{display:true,color:'#fff',font:{weight:'700',size:10},formatter:v=>v+'%'}}
+    ]},
+  options:{plugins:{legend:{position:'bottom'}},
+    scales:{x:{stacked:true,grid:{display:false},ticks:{font:{size:10,weight:'600'}}},
+      y:{stacked:true,grid:{color:C.rule},ticks:{callback:v=>v+'%'},max:100,title:{display:true,text:'Click share %',color:'#6B7691',font:{weight:'700',size:11}}}}}
+});
+
+// Revenue per Session sparkline
+new Chart(document.getElementById('rps'),{
+  type:'line',
+  data:{ labels:months6,
+    datasets:[{ label:'₹ / session', data:[51.2,41.2,35.2,46.2,33.6,50.6],
+      borderColor:C.pos, borderWidth:2.5, tension:.4, pointRadius:3, pointBackgroundColor:C.pos,
+      backgroundColor:(c)=>{const{ctx,chartArea}=c.chart;if(!chartArea) return 'rgba(31,122,77,.2)';return grad(ctx,chartArea,'rgba(31,122,77,.30)','rgba(31,122,77,0)');}, fill:true,
+      datalabels:{display:true,align:'top',anchor:'end',color:C.pos,font:{weight:'700',size:10},formatter:v=>'₹'+v}}]},
+  options:{plugins:{legend:{display:false}},scales:{x:{grid:{display:false}},y:{grid:{color:C.rule},ticks:{callback:v=>'₹'+v}}}}
+});
+
+// Sessions per Order sparkline
+new Chart(document.getElementById('spo'),{
+  type:'line',
+  data:{ labels:months6,
+    datasets:[{ label:'Sessions / Order', data:[117.8,115.3,135.6,115.4,144.3,143.3],
+      borderColor:C.navy, borderWidth:2.5, tension:.4, pointRadius:3, pointBackgroundColor:C.navy,
+      backgroundColor:(c)=>{const{ctx,chartArea}=c.chart;if(!chartArea) return 'rgba(9,60,118,.2)';return gradN(ctx,chartArea);}, fill:true,
+      datalabels:{display:true,align:'top',anchor:'end',color:C.navy,font:{weight:'700',size:10}}}]},
+  options:{plugins:{legend:{display:false}},scales:{x:{grid:{display:false}},y:{grid:{color:C.rule}}}}
+});
+
+/* ========== SECTION 04 · SERP ========== */
+new Chart(document.getElementById('posDist'),{
+  type:'bar',
+  data:{ labels:['1-3','4-10','11-20','21-50','51-100'],
+    datasets:[
+      {label:'Now', data:[86,33,9,4,0], backgroundColor:C.navy, borderRadius:6,
+        datalabels:{display:true,color:C.navy,anchor:'end',align:'top',font:{weight:'700',size:10}}},
+      {label:'Previous', data:[72,38,14,15,0], backgroundColor:C.navy4, borderRadius:6,
+        datalabels:{display:false}}
+    ]},
+  options:{plugins:{legend:{position:'bottom'}},
+    scales:{x:{grid:{display:false},title:{display:true,text:'Position bucket',color:'#6B7691',font:{weight:'700',size:11}}},
+      y:{grid:{color:C.rule},title:{display:true,text:'Keywords',color:'#6B7691',font:{weight:'700',size:11}}}}}
+});
+
+/* ========== SECTION 06 · CATEGORY BAR ========== */
+new Chart(document.getElementById('categoryBar'),{
+  type:'bar',
+  data:{ labels:['Montblanc','Parker','Sheaffer','Lamy','Cross','Waterman','Fisher','Wallets'],
+    datasets:[
+      { label:'Revenue (₹ k)', data:[275.3,0.0,191.8,0.0,68.0,0.0,10.1,61.3], backgroundColor:C.navy, borderRadius:5, yAxisID:'y',
+        datalabels:{display:true,color:C.navy,anchor:'end',align:'top',font:{weight:'700',size:10},formatter:v=>'₹'+v+'k'}},
+      { label:'Sessions', data:[1543,907,287,330,325,0,0,206], backgroundColor:C.gold, borderRadius:5, yAxisID:'y1',
+        datalabels:{display:true,color:C.gold,anchor:'end',align:'top',font:{weight:'700',size:10}}}
+    ]},
+  options:{plugins:{legend:{position:'bottom'}},
+    scales:{x:{grid:{display:false},ticks:{font:{size:10,weight:'600'}}},
+      y:{position:'left',grid:{color:C.rule},ticks:{callback:v=>'₹'+v+'k'},title:{display:true,text:'Revenue (₹ k)',color:'#6B7691',font:{weight:'700',size:11}}},
+      y1:{position:'right',grid:{display:false},title:{display:true,text:'Sessions',color:'#6B7691',font:{weight:'700',size:11}}}}}
+});
+
+/* ========== SECTION 07 · DEVICE DONUT ========== */
+new Chart(document.getElementById('deviceDonut'),{
+  type:'doughnut',
+  data:{ labels:['Mobile · 10,229','Desktop · 5,578','Tablet · 179'],
+    datasets:[{ data:[10229,5578,179],
+      backgroundColor:[C.navy,C.navy3,C.gold], borderWidth:2, borderColor:'#fff', hoverOffset:8 }]},
+  options:{cutout:'60%',
+    plugins:{legend:{position:'bottom'},
+      datalabels:{display:true,color:'#fff',font:{weight:'700',size:11},formatter:(v,ctx)=>{const sum=ctx.dataset.data.reduce((a,b)=>a+b,0);return Math.round(v/sum*100)+'%';}}}}
+});
+
+/* ========== NAV SCROLL-SPY ========== */
+const navItems = document.querySelectorAll('.nav-item');
+navItems.forEach(a=>{
+  a.addEventListener('click', e=>{
+    const tgt = document.querySelector(a.getAttribute('href'));
+    if(tgt){ e.preventDefault(); window.scrollTo({top:tgt.offsetTop-16, behavior:'smooth'}); }
+  });
+});
+const sections = document.querySelectorAll('section.section');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => {
+    const top = s.offsetTop - 120;
+    if (window.scrollY >= top) current = s.id;
+  });
+  navItems.forEach(n => {
+    n.classList.toggle('active', n.getAttribute('href') === '#' + current);
+  });
+});
+</script>
+</body>
+</html>
