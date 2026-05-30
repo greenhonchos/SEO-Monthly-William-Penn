@@ -1,0 +1,2093 @@
+{
+  "domain": "williampenn.net",
+  "source": "SEMrush position tracking export (20260530)",
+  "keywords": [
+    {
+      "keyword": "1 lakh rupees pen",
+      "pos": 1.0,
+      "prev_pos": 1.0,
+      "delta": 0.0,
+      "landing": "https://www.williampenn.net/category/1-lakh-rupees-pen",
+      "vol": 110.0,
+      "intent": "i",
+      "cpc": null
+    },
+    {
+      "keyword": "caran d ache ballpoint pen",
+      "pos": 1.0,
+      "prev_pos": 1.0,
+      "delta": 0.0,
+      "landing": "https://www.williampenn.net/category/caran-d-ache",
+      "vol": 50.0,
+      "intent": "i",
+      "cpc": 0.03
+    },
+    {
+      "keyword": "caran d ache pen",
+      "pos": 1.0,
+      "prev_pos": 1.0,
+      "delta": 0.0,
+      "landing": "https://www.williampenn.net/category/caran-d-ache",
+      "vol": 720.0,
+      "intent": "c",
+      "cpc": 0.04
+    },
+    {
+      "keyword": "classic pens",
+      "pos": 1.0,
+      "prev_pos": 1.0,
+      "delta": 0.0,
+      "landing": "https://www.williampenn.net/category/classic-pens",
+      "vol": 590.0,
+      "intent": "c",
+      "cpc": 0.04
+    },
+    {
+      "keyword": "classic rollerball pen",
+      "pos": 1.0,
+      "prev_pos": 1.0,
+      "delta": 0.0,
+      "landing": "https://www.williampenn.net/category/classic-rollerball-pen",
+      "vol": 40.0,
+      "intent": "c",
+      "cpc": null
+    },
+    {
+      "keyword": "cross bailey ballpoint pen",
+      "pos": 1.0,
+      "prev_pos": 2.0,
+      "delta": 1.0,
+      "landing": "https://www.williampenn.net/category/cross",
+      "vol": 20.0,
+      "intent": "i",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "cross ball pen",
+      "pos": 1.0,
+      "prev_pos": 3.0,
+      "delta": 2.0,
+      "landing": "https://www.williampenn.net/category/cross",
+      "vol": 880.0,
+      "intent": "i",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "cross ballpoint pen",
+      "pos": 1.0,
+      "prev_pos": 2.0,
+      "delta": 1.0,
+      "landing": "https://www.williampenn.net/category/cross",
+      "vol": 880.0,
+      "intent": "i",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "cross fountain pen",
+      "pos": 1.0,
+      "prev_pos": 4.0,
+      "delta": 3.0,
+      "landing": "https://www.williampenn.net/category/cross",
+      "vol": 880.0,
+      "intent": "c",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "cross pens",
+      "pos": 1.0,
+      "prev_pos": 3.0,
+      "delta": 2.0,
+      "landing": "https://www.williampenn.net/category/cross",
+      "vol": 12100.0,
+      "intent": "n",
+      "cpc": 0.03
+    },
+    {
+      "keyword": "exclusive pens",
+      "pos": 1.0,
+      "prev_pos": 3.0,
+      "delta": 2.0,
+      "landing": "https://www.williampenn.net/category/expensive-pens",
+      "vol": 140.0,
+      "intent": "i|t",
+      "cpc": 0.03
+    },
+    {
+      "keyword": "expensive pens",
+      "pos": 1.0,
+      "prev_pos": 1.0,
+      "delta": 0.0,
+      "landing": "https://www.williampenn.net/category/expensive-pens",
+      "vol": 6600.0,
+      "intent": "c",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "fountain pen converter",
+      "pos": 1.0,
+      "prev_pos": 18.0,
+      "delta": 17.0,
+      "landing": "https://www.williampenn.net/product/converter-for-townsend-fountain-pen-wp31082",
+      "vol": 590.0,
+      "intent": "i|c",
+      "cpc": 0.01
+    },
+    {
+      "keyword": "gold pen",
+      "pos": 1.0,
+      "prev_pos": 1.0,
+      "delta": 0.0,
+      "landing": "https://www.williampenn.net/category/gold-pen",
+      "vol": 6600.0,
+      "intent": "i",
+      "cpc": 0.03
+    },
+    {
+      "keyword": "hugo boss rollerball pen",
+      "pos": 1.0,
+      "prev_pos": 2.0,
+      "delta": 1.0,
+      "landing": "https://www.williampenn.net/product/hugo-boss-gear-ribs-rollerball-pen",
+      "vol": 30.0,
+      "intent": "i",
+      "cpc": null
+    },
+    {
+      "keyword": "lamy ball pen",
+      "pos": 1.0,
+      "prev_pos": 5.0,
+      "delta": 4.0,
+      "landing": "https://www.williampenn.net/category/lamy",
+      "vol": 720.0,
+      "intent": "i",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "lamy ballpoint pen",
+      "pos": 1.0,
+      "prev_pos": 7.0,
+      "delta": 6.0,
+      "landing": "https://www.williampenn.net/category/lamy",
+      "vol": 720.0,
+      "intent": "c",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "lamy rollerball pen",
+      "pos": 1.0,
+      "prev_pos": 5.0,
+      "delta": 4.0,
+      "landing": "https://www.williampenn.net/category/lamy",
+      "vol": 260.0,
+      "intent": "i",
+      "cpc": 0.03
+    },
+    {
+      "keyword": "lamy safari ballpoint pen",
+      "pos": 1.0,
+      "prev_pos": 6.0,
+      "delta": 5.0,
+      "landing": "https://www.williampenn.net/category/lamy",
+      "vol": 720.0,
+      "intent": "i|t",
+      "cpc": 0.01
+    },
+    {
+      "keyword": "lamy safari rollerball pen",
+      "pos": 1.0,
+      "prev_pos": 10.0,
+      "delta": 9.0,
+      "landing": "https://www.williampenn.net/category/lamy",
+      "vol": 390.0,
+      "intent": "i",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "lapis bard",
+      "pos": 1.0,
+      "prev_pos": 1.0,
+      "delta": 0.0,
+      "landing": "https://www.williampenn.net/category/lapis-bard",
+      "vol": 1900.0,
+      "intent": "i|c",
+      "cpc": 0.14
+    },
+    {
+      "keyword": "lapis bard fountain pen",
+      "pos": 1.0,
+      "prev_pos": 5.0,
+      "delta": 4.0,
+      "landing": "https://www.williampenn.net/category/lapis-bard",
+      "vol": 140.0,
+      "intent": "c",
+      "cpc": 0.08
+    },
+    {
+      "keyword": "music nib fountain pen",
+      "pos": 1.0,
+      "prev_pos": 1.0,
+      "delta": 0.0,
+      "landing": "https://www.williampenn.net/category/music-nib-fountain-pen",
+      "vol": 20.0,
+      "intent": "i",
+      "cpc": 0.04
+    },
+    {
+      "keyword": "noblia pen",
+      "pos": 1.0,
+      "prev_pos": 21.0,
+      "delta": 20.0,
+      "landing": "https://www.williampenn.net/category/noblia",
+      "vol": 170.0,
+      "intent": "c",
+      "cpc": 0.04
+    },
+    {
+      "keyword": "personalized fountain pen",
+      "pos": 1.0,
+      "prev_pos": 2.0,
+      "delta": 1.0,
+      "landing": "https://www.williampenn.net/category/personalized-fountain-pen",
+      "vol": 140.0,
+      "intent": "t",
+      "cpc": 0.08
+    },
+    {
+      "keyword": "personalized gifts for boss",
+      "pos": 1.0,
+      "prev_pos": 6.0,
+      "delta": 5.0,
+      "landing": "https://www.williampenn.net/category/personalized-gifts-for-boss",
+      "vol": 320.0,
+      "intent": "i|c",
+      "cpc": 0.04
+    },
+    {
+      "keyword": "premium diary",
+      "pos": 1.0,
+      "prev_pos": 1.0,
+      "delta": 0.0,
+      "landing": "https://www.williampenn.net/category/journals-and-diaries",
+      "vol": 590.0,
+      "intent": "c",
+      "cpc": 0.05
+    },
+    {
+      "keyword": "rollerball pen",
+      "pos": 1.0,
+      "prev_pos": 5.0,
+      "delta": 4.0,
+      "landing": "https://www.williampenn.net/category/roller-ball-pens",
+      "vol": 14800.0,
+      "intent": "c",
+      "cpc": 0.01
+    },
+    {
+      "keyword": "ball pen",
+      "pos": 2.0,
+      "prev_pos": 11.0,
+      "delta": 9.0,
+      "landing": "https://www.williampenn.net/category/ball-point-pens",
+      "vol": 49500.0,
+      "intent": "c",
+      "cpc": 0.01
+    },
+    {
+      "keyword": "benu fountain pen",
+      "pos": 2.0,
+      "prev_pos": 1.0,
+      "delta": -1.0,
+      "landing": "https://www.williampenn.net/category/benu",
+      "vol": 110.0,
+      "intent": "c",
+      "cpc": 0.08
+    },
+    {
+      "keyword": "black ball pen",
+      "pos": 2.0,
+      "prev_pos": 2.0,
+      "delta": 0.0,
+      "landing": "https://www.williampenn.net/category/black-ball-pen",
+      "vol": 5400.0,
+      "intent": "i|t",
+      "cpc": 0.01
+    },
+    {
+      "keyword": "black fountain pen",
+      "pos": 2.0,
+      "prev_pos": 3.0,
+      "delta": 1.0,
+      "landing": "https://www.williampenn.net/category/fountain-pens",
+      "vol": 880.0,
+      "intent": "i|t",
+      "cpc": 0.01
+    },
+    {
+      "keyword": "buy fountain pen",
+      "pos": 2.0,
+      "prev_pos": 8.0,
+      "delta": 6.0,
+      "landing": "https://www.williampenn.net/category/fountain-pens",
+      "vol": 260.0,
+      "intent": "t",
+      "cpc": 0.04
+    },
+    {
+      "keyword": "caran d ache fountain pen",
+      "pos": 2.0,
+      "prev_pos": 2.0,
+      "delta": 0.0,
+      "landing": "https://www.williampenn.net/category/caran-d-ache",
+      "vol": 170.0,
+      "intent": "i|t",
+      "cpc": 0.06
+    },
+    {
+      "keyword": "caran d ache rollerball pen",
+      "pos": 2.0,
+      "prev_pos": null,
+      "delta": null,
+      "landing": "https://www.williampenn.net/product/caran-d-ache-849-classic-line-rollerball-pen-black-wp33526",
+      "vol": 20.0,
+      "intent": "c",
+      "cpc": 0.11
+    },
+    {
+      "keyword": "cross century ballpoint pen",
+      "pos": 2.0,
+      "prev_pos": 1.0,
+      "delta": -1.0,
+      "landing": "https://www.williampenn.net/category/cross-classic-century-ballpoint-pen",
+      "vol": 40.0,
+      "intent": "i",
+      "cpc": 0.04
+    },
+    {
+      "keyword": "cross classic century ballpoint pen",
+      "pos": 2.0,
+      "prev_pos": 1.0,
+      "delta": -1.0,
+      "landing": "https://www.williampenn.net/category/cross-classic-century-ballpoint-pen",
+      "vol": 320.0,
+      "intent": "i",
+      "cpc": 0.04
+    },
+    {
+      "keyword": "cross rollerball pen",
+      "pos": 2.0,
+      "prev_pos": 3.0,
+      "delta": 1.0,
+      "landing": "https://www.williampenn.net/category/cross",
+      "vol": 390.0,
+      "intent": "i",
+      "cpc": 0.03
+    },
+    {
+      "keyword": "esterbrook fountain pen",
+      "pos": 2.0,
+      "prev_pos": 3.0,
+      "delta": 1.0,
+      "landing": "https://www.williampenn.net/category/esterbrook",
+      "vol": 140.0,
+      "intent": "c",
+      "cpc": 0.04
+    },
+    {
+      "keyword": "esterbrook pens",
+      "pos": 2.0,
+      "prev_pos": 3.0,
+      "delta": 1.0,
+      "landing": "https://www.williampenn.net/category/esterbrook",
+      "vol": 20.0,
+      "intent": "i|c",
+      "cpc": 0.07
+    },
+    {
+      "keyword": "fisher space pen",
+      "pos": 2.0,
+      "prev_pos": 2.0,
+      "delta": 0.0,
+      "landing": "https://www.williampenn.net/category/fisher-space-pen",
+      "vol": 1900.0,
+      "intent": "i",
+      "cpc": 0.03
+    },
+    {
+      "keyword": "gold ballpoint pen",
+      "pos": 2.0,
+      "prev_pos": 4.0,
+      "delta": 2.0,
+      "landing": "https://www.williampenn.net/category/gold-pen",
+      "vol": 30.0,
+      "intent": "i|t",
+      "cpc": null
+    },
+    {
+      "keyword": "gold fountain pen",
+      "pos": 2.0,
+      "prev_pos": 3.0,
+      "delta": 1.0,
+      "landing": "https://www.williampenn.net/category/gold-pen",
+      "vol": 590.0,
+      "intent": "i",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "hugo boss ballpoint pen",
+      "pos": 2.0,
+      "prev_pos": 1.0,
+      "delta": -1.0,
+      "landing": "https://www.williampenn.net/category/hugo-boss",
+      "vol": 20.0,
+      "intent": "i|t",
+      "cpc": 0.12
+    },
+    {
+      "keyword": "lamy fountain pen",
+      "pos": 2.0,
+      "prev_pos": 6.0,
+      "delta": 4.0,
+      "landing": "https://www.williampenn.net/category/lamy",
+      "vol": 4400.0,
+      "intent": "i|t",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "lamy fountain pen ink",
+      "pos": 2.0,
+      "prev_pos": 15.0,
+      "delta": 13.0,
+      "landing": "https://www.williampenn.net/category/lamy",
+      "vol": 140.0,
+      "intent": "i",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "lapis bard belt",
+      "pos": 2.0,
+      "prev_pos": 2.0,
+      "delta": 0.0,
+      "landing": "https://www.williampenn.net/category/lapis-bard-belt",
+      "vol": 170.0,
+      "intent": "i|t",
+      "cpc": 0.16
+    },
+    {
+      "keyword": "lapis bard pen",
+      "pos": 2.0,
+      "prev_pos": 6.0,
+      "delta": 4.0,
+      "landing": "https://www.williampenn.net/category/lapis-bard",
+      "vol": 720.0,
+      "intent": "i|t",
+      "cpc": 0.09
+    },
+    {
+      "keyword": "metal fountain pen",
+      "pos": 2.0,
+      "prev_pos": 2.0,
+      "delta": 0.0,
+      "landing": "https://www.williampenn.net/category/metal-fountain-pen",
+      "vol": 590.0,
+      "intent": "c",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "montblanc meisterstuck",
+      "pos": 2.0,
+      "prev_pos": 3.0,
+      "delta": 1.0,
+      "landing": "https://www.williampenn.net/category/montblanc-meisterstuck-fountain-pen",
+      "vol": 1300.0,
+      "intent": "t",
+      "cpc": 0.06
+    },
+    {
+      "keyword": "montblanc pen",
+      "pos": 2.0,
+      "prev_pos": 3.0,
+      "delta": 1.0,
+      "landing": "https://www.williampenn.net/category/montblanc",
+      "vol": 49500.0,
+      "intent": "i|t",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "montblanc starwalker",
+      "pos": 2.0,
+      "prev_pos": 4.0,
+      "delta": 2.0,
+      "landing": "https://www.williampenn.net/category/montblanc-starwalker-fountain-pen",
+      "vol": 480.0,
+      "intent": "i",
+      "cpc": 0.13
+    },
+    {
+      "keyword": "montblanc starwalker fountain pen",
+      "pos": 2.0,
+      "prev_pos": 2.0,
+      "delta": 0.0,
+      "landing": "https://www.williampenn.net/category/montblanc-starwalker-fountain-pen",
+      "vol": 140.0,
+      "intent": "i|t",
+      "cpc": 0.1
+    },
+    {
+      "keyword": "parker pen",
+      "pos": 2.0,
+      "prev_pos": 6.0,
+      "delta": 4.0,
+      "landing": "https://www.williampenn.net/category/parker",
+      "vol": 110000.0,
+      "intent": "n",
+      "cpc": 0.01
+    },
+    {
+      "keyword": "personalised rollerball pen",
+      "pos": 2.0,
+      "prev_pos": 2.0,
+      "delta": 0.0,
+      "landing": "https://www.williampenn.net/category/personalised-rollerball-pen",
+      "vol": 20.0,
+      "intent": "t",
+      "cpc": null
+    },
+    {
+      "keyword": "premium ballpoint pen",
+      "pos": 2.0,
+      "prev_pos": 1.0,
+      "delta": -1.0,
+      "landing": "https://www.williampenn.net/category/ball-point-pens",
+      "vol": 480.0,
+      "intent": "c",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "premium notebooks",
+      "pos": 2.0,
+      "prev_pos": 2.0,
+      "delta": 0.0,
+      "landing": "https://www.williampenn.net/category/notebooks",
+      "vol": 590.0,
+      "intent": "i|t",
+      "cpc": 0.06
+    },
+    {
+      "keyword": "premium pens",
+      "pos": 2.0,
+      "prev_pos": 10.0,
+      "delta": 8.0,
+      "landing": "https://www.williampenn.net/category/ball-point-pens",
+      "vol": 2900.0,
+      "intent": "c",
+      "cpc": 0.03
+    },
+    {
+      "keyword": "sailor fountain pen",
+      "pos": 2.0,
+      "prev_pos": 1.0,
+      "delta": -1.0,
+      "landing": "https://www.williampenn.net/category/sailor",
+      "vol": 1000.0,
+      "intent": "c",
+      "cpc": 0.03
+    },
+    {
+      "keyword": "secrid card holder",
+      "pos": 2.0,
+      "prev_pos": 1.0,
+      "delta": -1.0,
+      "landing": "https://www.williampenn.net/category/secrid",
+      "vol": 260.0,
+      "intent": "i|t",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "secrid wallet",
+      "pos": 2.0,
+      "prev_pos": 2.0,
+      "delta": 0.0,
+      "landing": "https://www.williampenn.net/category/secrid",
+      "vol": 1300.0,
+      "intent": "i|t",
+      "cpc": 0.04
+    },
+    {
+      "keyword": "sheaffer gift set",
+      "pos": 2.0,
+      "prev_pos": 2.0,
+      "delta": 0.0,
+      "landing": "https://www.williampenn.net/category/sheaffer-gift-set",
+      "vol": 20.0,
+      "intent": "i|t",
+      "cpc": 0.06
+    },
+    {
+      "keyword": "sheaffer ink cartridges",
+      "pos": 2.0,
+      "prev_pos": 2.0,
+      "delta": 0.0,
+      "landing": "https://www.williampenn.net/product/sheaffer-classic-ink-cartridge-pack-of-5-blue-wp02191",
+      "vol": 90.0,
+      "intent": "i|t",
+      "cpc": 0.04
+    },
+    {
+      "keyword": "sheaffer pen refill",
+      "pos": 2.0,
+      "prev_pos": 5.0,
+      "delta": 3.0,
+      "landing": "https://www.williampenn.net/product/sheaffer-classic-rollerball-refill-medium-black-wp02208",
+      "vol": 390.0,
+      "intent": "t",
+      "cpc": 0.01
+    },
+    {
+      "keyword": "sheaffer rollerball pen",
+      "pos": 2.0,
+      "prev_pos": 2.0,
+      "delta": 0.0,
+      "landing": "https://www.williampenn.net/category/sheaffer-rollerball-pen",
+      "vol": 320.0,
+      "intent": "i|t",
+      "cpc": 0.03
+    },
+    {
+      "keyword": "silver pen",
+      "pos": 2.0,
+      "prev_pos": 3.0,
+      "delta": 1.0,
+      "landing": "https://www.williampenn.net/category/silver-pen",
+      "vol": 5400.0,
+      "intent": "i|t",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "tommy hilfiger belts",
+      "pos": 2.0,
+      "prev_pos": 10.0,
+      "delta": 8.0,
+      "landing": "https://www.williampenn.net/category/tommy-hilfiger-belts",
+      "vol": 14800.0,
+      "intent": "t",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "waterman fountain pen",
+      "pos": 2.0,
+      "prev_pos": 5.0,
+      "delta": 3.0,
+      "landing": "https://www.williampenn.net/category/waterman",
+      "vol": 1900.0,
+      "intent": "i|t",
+      "cpc": 0.03
+    },
+    {
+      "keyword": "waterman pens",
+      "pos": 2.0,
+      "prev_pos": 3.0,
+      "delta": 1.0,
+      "landing": "https://www.williampenn.net/category/waterman",
+      "vol": 5400.0,
+      "intent": "n",
+      "cpc": 0.03
+    },
+    {
+      "keyword": "calligraphy pens",
+      "pos": 3.0,
+      "prev_pos": 2.0,
+      "delta": -1.0,
+      "landing": "https://www.williampenn.net/category/calligraphy-pens",
+      "vol": 27100.0,
+      "intent": "i",
+      "cpc": 0.03
+    },
+    {
+      "keyword": "cross edge rollerball pen",
+      "pos": 3.0,
+      "prev_pos": 5.0,
+      "delta": 2.0,
+      "landing": "https://www.williampenn.net/category/cross-edge-rollerball-pen",
+      "vol": 140.0,
+      "intent": "i|t",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "hugo boss fountain pen",
+      "pos": 3.0,
+      "prev_pos": 1.0,
+      "delta": -2.0,
+      "landing": "https://www.williampenn.net/category/hugo-boss",
+      "vol": 110.0,
+      "intent": "i|t",
+      "cpc": 0.14
+    },
+    {
+      "keyword": "hugo boss pen",
+      "pos": 3.0,
+      "prev_pos": 1.0,
+      "delta": -2.0,
+      "landing": "https://www.williampenn.net/category/hugo-boss",
+      "vol": 480.0,
+      "intent": "i",
+      "cpc": 0.07
+    },
+    {
+      "keyword": "ink pen",
+      "pos": 3.0,
+      "prev_pos": 34.0,
+      "delta": 31.0,
+      "landing": "https://www.williampenn.net/category/fountain-pens",
+      "vol": 33100.0,
+      "intent": "c",
+      "cpc": 0.03
+    },
+    {
+      "keyword": "lamy pens",
+      "pos": 3.0,
+      "prev_pos": 7.0,
+      "delta": 4.0,
+      "landing": "https://www.williampenn.net/category/lamy",
+      "vol": 12100.0,
+      "intent": "i|t",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "lapis bard ink",
+      "pos": 3.0,
+      "prev_pos": 3.0,
+      "delta": 0.0,
+      "landing": "https://www.williampenn.net/product/lapis-bard-ink-bottle-50-ml-honey-mead-wp32176",
+      "vol": 140.0,
+      "intent": "i",
+      "cpc": 0.16
+    },
+    {
+      "keyword": "lapis bard laptop bags",
+      "pos": 3.0,
+      "prev_pos": 3.0,
+      "delta": 0.0,
+      "landing": "https://www.williampenn.net/category/lapis-bard",
+      "vol": 480.0,
+      "intent": "i|t",
+      "cpc": 0.1
+    },
+    {
+      "keyword": "lapis bard wallet",
+      "pos": 3.0,
+      "prev_pos": 2.0,
+      "delta": -1.0,
+      "landing": "https://www.williampenn.net/category/lapis-bard-wallet",
+      "vol": 590.0,
+      "intent": "i|t",
+      "cpc": 0.1
+    },
+    {
+      "keyword": "medium nib fountain pen",
+      "pos": 3.0,
+      "prev_pos": 22.0,
+      "delta": 19.0,
+      "landing": "https://www.williampenn.net/category/fountain-pens",
+      "vol": 210.0,
+      "intent": "i",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "montblanc fountain pens",
+      "pos": 3.0,
+      "prev_pos": 5.0,
+      "delta": 2.0,
+      "landing": "https://www.williampenn.net/category/montblanc",
+      "vol": 2900.0,
+      "intent": "i|t",
+      "cpc": 0.04
+    },
+    {
+      "keyword": "montblanc meisterstuck fountain pen",
+      "pos": 3.0,
+      "prev_pos": 2.0,
+      "delta": -1.0,
+      "landing": "https://www.williampenn.net/category/montblanc-meisterstuck-fountain-pen",
+      "vol": 210.0,
+      "intent": "i|t",
+      "cpc": 0.06
+    },
+    {
+      "keyword": "montblanc starwalker ballpoint pen",
+      "pos": 3.0,
+      "prev_pos": 2.0,
+      "delta": -1.0,
+      "landing": "https://www.williampenn.net/category/montblanc-starwalker-fountain-pen",
+      "vol": 140.0,
+      "intent": "i|t",
+      "cpc": 0.09
+    },
+    {
+      "keyword": "montblanc wallets",
+      "pos": 3.0,
+      "prev_pos": 2.0,
+      "delta": -1.0,
+      "landing": "https://www.williampenn.net/category/montblanc-wallets",
+      "vol": 5400.0,
+      "intent": "i|t",
+      "cpc": 0.04
+    },
+    {
+      "keyword": "premium fountain pens",
+      "pos": 3.0,
+      "prev_pos": 1.0,
+      "delta": -2.0,
+      "landing": "https://www.williampenn.net/category/fountain-pens",
+      "vol": 480.0,
+      "intent": "c",
+      "cpc": 0.03
+    },
+    {
+      "keyword": "sailor pens",
+      "pos": 3.0,
+      "prev_pos": 1.0,
+      "delta": -2.0,
+      "landing": "https://www.williampenn.net/category/sailor",
+      "vol": 880.0,
+      "intent": "i|t",
+      "cpc": 0.03
+    },
+    {
+      "keyword": "waterman ballpoint pen",
+      "pos": 3.0,
+      "prev_pos": 5.0,
+      "delta": 2.0,
+      "landing": "https://www.williampenn.net/category/waterman",
+      "vol": 260.0,
+      "intent": "t",
+      "cpc": 0.03
+    },
+    {
+      "keyword": "benu pens",
+      "pos": 4.0,
+      "prev_pos": 2.0,
+      "delta": -2.0,
+      "landing": "https://www.williampenn.net/category/benu",
+      "vol": 170.0,
+      "intent": "n",
+      "cpc": 0.1
+    },
+    {
+      "keyword": "fountain pen with gold nib",
+      "pos": 4.0,
+      "prev_pos": 2.0,
+      "delta": -2.0,
+      "landing": "https://www.williampenn.net/category/gold-pen",
+      "vol": 260.0,
+      "intent": "c",
+      "cpc": 0.03
+    },
+    {
+      "keyword": "hover pen",
+      "pos": 4.0,
+      "prev_pos": 6.0,
+      "delta": 2.0,
+      "landing": "https://www.williampenn.net/category/novium",
+      "vol": 480.0,
+      "intent": "i",
+      "cpc": 0.01
+    },
+    {
+      "keyword": "kaweco fountain pen",
+      "pos": 4.0,
+      "prev_pos": 1.0,
+      "delta": -3.0,
+      "landing": "https://www.williampenn.net/category/kaweco",
+      "vol": 590.0,
+      "intent": "c",
+      "cpc": 0.03
+    },
+    {
+      "keyword": "limited edition pens",
+      "pos": 4.0,
+      "prev_pos": 4.0,
+      "delta": 0.0,
+      "landing": "https://www.williampenn.net/category/limited-edition",
+      "vol": 320.0,
+      "intent": "i|t",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "montblanc ballpoint pens",
+      "pos": 4.0,
+      "prev_pos": 4.0,
+      "delta": 0.0,
+      "landing": "https://www.williampenn.net/category/montblanc",
+      "vol": 720.0,
+      "intent": "i|t",
+      "cpc": 0.04
+    },
+    {
+      "keyword": "montblanc meisterstuck ballpoint pen",
+      "pos": 4.0,
+      "prev_pos": 4.0,
+      "delta": 0.0,
+      "landing": "https://www.williampenn.net/category/montblanc",
+      "vol": 50.0,
+      "intent": "i|t",
+      "cpc": 0.04
+    },
+    {
+      "keyword": "montblanc rollerball pens",
+      "pos": 4.0,
+      "prev_pos": 3.0,
+      "delta": -1.0,
+      "landing": "https://www.williampenn.net/category/montblanc",
+      "vol": 590.0,
+      "intent": "i|t",
+      "cpc": 0.04
+    },
+    {
+      "keyword": "personalised ball pens",
+      "pos": 4.0,
+      "prev_pos": 1.0,
+      "delta": -3.0,
+      "landing": "https://www.williampenn.net/category/personalized-pens",
+      "vol": 20.0,
+      "intent": "t",
+      "cpc": 0.04
+    },
+    {
+      "keyword": "exclusive fountain pens",
+      "pos": 5.0,
+      "prev_pos": 1.0,
+      "delta": -4.0,
+      "landing": "https://www.williampenn.net/category/fountain-pens",
+      "vol": 20.0,
+      "intent": "c",
+      "cpc": null
+    },
+    {
+      "keyword": "fountain pen",
+      "pos": 5.0,
+      "prev_pos": 11.0,
+      "delta": 6.0,
+      "landing": "https://www.williampenn.net/category/fountain-pens",
+      "vol": 110000.0,
+      "intent": "c",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "luxury fountain pen",
+      "pos": 5.0,
+      "prev_pos": 1.0,
+      "delta": -4.0,
+      "landing": "https://www.williampenn.net/category/fountain-pens",
+      "vol": 720.0,
+      "intent": "c",
+      "cpc": 0.04
+    },
+    {
+      "keyword": "premium leather belts",
+      "pos": 5.0,
+      "prev_pos": 2.0,
+      "delta": -3.0,
+      "landing": "https://www.williampenn.net/category/belts",
+      "vol": 260.0,
+      "intent": "c",
+      "cpc": 0.04
+    },
+    {
+      "keyword": "classic ballpoint pens",
+      "pos": 6.0,
+      "prev_pos": 8.0,
+      "delta": 2.0,
+      "landing": "https://www.williampenn.net/category/ball-point-pens",
+      "vol": 140.0,
+      "intent": "i|t",
+      "cpc": 0.01
+    },
+    {
+      "keyword": "classic fountain pens",
+      "pos": 6.0,
+      "prev_pos": 1.0,
+      "delta": -5.0,
+      "landing": "https://www.williampenn.net/category/classic-fountain-pens",
+      "vol": 210.0,
+      "intent": "i|c",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "premium leather bags",
+      "pos": 6.0,
+      "prev_pos": 5.0,
+      "delta": -1.0,
+      "landing": "https://www.williampenn.net/category/bags",
+      "vol": 390.0,
+      "intent": "t",
+      "cpc": 0.06
+    },
+    {
+      "keyword": "premium mens wallet",
+      "pos": 6.0,
+      "prev_pos": 6.0,
+      "delta": 0.0,
+      "landing": "https://www.williampenn.net/category/wallets",
+      "vol": 2900.0,
+      "intent": "c",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "retractable fountain pen",
+      "pos": 6.0,
+      "prev_pos": null,
+      "delta": null,
+      "landing": "https://www.williampenn.net/category/retractable-fountain-pen",
+      "vol": 1000.0,
+      "intent": "i|t",
+      "cpc": 0.01
+    },
+    {
+      "keyword": "sailor ink",
+      "pos": 6.0,
+      "prev_pos": 7.0,
+      "delta": 1.0,
+      "landing": "https://www.williampenn.net/category/sailor",
+      "vol": 110.0,
+      "intent": "c",
+      "cpc": 0.03
+    },
+    {
+      "keyword": "sheaffer accessories",
+      "pos": 6.0,
+      "prev_pos": 24.0,
+      "delta": 18.0,
+      "landing": "https://www.williampenn.net/category/sheaffer",
+      "vol": null,
+      "intent": "n",
+      "cpc": null
+    },
+    {
+      "keyword": "sheaffer ball pen",
+      "pos": 6.0,
+      "prev_pos": 6.0,
+      "delta": 0.0,
+      "landing": "https://www.williampenn.net/category/sheaffer",
+      "vol": 480.0,
+      "intent": "i|t",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "sheaffer ballpoint pen",
+      "pos": 6.0,
+      "prev_pos": 5.0,
+      "delta": -1.0,
+      "landing": "https://www.williampenn.net/category/sheaffer",
+      "vol": 320.0,
+      "intent": "i|t",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "personalized pens",
+      "pos": 7.0,
+      "prev_pos": 7.0,
+      "delta": 0.0,
+      "landing": "https://www.williampenn.net/category/personalized-pens",
+      "vol": 1300.0,
+      "intent": "c",
+      "cpc": 0.08
+    },
+    {
+      "keyword": "sheaffer fountain pen",
+      "pos": 7.0,
+      "prev_pos": 7.0,
+      "delta": 0.0,
+      "landing": "https://www.williampenn.net/category/sheaffer",
+      "vol": 2900.0,
+      "intent": "i|t",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "sheaffer pen",
+      "pos": 7.0,
+      "prev_pos": 18.0,
+      "delta": 11.0,
+      "landing": "https://www.williampenn.net/category/sheaffer",
+      "vol": 14800.0,
+      "intent": "n",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "fisher space pen refills",
+      "pos": 8.0,
+      "prev_pos": 1.0,
+      "delta": -7.0,
+      "landing": "https://www.williampenn.net/product/fisher-space-spr1-pressurized-refill-medium-blue-wp00498",
+      "vol": 110.0,
+      "intent": "c",
+      "cpc": 0.03
+    },
+    {
+      "keyword": "pen gift set",
+      "pos": 8.0,
+      "prev_pos": 3.0,
+      "delta": -5.0,
+      "landing": "https://www.williampenn.net/category/giftsets",
+      "vol": 2900.0,
+      "intent": "t",
+      "cpc": 0.04
+    },
+    {
+      "keyword": "premium laptop bags",
+      "pos": 8.0,
+      "prev_pos": 8.0,
+      "delta": 0.0,
+      "landing": "https://www.williampenn.net/category/bags",
+      "vol": 1600.0,
+      "intent": "c",
+      "cpc": 0.05
+    },
+    {
+      "keyword": "zippo lighters online",
+      "pos": 8.0,
+      "prev_pos": 12.0,
+      "delta": 4.0,
+      "landing": "https://www.williampenn.net/category/zippo",
+      "vol": 390.0,
+      "intent": "c",
+      "cpc": 0.05
+    },
+    {
+      "keyword": "gifts for ceo",
+      "pos": 9.0,
+      "prev_pos": 18.0,
+      "delta": 9.0,
+      "landing": "https://www.williampenn.net/category/gifts-for-ceo",
+      "vol": 320.0,
+      "intent": "i|c",
+      "cpc": 0.19
+    },
+    {
+      "keyword": "metal ballpoint pen",
+      "pos": 9.0,
+      "prev_pos": 11.0,
+      "delta": 2.0,
+      "landing": "https://www.williampenn.net/category/ball-point-pens",
+      "vol": 720.0,
+      "intent": "i|t",
+      "cpc": 0.01
+    },
+    {
+      "keyword": "sheaffer ink",
+      "pos": 9.0,
+      "prev_pos": 9.0,
+      "delta": 0.0,
+      "landing": "https://www.williampenn.net/product/sheaffer-classic-ink-cartridge-pack-of-5-blue-wp02191",
+      "vol": 170.0,
+      "intent": "i|t",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "lamy safari fountain pen",
+      "pos": 10.0,
+      "prev_pos": null,
+      "delta": null,
+      "landing": "https://www.williampenn.net/category/lamy",
+      "vol": 5400.0,
+      "intent": "i",
+      "cpc": 0.01
+    },
+    {
+      "keyword": "novium",
+      "pos": 12.0,
+      "prev_pos": null,
+      "delta": null,
+      "landing": "https://www.williampenn.net/category/novium",
+      "vol": 140.0,
+      "intent": "n",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "ballpoint pen",
+      "pos": 13.0,
+      "prev_pos": 15.0,
+      "delta": 2.0,
+      "landing": "https://www.williampenn.net/category/ball-point-pens",
+      "vol": 49500.0,
+      "intent": "i|t",
+      "cpc": 0.01
+    },
+    {
+      "keyword": "gifts for men under 10000",
+      "pos": 14.0,
+      "prev_pos": 13.0,
+      "delta": -1.0,
+      "landing": "https://www.williampenn.net/category/gifts-from-5k-to-10k",
+      "vol": 390.0,
+      "intent": "c",
+      "cpc": 0.04
+    },
+    {
+      "keyword": "luxury gifts under 5000",
+      "pos": 14.0,
+      "prev_pos": 11.0,
+      "delta": -3.0,
+      "landing": "https://www.williampenn.net/category/gifts-under-5k",
+      "vol": 1900.0,
+      "intent": "i",
+      "cpc": 0.04
+    },
+    {
+      "keyword": "mechanical pencils",
+      "pos": 15.0,
+      "prev_pos": 31.0,
+      "delta": 16.0,
+      "landing": "https://www.williampenn.net/category/mechanical-pencils",
+      "vol": 40500.0,
+      "intent": "t",
+      "cpc": 0.01
+    },
+    {
+      "keyword": "montblanc belt",
+      "pos": 15.0,
+      "prev_pos": null,
+      "delta": null,
+      "landing": "https://www.williampenn.net/product/montblanc-118413-leather-belt-35mm-brown-wp33063",
+      "vol": 2400.0,
+      "intent": "i|t",
+      "cpc": 0.11
+    },
+    {
+      "keyword": "zippo lighters",
+      "pos": 16.0,
+      "prev_pos": 40.0,
+      "delta": 24.0,
+      "landing": "https://www.williampenn.net/category/zippo",
+      "vol": 2900.0,
+      "intent": "i|t",
+      "cpc": null
+    },
+    {
+      "keyword": "demonstrator fountain pen",
+      "pos": 18.0,
+      "prev_pos": 2.0,
+      "delta": -16.0,
+      "landing": "https://www.williampenn.net/category/demonstrator-fountain-pen",
+      "vol": 110.0,
+      "intent": "c",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "pilot fountain pen",
+      "pos": 20.0,
+      "prev_pos": 3.0,
+      "delta": -17.0,
+      "landing": "https://www.williampenn.net/category/pilot",
+      "vol": 4400.0,
+      "intent": "c",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "extra fine nib fountain pen",
+      "pos": 22.0,
+      "prev_pos": 38.0,
+      "delta": 16.0,
+      "landing": "https://www.williampenn.net/category/fountain-pens",
+      "vol": 260.0,
+      "intent": "c",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "broad nib fountain pen",
+      "pos": 25.0,
+      "prev_pos": 33.0,
+      "delta": 8.0,
+      "landing": "https://www.williampenn.net/category/fountain-pens",
+      "vol": 260.0,
+      "intent": "i",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "lamy safari pen",
+      "pos": 33.0,
+      "prev_pos": null,
+      "delta": null,
+      "landing": "https://www.williampenn.net/category/lamy",
+      "vol": 1300.0,
+      "intent": "i|t",
+      "cpc": 0.03
+    },
+    {
+      "keyword": "hugo boss wallet",
+      "pos": 40.0,
+      "prev_pos": 12.0,
+      "delta": -28.0,
+      "landing": "https://www.williampenn.net/category/hugo-boss-wallet",
+      "vol": 880.0,
+      "intent": "i|t",
+      "cpc": 0.06
+    },
+    {
+      "keyword": "anniversary gifts for him",
+      "pos": null,
+      "prev_pos": null,
+      "delta": null,
+      "landing": null,
+      "vol": 4400.0,
+      "intent": "i|c",
+      "cpc": 0.04
+    },
+    {
+      "keyword": "ballpoint pen refills",
+      "pos": null,
+      "prev_pos": null,
+      "delta": null,
+      "landing": null,
+      "vol": 480.0,
+      "intent": "t",
+      "cpc": 0.01
+    },
+    {
+      "keyword": "best gifts for employees",
+      "pos": null,
+      "prev_pos": null,
+      "delta": null,
+      "landing": null,
+      "vol": 480.0,
+      "intent": "c",
+      "cpc": 0.07
+    },
+    {
+      "keyword": "caran d ache pencils",
+      "pos": null,
+      "prev_pos": null,
+      "delta": null,
+      "landing": null,
+      "vol": 320.0,
+      "intent": "c",
+      "cpc": 0.03
+    },
+    {
+      "keyword": "cartridge pen",
+      "pos": null,
+      "prev_pos": null,
+      "delta": null,
+      "landing": null,
+      "vol": 6600.0,
+      "intent": "i|t",
+      "cpc": 0.01
+    },
+    {
+      "keyword": "cross pen refills",
+      "pos": null,
+      "prev_pos": 2.0,
+      "delta": null,
+      "landing": null,
+      "vol": 720.0,
+      "intent": "i|t",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "customized gifts for him",
+      "pos": null,
+      "prev_pos": null,
+      "delta": null,
+      "landing": null,
+      "vol": 2400.0,
+      "intent": "t",
+      "cpc": 0.04
+    },
+    {
+      "keyword": "employee appreciation gifts",
+      "pos": null,
+      "prev_pos": null,
+      "delta": null,
+      "landing": null,
+      "vol": 320.0,
+      "intent": "c",
+      "cpc": 0.16
+    },
+    {
+      "keyword": "engraved gifts for men",
+      "pos": null,
+      "prev_pos": null,
+      "delta": null,
+      "landing": null,
+      "vol": 170.0,
+      "intent": "c",
+      "cpc": 0.1
+    },
+    {
+      "keyword": "farewell gift for boss",
+      "pos": null,
+      "prev_pos": null,
+      "delta": null,
+      "landing": null,
+      "vol": 1600.0,
+      "intent": "c",
+      "cpc": 0.03
+    },
+    {
+      "keyword": "fine nib fountain pen",
+      "pos": null,
+      "prev_pos": 37.0,
+      "delta": null,
+      "landing": null,
+      "vol": 320.0,
+      "intent": "c",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "fountain pen cartridge",
+      "pos": null,
+      "prev_pos": null,
+      "delta": null,
+      "landing": null,
+      "vol": 880.0,
+      "intent": "i",
+      "cpc": 0.03
+    },
+    {
+      "keyword": "fountain pen ink",
+      "pos": null,
+      "prev_pos": null,
+      "delta": null,
+      "landing": null,
+      "vol": 6600.0,
+      "intent": "c",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "fountain pen refill",
+      "pos": null,
+      "prev_pos": null,
+      "delta": null,
+      "landing": null,
+      "vol": 720.0,
+      "intent": "i",
+      "cpc": 0.01
+    },
+    {
+      "keyword": "gifts for boss",
+      "pos": null,
+      "prev_pos": null,
+      "delta": null,
+      "landing": null,
+      "vol": 3600.0,
+      "intent": "i|c",
+      "cpc": 0.04
+    },
+    {
+      "keyword": "gifts for brother",
+      "pos": null,
+      "prev_pos": null,
+      "delta": null,
+      "landing": null,
+      "vol": 22200.0,
+      "intent": "c",
+      "cpc": 0.03
+    },
+    {
+      "keyword": "gifts for doctors",
+      "pos": null,
+      "prev_pos": 41.0,
+      "delta": null,
+      "landing": null,
+      "vol": 12100.0,
+      "intent": "i|c",
+      "cpc": 0.08
+    },
+    {
+      "keyword": "gifts for lawyers",
+      "pos": null,
+      "prev_pos": 34.0,
+      "delta": null,
+      "landing": null,
+      "vol": 880.0,
+      "intent": "c",
+      "cpc": 0.03
+    },
+    {
+      "keyword": "god pen",
+      "pos": null,
+      "prev_pos": 3.0,
+      "delta": null,
+      "landing": null,
+      "vol": 140.0,
+      "intent": "i",
+      "cpc": null
+    },
+    {
+      "keyword": "jekyll & hide wallet",
+      "pos": null,
+      "prev_pos": 1.0,
+      "delta": null,
+      "landing": null,
+      "vol": 20.0,
+      "intent": "n",
+      "cpc": 0.06
+    },
+    {
+      "keyword": "lamy pen refills",
+      "pos": null,
+      "prev_pos": null,
+      "delta": null,
+      "landing": null,
+      "vol": 170.0,
+      "intent": "i|t",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "leather accessories",
+      "pos": null,
+      "prev_pos": null,
+      "delta": null,
+      "landing": null,
+      "vol": 480.0,
+      "intent": "c",
+      "cpc": 0.16
+    },
+    {
+      "keyword": "leather bag",
+      "pos": null,
+      "prev_pos": null,
+      "delta": null,
+      "landing": null,
+      "vol": 33100.0,
+      "intent": "c",
+      "cpc": 0.05
+    },
+    {
+      "keyword": "metallic pens",
+      "pos": null,
+      "prev_pos": 23.0,
+      "delta": null,
+      "landing": null,
+      "vol": 8100.0,
+      "intent": "i",
+      "cpc": 0.01
+    },
+    {
+      "keyword": "nib pen",
+      "pos": null,
+      "prev_pos": null,
+      "delta": null,
+      "landing": null,
+      "vol": 5400.0,
+      "intent": "i",
+      "cpc": 0.01
+    },
+    {
+      "keyword": "personalized anniversary gifts for him",
+      "pos": null,
+      "prev_pos": null,
+      "delta": null,
+      "landing": null,
+      "vol": 260.0,
+      "intent": "c",
+      "cpc": 0.08
+    },
+    {
+      "keyword": "personalized corporate gifts",
+      "pos": null,
+      "prev_pos": null,
+      "delta": null,
+      "landing": null,
+      "vol": 390.0,
+      "intent": "c",
+      "cpc": 0.27
+    },
+    {
+      "keyword": "personalized gifts",
+      "pos": null,
+      "prev_pos": null,
+      "delta": null,
+      "landing": null,
+      "vol": 14800.0,
+      "intent": "c",
+      "cpc": 0.06
+    },
+    {
+      "keyword": "personalized teacher gifts",
+      "pos": null,
+      "prev_pos": 13.0,
+      "delta": null,
+      "landing": null,
+      "vol": 880.0,
+      "intent": "i",
+      "cpc": 0.04
+    },
+    {
+      "keyword": "pilot ink cartridges",
+      "pos": null,
+      "prev_pos": null,
+      "delta": null,
+      "landing": null,
+      "vol": 390.0,
+      "intent": "i|t",
+      "cpc": 0.01
+    },
+    {
+      "keyword": "pilot pen ink",
+      "pos": null,
+      "prev_pos": null,
+      "delta": null,
+      "landing": null,
+      "vol": 1300.0,
+      "intent": "i|t",
+      "cpc": 0.01
+    },
+    {
+      "keyword": "pilot pens",
+      "pos": null,
+      "prev_pos": null,
+      "delta": null,
+      "landing": null,
+      "vol": 49500.0,
+      "intent": "n|t",
+      "cpc": 0.01
+    },
+    {
+      "keyword": "piston filler fountain pen",
+      "pos": null,
+      "prev_pos": 15.0,
+      "delta": null,
+      "landing": null,
+      "vol": 210.0,
+      "intent": "i",
+      "cpc": 0.03
+    },
+    {
+      "keyword": "premium birthday gifts",
+      "pos": null,
+      "prev_pos": null,
+      "delta": null,
+      "landing": null,
+      "vol": 40.0,
+      "intent": "c",
+      "cpc": 0.18
+    },
+    {
+      "keyword": "premium corporate gifts",
+      "pos": null,
+      "prev_pos": null,
+      "delta": null,
+      "landing": null,
+      "vol": 480.0,
+      "intent": "i|c",
+      "cpc": 0.46
+    },
+    {
+      "keyword": "premium gifts for her",
+      "pos": null,
+      "prev_pos": null,
+      "delta": null,
+      "landing": null,
+      "vol": 90.0,
+      "intent": "c",
+      "cpc": 0.13
+    },
+    {
+      "keyword": "premium gifts for men",
+      "pos": null,
+      "prev_pos": null,
+      "delta": null,
+      "landing": null,
+      "vol": 1000.0,
+      "intent": "c",
+      "cpc": 0.06
+    },
+    {
+      "keyword": "premium gifts set",
+      "pos": null,
+      "prev_pos": null,
+      "delta": null,
+      "landing": null,
+      "vol": null,
+      "intent": "c",
+      "cpc": null
+    },
+    {
+      "keyword": "premium lighters",
+      "pos": null,
+      "prev_pos": 21.0,
+      "delta": null,
+      "landing": null,
+      "vol": 1000.0,
+      "intent": "c",
+      "cpc": 0.01
+    },
+    {
+      "keyword": "rollerball pen refill",
+      "pos": null,
+      "prev_pos": 25.0,
+      "delta": null,
+      "landing": null,
+      "vol": 590.0,
+      "intent": "i|t",
+      "cpc": 0.01
+    },
+    {
+      "keyword": "stub nib fountain pen",
+      "pos": null,
+      "prev_pos": null,
+      "delta": null,
+      "landing": null,
+      "vol": 50.0,
+      "intent": "i",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "swiss army knife",
+      "pos": null,
+      "prev_pos": null,
+      "delta": null,
+      "landing": null,
+      "vol": 9900.0,
+      "intent": "i",
+      "cpc": 0.01
+    },
+    {
+      "keyword": "tech books",
+      "pos": null,
+      "prev_pos": null,
+      "delta": null,
+      "landing": null,
+      "vol": 480.0,
+      "intent": "c",
+      "cpc": 0.06
+    },
+    {
+      "keyword": "tommy hilfiger bags",
+      "pos": null,
+      "prev_pos": null,
+      "delta": null,
+      "landing": null,
+      "vol": 40500.0,
+      "intent": "t",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "tommy hilfiger wallets",
+      "pos": null,
+      "prev_pos": null,
+      "delta": null,
+      "landing": null,
+      "vol": 22200.0,
+      "intent": "t",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "victorinox knife",
+      "pos": null,
+      "prev_pos": null,
+      "delta": null,
+      "landing": null,
+      "vol": 6600.0,
+      "intent": "n|t",
+      "cpc": 0.01
+    },
+    {
+      "keyword": "victorinox swiss army knife",
+      "pos": null,
+      "prev_pos": null,
+      "delta": null,
+      "landing": null,
+      "vol": 1000.0,
+      "intent": "i|t",
+      "cpc": 0.01
+    },
+    {
+      "keyword": "waterman ink",
+      "pos": null,
+      "prev_pos": 7.0,
+      "delta": null,
+      "landing": null,
+      "vol": 390.0,
+      "intent": "c",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "zoom nib fountain pen",
+      "pos": null,
+      "prev_pos": 24.0,
+      "delta": null,
+      "landing": null,
+      "vol": 20.0,
+      "intent": "i",
+      "cpc": null
+    }
+  ],
+  "buckets": {
+    "tracked_total": 181,
+    "ranking": 132,
+    "top3": 86,
+    "top5": 99,
+    "top10": 119,
+    "top20": 128,
+    "page1": 119,
+    "page2": 9,
+    "avg_pos": 4.7,
+    "total_vol": 917510,
+    "dist": {
+      "1-3": 86,
+      "4-10": 33,
+      "11-20": 9,
+      "21-50": 4,
+      "51-100": 0
+    }
+  },
+  "winners": [
+    {
+      "keyword": "ink pen",
+      "pos": 3.0,
+      "prev_pos": 34.0,
+      "delta": 31.0,
+      "landing": "https://www.williampenn.net/category/fountain-pens",
+      "vol": 33100.0,
+      "intent": "c",
+      "cpc": 0.03
+    },
+    {
+      "keyword": "zippo lighters",
+      "pos": 16.0,
+      "prev_pos": 40.0,
+      "delta": 24.0,
+      "landing": "https://www.williampenn.net/category/zippo",
+      "vol": 2900.0,
+      "intent": "i|t",
+      "cpc": null
+    },
+    {
+      "keyword": "noblia pen",
+      "pos": 1.0,
+      "prev_pos": 21.0,
+      "delta": 20.0,
+      "landing": "https://www.williampenn.net/category/noblia",
+      "vol": 170.0,
+      "intent": "c",
+      "cpc": 0.04
+    },
+    {
+      "keyword": "medium nib fountain pen",
+      "pos": 3.0,
+      "prev_pos": 22.0,
+      "delta": 19.0,
+      "landing": "https://www.williampenn.net/category/fountain-pens",
+      "vol": 210.0,
+      "intent": "i",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "sheaffer accessories",
+      "pos": 6.0,
+      "prev_pos": 24.0,
+      "delta": 18.0,
+      "landing": "https://www.williampenn.net/category/sheaffer",
+      "vol": null,
+      "intent": "n",
+      "cpc": null
+    },
+    {
+      "keyword": "fountain pen converter",
+      "pos": 1.0,
+      "prev_pos": 18.0,
+      "delta": 17.0,
+      "landing": "https://www.williampenn.net/product/converter-for-townsend-fountain-pen-wp31082",
+      "vol": 590.0,
+      "intent": "i|c",
+      "cpc": 0.01
+    },
+    {
+      "keyword": "mechanical pencils",
+      "pos": 15.0,
+      "prev_pos": 31.0,
+      "delta": 16.0,
+      "landing": "https://www.williampenn.net/category/mechanical-pencils",
+      "vol": 40500.0,
+      "intent": "t",
+      "cpc": 0.01
+    },
+    {
+      "keyword": "extra fine nib fountain pen",
+      "pos": 22.0,
+      "prev_pos": 38.0,
+      "delta": 16.0,
+      "landing": "https://www.williampenn.net/category/fountain-pens",
+      "vol": 260.0,
+      "intent": "c",
+      "cpc": 0.02
+    }
+  ],
+  "losers": [
+    {
+      "keyword": "hugo boss wallet",
+      "pos": 40.0,
+      "prev_pos": 12.0,
+      "delta": -28.0,
+      "landing": "https://www.williampenn.net/category/hugo-boss-wallet",
+      "vol": 880.0,
+      "intent": "i|t",
+      "cpc": 0.06
+    },
+    {
+      "keyword": "pilot fountain pen",
+      "pos": 20.0,
+      "prev_pos": 3.0,
+      "delta": -17.0,
+      "landing": "https://www.williampenn.net/category/pilot",
+      "vol": 4400.0,
+      "intent": "c",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "demonstrator fountain pen",
+      "pos": 18.0,
+      "prev_pos": 2.0,
+      "delta": -16.0,
+      "landing": "https://www.williampenn.net/category/demonstrator-fountain-pen",
+      "vol": 110.0,
+      "intent": "c",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "fisher space pen refills",
+      "pos": 8.0,
+      "prev_pos": 1.0,
+      "delta": -7.0,
+      "landing": "https://www.williampenn.net/product/fisher-space-spr1-pressurized-refill-medium-blue-wp00498",
+      "vol": 110.0,
+      "intent": "c",
+      "cpc": 0.03
+    },
+    {
+      "keyword": "pen gift set",
+      "pos": 8.0,
+      "prev_pos": 3.0,
+      "delta": -5.0,
+      "landing": "https://www.williampenn.net/category/giftsets",
+      "vol": 2900.0,
+      "intent": "t",
+      "cpc": 0.04
+    },
+    {
+      "keyword": "classic fountain pens",
+      "pos": 6.0,
+      "prev_pos": 1.0,
+      "delta": -5.0,
+      "landing": "https://www.williampenn.net/category/classic-fountain-pens",
+      "vol": 210.0,
+      "intent": "i|c",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "luxury fountain pen",
+      "pos": 5.0,
+      "prev_pos": 1.0,
+      "delta": -4.0,
+      "landing": "https://www.williampenn.net/category/fountain-pens",
+      "vol": 720.0,
+      "intent": "c",
+      "cpc": 0.04
+    },
+    {
+      "keyword": "exclusive fountain pens",
+      "pos": 5.0,
+      "prev_pos": 1.0,
+      "delta": -4.0,
+      "landing": "https://www.williampenn.net/category/fountain-pens",
+      "vol": 20.0,
+      "intent": "c",
+      "cpc": null
+    }
+  ],
+  "page2": [
+    {
+      "keyword": "ballpoint pen",
+      "pos": 13.0,
+      "prev_pos": 15.0,
+      "delta": 2.0,
+      "landing": "https://www.williampenn.net/category/ball-point-pens",
+      "vol": 49500.0,
+      "intent": "i|t",
+      "cpc": 0.01
+    },
+    {
+      "keyword": "mechanical pencils",
+      "pos": 15.0,
+      "prev_pos": 31.0,
+      "delta": 16.0,
+      "landing": "https://www.williampenn.net/category/mechanical-pencils",
+      "vol": 40500.0,
+      "intent": "t",
+      "cpc": 0.01
+    },
+    {
+      "keyword": "pilot fountain pen",
+      "pos": 20.0,
+      "prev_pos": 3.0,
+      "delta": -17.0,
+      "landing": "https://www.williampenn.net/category/pilot",
+      "vol": 4400.0,
+      "intent": "c",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "zippo lighters",
+      "pos": 16.0,
+      "prev_pos": 40.0,
+      "delta": 24.0,
+      "landing": "https://www.williampenn.net/category/zippo",
+      "vol": 2900.0,
+      "intent": "i|t",
+      "cpc": null
+    },
+    {
+      "keyword": "montblanc belt",
+      "pos": 15.0,
+      "prev_pos": null,
+      "delta": null,
+      "landing": "https://www.williampenn.net/product/montblanc-118413-leather-belt-35mm-brown-wp33063",
+      "vol": 2400.0,
+      "intent": "i|t",
+      "cpc": 0.11
+    },
+    {
+      "keyword": "luxury gifts under 5000",
+      "pos": 14.0,
+      "prev_pos": 11.0,
+      "delta": -3.0,
+      "landing": "https://www.williampenn.net/category/gifts-under-5k",
+      "vol": 1900.0,
+      "intent": "i",
+      "cpc": 0.04
+    },
+    {
+      "keyword": "gifts for men under 10000",
+      "pos": 14.0,
+      "prev_pos": 13.0,
+      "delta": -1.0,
+      "landing": "https://www.williampenn.net/category/gifts-from-5k-to-10k",
+      "vol": 390.0,
+      "intent": "c",
+      "cpc": 0.04
+    },
+    {
+      "keyword": "novium",
+      "pos": 12.0,
+      "prev_pos": null,
+      "delta": null,
+      "landing": "https://www.williampenn.net/category/novium",
+      "vol": 140.0,
+      "intent": "n",
+      "cpc": 0.02
+    },
+    {
+      "keyword": "demonstrator fountain pen",
+      "pos": 18.0,
+      "prev_pos": 2.0,
+      "delta": -16.0,
+      "landing": "https://www.williampenn.net/category/demonstrator-fountain-pen",
+      "vol": 110.0,
+      "intent": "c",
+      "cpc": 0.02
+    }
+  ],
+  "footprint_total_keywords": null,
+  "featured_snippets": null
+}
